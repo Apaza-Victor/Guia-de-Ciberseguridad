@@ -91,10 +91,15 @@
   
   .navbar-brand {
     font-size: 1.1rem;
+    gap: 6px;
   }
   
   .navbar-brand i {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .navbar-brand span {
+    font-size: 1rem;
   }
   
   /* Tarjetas */
@@ -199,12 +204,16 @@
   }
   
   .navbar-brand {
-    font-size: 1rem;
+    font-size: 0.95rem;
     gap: 5px;
   }
   
+  .navbar-brand i {
+    font-size: 1rem;
+  }
+  
   .navbar-brand span {
-    display: none;
+    font-size: 0.9rem;
   }
   
   .theme-toggle {
@@ -520,11 +529,16 @@
   }
   
   .navbar-brand {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    gap: 4px;
   }
   
   .navbar-brand i {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .navbar-brand span {
+    font-size: 0.8rem;
   }
   
   .navbar-toggler {
@@ -707,6 +721,19 @@
 @media (max-width: 320px) {
   html {
     font-size: 13px;
+  }
+  
+  .navbar-brand {
+    font-size: 0.8rem;
+    gap: 3px;
+  }
+  
+  .navbar-brand i {
+    font-size: 0.85rem;
+  }
+  
+  .navbar-brand span {
+    font-size: 0.75rem;
   }
   
   .hero-title {
