@@ -9,6 +9,7 @@
 // INICIALIZACIÓN PRINCIPAL
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
+  updateYear();
   initThemeToggle();
   initProgressBar();
   initNavbar();
@@ -23,6 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
   initSectionNav();
   initParallax();
 });
+
+// ============================================
+// ACTUALIZACIÓN AUTOMÁTICA DEL AÑO
+// ============================================
+function updateYear() {
+  const currentYear = new Date().getFullYear();
+  const yearElements = document.querySelectorAll('[data-year]');
+  yearElements.forEach(el => {
+    el.textContent = currentYear;
+  });
+  // Also update any element with class 'current-year'
+  const yearClassElements = document.querySelectorAll('.current-year');
+  yearClassElements.forEach(el => {
+    el.textContent = currentYear;
+  });
+}
 
 // ============================================
 // THEME TOGGLE (Light/Dark Mode)

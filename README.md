@@ -100,7 +100,7 @@ php -S localhost:8000
 - Historia de la ciberseguridad (1960s - 2020s)
 - Principios CIA (Confidentiality, Integrity, Availability)
 - 6 Dominios de la ciberseguridad
-- Panorama actual 2025 con estadísticas
+- Panorama actual <span class="current-year">2026</span> con estadísticas
 
 ### 2️⃣ Amenazas y Vulnerabilidades
 - Tipos de malware: Virus, Ransomware, Troyanos, Gusanos, Spyware, Adware

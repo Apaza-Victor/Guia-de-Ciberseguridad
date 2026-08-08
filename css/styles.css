@@ -405,12 +405,14 @@ body {
    HERO SECTION 3D
    ============================================ */
 .hero-section {
+  height: 100vh;
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 120px 2rem 60px;
+  padding: 80px 2rem 40px;
   overflow: hidden;
   width: 100%;
   max-width: 100vw;
