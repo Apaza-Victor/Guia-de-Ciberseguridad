@@ -76,6 +76,30 @@ body {
 }
 
 /* ============================================
+   NAVBAR ACTIONS (Theme toggle + Hamburger)
+   ============================================ */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  order: 2;
+}
+
+.navbar-cyber .theme-toggle {
+  order: 1;
+}
+
+.navbar-cyber .navbar-toggler {
+  order: 2;
+}
+
+@media (min-width: 992px) {
+  .navbar-actions {
+    display: none;
+  }
+}
+
+/* ============================================
    NAVEGACIÓN - HEADER
    ============================================ */
 .navbar-cyber {
