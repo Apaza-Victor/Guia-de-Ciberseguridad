@@ -415,7 +415,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 80px 2rem 40px;
+  padding: 70px 2rem 20px;
   overflow: hidden;
   width: 100%;
   max-width: 100vw;
@@ -427,6 +427,10 @@ body {
   max-width: 900px;
   width: 100%;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-title {
@@ -560,6 +564,21 @@ body {
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+}
+
+/* Stats cards en hero - más compactas */
+.hero-section .stat-card {
+  padding: 1rem 0.8rem;
+}
+
+.hero-section .stat-number {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.hero-section .stat-label {
+  font-size: 0.75rem;
+  margin-top: 0;
 }
 
 [data-theme="light"] .card-cyber {
