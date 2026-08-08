@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Criptografía y Cifrado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="reading-progress"></div>
+    <div class="bg-3d-container"></div>
+    <nav class="navbar-cyber navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shield-halved"></i>
+                <span>CyberSec Guide</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
+                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
+                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
+                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
+                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
+                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
+                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
+                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
+                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
+                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../comandos.html">Comandos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../recursos.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">Acerca de</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section-page-content">
+        <div class="content-block">
+            <div class="section-header" style="text-align: left;">
+                <span class="difficulty-badge difficulty-intermediate"><i class="fas fa-fire"></i> Nivel Intermedio</span>
+                <h1 class="section-title" style="text-align: left; margin-top: 1rem;">Criptografía y Cifrado</h1>
+                <p class="section-description" style="text-align: left; margin: 0;">El arte y la ciencia de proteger información mediante códigos inescrutables.</p>
+            </div>
+
+            <div class="diagram-3d" style="height: 350px;"><canvas id="crypto-canvas"></canvas></div>
+
+            <h2><i class="fas fa-key" style="color: var(--primary);"></i> Cifrado Simétrico vs Asimétrico</h2>
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="sim"><i class="fas fa-key"></i> Simétrico</button>
+                    <button class="tab-btn" data-tab="asim"><i class="fas fa-lock-open"></i> Asimétrico</button>
+                    <button class="tab-btn" data-tab="hash"><i class="fas fa-fingerprint"></i> Hashing</button>
+                </div>
+                <div class="tab-content active" data-content="sim">
+                    <div class="card-cyber">
+                        <div class="card-title">Cifrado Simétrico</div>
+                        <p class="card-text">Una misma clave se usa para cifrar y descifrar. Rápido pero requiere distribución segura de la clave.</p>
+                        <h4 style="color: var(--primary);">Algoritmos principales:</h4>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">AES-256</div><div class="tool-desc">Estándar actual. 256 bits de clave. Usado por gobiernos y bancos.</div></div>
+                            <div class="tool-card"><div class="tool-name">ChaCha20</div><div class="tool-desc">Alto rendimiento en software. Usado en TLS 1.3 y WireGuard.</div></div>
+                            <div class="tool-card"><div class="tool-name">3DES</div><div class="tool-desc">Legacy. Bloque de 64 bits, clave de 168 bits. Obsoleto.</div></div>
+                        </div>
+                        <div class="code-block" data-lang="python">
+                            <code><span class="code-comment"># Cifrar con AES-256 en Python</span>
+<span class="code-keyword">from</span> cryptography.fernet <span class="code-keyword">import</span> Fernet
+
+<span class="code-comment"># Generar clave</span>
+key = Fernet.<span class="code-function">generate_key</span>()
+cipher = <span class="code-function">Fernet</span>(key)
+
+<span class="code-comment"># Cifrar</span>
+encrypted = cipher.<span class="code-function">encrypt</span>(<span class="code-string">b"Mensaje secreto"</span>)
+<span class="code-function">print</span>(<span class="code-string">f"Cifrado: </span>{encrypted}<span class="code-string">"</span>)
+
+<span class="code-comment"># Descifrar</span>
+decrypted = cipher.<span class="code-function">decrypt</span>(encrypted)
+<span class="code-function">print</span>(<span class="code-string">f"Descifrado: </span>{decrypted.decode()}<span class="code-string">"</span>)</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="asim">
+                    <div class="card-cyber">
+                        <div class="card-title">Cifrado Asimétrico</div>
+                        <p class="card-text">Par de claves: pública (compartida) y privada (secreta). Más lento pero resuelve el problema de distribución de claves.</p>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">RSA</div><div class="tool-desc">Basado en factorización de primos. Mínimo 2048 bits recomendado.</div></div>
+                            <div class="tool-card"><div class="tool-name">ECC</div><div class="tool-desc">Curvas elípticas. Misma seguridad que RSA con claves más cortas.</div></div>
+                            <div class="tool-card"><div class="tool-name">Ed25519</div><div class="tool-desc">Firma digital moderna. Usado en SSH y Signal Protocol.</div></div>
+                        </div>
+                        <div class="alert-cyber alert-info">
+                            <i class="fas fa-lightbulb"></i>
+                            <div><strong>HTTPS en acción:</strong> TLS usa asimétrico para intercambiar claves y simétrico para la comunicación continua. Combina lo mejor de ambos mundos.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="hash">
+                    <div class="card-cyber">
+                        <div class="card-title">Funciones Hash</div>
+                        <p class="card-text">Transforman datos de cualquier tamaño en un valor fijo. Son unidireccionales: no se puede "descifrar" un hash.</p>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">SHA-256</div><div class="tool-desc">Produce 256 bits. Usado en Bitcoin, certificados TLS, integridad de archivos.</div></div>
+                            <div class="tool-card"><div class="tool-name">SHA-3</div><div class="tool-desc">Estándar más reciente. Diferente estructura (Keccak) que SHA-2.</div></div>
+                            <div class="tool-card"><div class="tool-name">bcrypt</div><div class="tool-desc">Hash adaptativo para contraseñas. Factor de costo configurable.</div></div>
+                            <div class="tool-card"><div class="tool-name">Argon2</div><div class="tool-desc">Ganador del Password Hashing Competition. Resistente a GPU/ASIC.</div></div>
+                        </div>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Generar hashes con herramientas CLI</span>
+<span class="code-comment"># SHA-256</span>
+<span class="code-function">echo -n</span> <span class="code-string">"hola mundo"</span> | <span class="code-function">sha256sum</span>
+
+<span class="code-comment"># MD5 (NO recomendado, solo para checksums no críticos)</span>
+<span class="code-function">echo -n</span> <span class="code-string">"hola mundo"</span> | <span class="code-function">md5sum</span>
+
+<span class="code-comment"># Hash de contraseña con openssl</span>
+<span class="code-function">openssl</span> passwd -6 -salt xyz <span class="code-string">"mi_password"</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-certificate" style="color: var(--secondary);"></i> PKI y Certificados Digitales</h2>
+            <p>La Infraestructura de Clave Pública (PKI) gestiona la creación, emisión y revocación de certificados digitales que autentican la identidad de entidades en Internet.</p>
+            <div class="row g-3">
+                <div class="col-md-6" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-sitemap" style="color: var(--primary);"></i> Cadena de Confianza</div>
+                        <ul>
+                            <li><strong>CA Raíz:</strong> Autoridad raíz de confianza (embebida en SO/navegador)</li>
+                            <li><strong>CA Intermedia:</strong> Emite certificados finales</li>
+                            <li><strong>Certificado Final:</strong> Asocia clave pública a identidad</li>
+                            <li><strong>CRL/OCSP:</strong> Lista de certificados revocados</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-lock" style="color: var(--accent);"></i> TLS 1.3</div>
+                        <p class="card-text">El protocolo TLS 1.3 simplificó el handshake de 2 round-trips a solo 1, mejorando velocidad y seguridad.</p>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Generar certificado autofirmado para desarrollo</span>
+<span class="code-function">openssl</span> req -x509 -newkey rsa:2048 \
+  -keyout key.pem -out cert.pem \
+  -days 365 -nodes \
+  -subj <span class="code-string">"/CN=localhost"</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-brain" style="color: var(--accent);"></i> Criptografía Cuántica</h2>
+            <div class="quote-box">
+                "Cuando un ordenador cuántico lo suficientemente potente se construya, todos los sistemas de cifrado asimétrico actuales serán vulnerables."
+                <cite>— Preocupación de la industria criptográfica</cite>
+            </div>
+            <p>Los computadores cuánticos podrían romper RSA y ECC usando el algoritmo de Shor. La industria se está moviendo hacia la <strong>criptografía post-cuántica</strong> (PQC).</p>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">CRYSTALS-Kyber</div><div class="tool-desc">Estándar NIST para intercambio de claves post-cuántico (ML-KEM)</div></div>
+                <div class="tool-card"><div class="tool-name">CRYSTALS-Dilithium</div><div class="tool-desc">Estándar NIST para firmas digitales post-cuánticas (ML-DSA)</div></div>
+                <div class="tool-card"><div class="tool-name">SPHINCS+</div><div class="tool-desc">Firma basada en hashes. Alternativa a lattice-based</div></div>
+            </div>
+
+            <div class="section-nav"></div>
+        </div>
+    </main>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/section-nav.js"></script>
+    <script>
+    (function(){
+        const canvas=document.getElementById('crypto-canvas');if(!canvas||typeof THREE==='undefined')return;
+        const c=canvas.parentElement;const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(60,c.clientWidth/c.clientHeight,0.1,1000);
+        const r=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});r.setSize(c.clientWidth,c.clientHeight);
+        const g=new THREE.Group();
+        // Lock icon representation
+        const bodyG=new THREE.BoxGeometry(2,1.5,0.5);
+        const bodyM=new THREE.MeshBasicMaterial({color:0x00f0ff,wireframe:true,transparent:true,opacity:0.5});
+        const body=new THREE.Mesh(bodyG,bodyM);body.position.y=-0.3;g.add(body);
+        const arcG=new THREE.TorusGeometry(0.6,0.08,8,16,Math.PI);
+        const arcM=new THREE.MeshBasicMaterial({color:0x7b2ff7,wireframe:true,transparent:true,opacity:0.6});
+        const arc=new THREE.Mesh(arcG,arcM);arc.position.y=0.75;arc.rotation.z=Math.PI;g.add(arc);
+        // Keyhole
+        const khG=new THREE.CircleGeometry(0.15,16);
+        const khM=new THREE.MeshBasicMaterial({color:0xff2e63,transparent:true,opacity:0.8});
+        const kh=new THREE.Mesh(khG,khM);kh.position.z=0.26;kh.position.y=-0.3;g.add(kh);
+        // Orbiting particles
+        for(let i=0;i<30;i++){
+            const pg=new THREE.SphereGeometry(0.04,6,6);
+            const pm=new THREE.MeshBasicMaterial({color:[0x00f0ff,0x7b2ff7,0xff2e63][i%3],transparent:true,opacity:0.6});
+            const p=new THREE.Mesh(pg,pm);
+            const a=(i/30)*Math.PI*2;p.position.set(Math.cos(a)*3.5,Math.sin(a)*2,(Math.random()-0.5)*2);g.add(p);
+        }
+        scene.add(g);cam.position.z=5;
+        function animate(){requestAnimationFrame(animate);g.rotation.y+=0.005;g.rotation.x=Math.sin(Date.now()*0.0005)*0.1;r.render(scene,cam);}
+        animate();
+        window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
+    })();
+    </script>
+</body>
+</html>

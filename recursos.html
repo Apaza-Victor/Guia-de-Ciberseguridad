@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Guía de Ciberseguridad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="reading-progress"></div>
+    <div class="bg-3d-container"></div>
+
+    <nav class="navbar-cyber navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="secciones/01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
+                            <li><a class="dropdown-item" href="secciones/02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
+                            <li><a class="dropdown-item" href="secciones/03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
+                            <li><a class="dropdown-item" href="secciones/04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
+                            <li><a class="dropdown-item" href="secciones/05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
+                            <li><a class="dropdown-item" href="secciones/06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
+                            <li><a class="dropdown-item" href="secciones/07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
+                            <li><a class="dropdown-item" href="secciones/08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
+                            <li><a class="dropdown-item" href="secciones/09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
+                            <li><a class="dropdown-item" href="secciones/10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">Acerca de</a></li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section-page-content">
+        <div class="content-block">
+            <div class="section-header" style="text-align: left;">
+                <h1 class="section-title" style="text-align: left; margin-top: 1rem;"><i class="fas fa-link" style="color: var(--primary);"></i> Recursos y Enlaces Útiles</h1>
+                <p class="section-description" style="text-align: left; margin: 0;">Las mejores webs, plataformas y herramientas para tu aprendizaje continuo.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-laptop-code" style="color: var(--primary);"></i> Plataformas de Práctica</div>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.hackthebox.com" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 Hack The Box</a> - Máquinas y retos de pentesting</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://tryhackme.com" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 TryHackMe</a> - Rutas de aprendizaje guiadas</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.vulnhub.com" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 VulnHub</a> - VMs vulnerables descargables</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://overthewire.org/wargames/" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 OverTheWire</a> - Wargames y desafíos</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://picoctf.org" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 PicoCTF</a> - Competencias CTF</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-virus" style="color: var(--accent);"></i> Análisis de Malware</div>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.virustotal.com" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 VirusTotal</a> - Análisis de archivos y URLs</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.any.run" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 Any.Run</a> - Sandbox interactiva</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://hybrid-analysis.com" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 Hybrid Analysis</a> - Análisis gratuito</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://bazaar.abuse.ch" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 MalwareBazaar</a> - Repositorio de muestras</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://otx.alienvault.com" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 AlienVault OTX</a> - Threat Intelligence</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-user-secret" style="color: var(--secondary);"></i> Hacking y Pentesting</div>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.8rem;"><a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 OWASP Testing Guide</a> - Guía de testing web</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.kali.org" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 Kali Linux</a> - Distribución de seguridad</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.metasploit.com" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 Metasploit</a> - Framework de exploits</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://nmap.org" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 Nmap</a> - Escáner de redes</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://portswigger.net/burp" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 Burp Suite</a> - Testing web</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-newspaper" style="color: #00c853;"></i> Noticias y Comunidad</div>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.8rem;"><a href="https://krebsonsecurity.com" target="_blank" style="color:#00c853;text-decoration:none;">🔗 Krebs on Security</a> - Noticias de seguridad</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://thehackernews.com" target="_blank" style="color:#00c853;text-decoration:none;">🔗 The Hacker News</a> - Últimas amenazas</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.bleepingcomputer.com" target="_blank" style="color:#00c853;text-decoration:none;">🔗 BleepingComputer</a> - Noticias y ransomware</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://attack.mitre.org" target="_blank" style="color:#00c853;text-decoration:none;">🔗 MITRE ATT&CK</a> - Tácticas de adversaries</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.exploit-db.com" target="_blank" style="color:#00c853;text-decoration:none;">🔗 Exploit-DB</a> - Base de datos de exploits</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-trophy" style="color: #ffc107;"></i> CTF y Competencias</div>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.8rem;"><a href="https://ctftime.org" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 CTFtime</a> - Calendario de CTFs</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.root-me.org" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 Root-Me</a> - Plataforma de retos</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://ringzer0ctf.com" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 RingZer0 CTF</a> - Desafíos online</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://defcon.org" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 DEF CON</a> - Conferencia de hacking</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.bsides.com" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 BSides</a> - Conferencias locales</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-certificate" style="color: var(--primary);"></i> Certificaciones y Formación</div>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.offsec.com/courses/" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 OffSec (OSCP)</a> - Cursos de pentesting</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.comptia.org/certifications/security" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 CompTIA Security+</a> - Certificación base</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.isc2.org/certifications" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 ISC2 (CISSP)</a> - Certificación senior</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.tcm-sec.com" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 TCM Security</a> - Cursos prácticos</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://academy.hackthebox.com" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 HTB Academy</a> - Formación estructurada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Introducción a la Ciberseguridad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="reading-progress"></div>
+    <div class="bg-3d-container"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar-cyber navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shield-halved"></i>
+                <span>CyberSec Guide</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
+                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
+                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
+                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
+                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
+                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
+                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
+                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
+                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
+                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../comandos.html">Comandos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../recursos.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">Acerca de</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="section-page-content">
+        <div class="content-block">
+            <div class="section-header" style="text-align: left;">
+                <span class="difficulty-badge difficulty-beginner"><i class="fas fa-seedling"></i> Nivel Básico</span>
+                <h1 class="section-title" style="text-align: left; margin-top: 1rem;">Introducción a la Ciberseguridad</h1>
+                <p class="section-description" style="text-align: left; margin: 0;">
+                    Los fundamentos esenciales que todo aspirante a experto en ciberseguridad debe conocer.
+                </p>
+            </div>
+
+            <!-- 3D Interactive: CIA Triad -->
+            <div class="diagram-3d" id="cia-triad-3d" style="height: 350px;">
+                <canvas id="cia-canvas"></canvas>
+            </div>
+
+            <h2><i class="fas fa-history" style="color: var(--primary);"></i> Historia de la Ciberseguridad</h2>
+            <p>
+                La ciberseguridad ha evolucionado drásticamente desde los primeros días de la computación.
+                Lo que comenzó como un problema de protección física de mainframes se convirtió en una
+                disciplina compleja que abarca redes, software, datos y personas.
+            </p>
+
+            <div class="quote-box">
+                "La seguridad no es un producto, sino un proceso."
+                <cite>— Bruce Schneier, Criptógrafo y Seguridad Informática</cite>
+            </div>
+
+            <h3>Línea del Tiempo</h3>
+            <div class="timeline">
+                <div class="timeline-item" data-animate>
+                    <div class="card-cyber" style="margin-top: 2rem;">
+                        <div class="card-icon"><i class="fas fa-computer"></i></div>
+                        <div class="card-title">1960s - Mainframes</div>
+                        <div class="card-text">Primeros conceptos de control de acceso en sistemas compartidos. El problema de la "cabecera de paquete" en ARPANET.</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate data-delay="100">
+                    <div class="card-cyber" style="margin-top: 2rem;">
+                        <div class="card-icon"><i class="fas fa-bug" style="color: var(--accent);"></i></div>
+                        <div class="card-title">1980s - Primeros Virus</div>
+                        <div class="card-text">El virus Brain (1986), Morris Worm (1988). Primeras legislaciones sobre cibercrimen.</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate data-delay="200">
+                    <div class="card-cyber" style="margin-top: 2rem;">
+                        <div class="card-icon"><i class="fas fa-globe" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">1990s - Internet</div>
+                        <div class="card-text">Expansión de WWW, primeros firewalls, nacimiento de antivirus comerciales.</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate data-delay="300">
+                    <div class="card-cyber" style="margin-top: 2rem;">
+                        <div class="card-icon"><i class="fas fa-mobile-alt" style="color: #00c853;"></i></div>
+                        <div class="card-title">2010s - Era Móvil e IoT</div>
+                        <div class="card-text">BYOD, cloud computing, ransomware, ataques APT y hacktivismo a escala global.</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate data-delay="400">
+                    <div class="card-cyber" style="margin-top: 2rem;">
+                        <div class="card-icon"><i class="fas fa-robot" style="color: var(--accent);"></i></div>
+                        <div class="card-title">2020s - IA y Amenazas Avanzadas</div>
+                        <div class="card-text">Deepfakes, IA generativa para ataques, zero-trust architecture, ciberseguridad cuántica.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-key" style="color: var(--primary);"></i> Principios CIA</h2>
+            <p>
+                La tríada CIA (Confidentiality, Integrity, Availability) es el pilar fundamental
+                de toda política de seguridad de la información.
+            </p>
+
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="confidentiality">
+                        <i class="fas fa-eye-slash"></i> Confidencialidad
+                    </button>
+                    <button class="tab-btn" data-tab="integrity">
+                        <i class="fas fa-check-circle"></i> Integridad
+                    </button>
+                    <button class="tab-btn" data-tab="availability">
+                        <i class="fas fa-bolt"></i> Disponibilidad
+                    </button>
+                </div>
+
+                <div class="tab-content active" data-content="confidentiality">
+                    <div class="card-cyber">
+                        <div class="card-icon"><i class="fas fa-eye-slash" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Confidencialidad</div>
+                        <p class="card-text">
+                            Garantizar que la información sea accesible solo por personas autorizadas.
+                            Se implementa mediante cifrado, control de acceso, autenticación y políticas de seguridad.
+                        </p>
+                        <h4 style="margin-top: 1.5rem; color: var(--primary);">Ejemplos:</h4>
+                        <ul>
+                            <li>Cifrado de datos en tránsito (TLS/SSL)</li>
+                            <li>Cifrado de datos en reposo (AES-256)</li>
+                            <li>Autenticación multifactor (MFA)</li>
+                            <li>Control de acceso basado en roles (RBAC)</li>
+                            <li>Segmentación de red</li>
+                        </ul>
+                        <div class="alert-cyber alert-info">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Consejo:</strong> Un dato confidencial que no está cifrado es como una
+                                carta abierta en la calle — cualquiera puede leerla.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" data-content="integrity">
+                    <div class="card-cyber">
+                        <div class="card-icon"><i class="fas fa-check-circle" style="color: #00c853;"></i></div>
+                        <div class="card-title">Integridad</div>
+                        <p class="card-text">
+                            Asegurar que los datos no sean alterados de manera no autorizada.
+                            Incluye la detección de modificaciones y la verificación de autenticidad.
+                        </p>
+                        <h4 style="margin-top: 1.5rem; color: #00c853;">Técnicas:</h4>
+                        <ul>
+                            <li>Hashing (SHA-256, SHA-3)</li>
+                            <li>Firmas digitales</li>
+                            <li>Control de versiones (Git)</li>
+                            <li>Sumas de verificación (checksums)</li>
+                            <li>Bases de datos con ACID</li>
+                        </ul>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Verificar integridad con hash</span>
+<span class="code-function">sha256sum</span> archivo_importante.pdf
+<span class="code-comment"># Salida: a1b2c3d4e5f6... archivo_importante.pdf</span>
+
+<span class="code-comment"># Comparar con hash conocido</span>
+<span class="code-function">echo</span> <span class="code-string">"a1b2c3d4e5f6..."</span> | <span class="code-function">sha256sum</span> -c -</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" data-content="availability">
+                    <div class="card-cyber">
+                        <div class="card-icon"><i class="fas fa-bolt" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Disponibilidad</div>
+                        <p class="card-text">
+                            Garantizar que la información y los sistemas estén accesibles cuando se necesiten.
+                            Implica planificación contra fallos, ataques DDoS y desastres naturales.
+                        </p>
+                        <h4 style="margin-top: 1.5rem; color: var(--accent);">Estrategias:</h4>
+                        <ul>
+                            <li>Redundancia de hardware y software</li>
+                            <li>Balanceo de carga (Load Balancing)</li>
+                            <li>Sistemas de backup y recuperación</li>
+                            <li>CDN para distribución de contenido</li>
+                            <li>Plan de continuidad del negocio (BCP)</li>
+                        </ul>
+                        <div class="alert-cyber alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div>
+                                <strong>Dato clave:</strong> Un minuto de inaprendibilidad puede costar
+                                a una empresa grande más de $5,600 USD (Gartner, 2024).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-layer-group" style="color: var(--secondary);"></i> Dominios de la Ciberseguridad</h2>
+            <p>
+                La ciberseguridad se divide en múltiples dominios especializados, cada uno con
+                sus propias metodologías, herramientas y certificaciones.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-network-wired" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Seguridad de Red</div>
+                        <div class="card-text">Protección de infraestructura de red, firewalls, IDS/IPS, segmentación y monitoreo de tráfico.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-laptop-code" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Seguridad de Aplicaciones</div>
+                        <div class="card-text">Secure coding, testing de penetración, análisis estático y dinámico (SAST/DAST).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-database" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Seguridad de Datos</div>
+                        <div class="card-text">Cifrado, DLP, tokenización, anonimización y protección de información personal.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-user-shield" style="color: #00c853;"></i></div>
+                        <div class="card-title">Seguridad del Usuario</div>
+                        <div class="card-text">Concienciación, phishing, ingeniería social, contraseñas seguras y MFA.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-cloud" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Seguridad en la Nube</div>
+                        <div class="card-text">Configuración segura, IAM, CSPM, responsabilidad compartida y Zero Trust.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-mobile-alt" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Seguridad Móvil e IoT</div>
+                        <div class="card-text">MDM, BYOD policies, firmware security, protocolos IoT y edge computing.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-chart-line" style="color: var(--accent);"></i> Panorama Actual 2025</h2>
+            <p>
+                El panorama de ciberseguridad en 2025 está definido por amenazas cada vez más sofisticadas,
+                el crecimiento exponencial del IoT, y la carrera armamentista entre atacantes y defensores
+                potenciada por inteligencia artificial.
+            </p>
+
+            <h3><i class="fas fa-robot" style="color: var(--secondary);"></i> Tendencias 2025</h3>
+            <div class="row g-3">
+                <div class="col-md-6" data-animate>
+                    <div class="alert-cyber alert-info">
+                        <i class="fas fa-brain"></i>
+                        <div><strong>IA Generativa:</strong> Los atacantes usan IA para crear malware más sofisticado y campañas de phishing personalizadas.</div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="50">
+                    <div class="alert-cyber alert-warning">
+                        <i class="fas fa-cloud"></i>
+                        <div><strong>Cloud Security:</strong> El 95% de las cargas de trabajo estarán en la nube para 2025. Seguridad multi-cloud es crítica.</div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="100">
+                    <div class="alert-cyber alert-danger">
+                        <i class="fas fa-link"></i>
+                        <div><strong>Cadena de Suministro:</strong> Ataques a proveedores de software como SolarWinds y Log4j siguen siendo una amenaza mayor.</div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="150">
+                    <div class="alert-cyber alert-success">
+                        <i class="fas fa-shield-alt"></i>
+                        <div><strong>Zero Trust:</strong> La arquitectura "nunca confiar, siempre verificar" se convierte en estándar de la industria.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3" style="margin: 2rem 0;">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-cyber text-center p-3">
+                        <div class="stat-number" data-count="10500000000">0</div>
+                        <div class="card-text" style="font-size: 0.85rem;">Dispositivos IoT conectados</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-cyber text-center p-3">
+                        <div class="stat-number" data-count="4880000000">0</div>
+                        <div class="card-text" style="font-size: 0.85rem;">Costo anual del cibercrimen</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-cyber text-center p-3">
+                        <div class="stat-number" data-count="3500000">0</div>
+                        <div class="card-text" style="font-size: 0.85rem;">Vacantes en ciberseguridad</div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card-cyber text-center p-3">
+                        <div class="stat-number" data-count="43">0</div>
+                        <div class="card-text" style="font-size: 0.85rem;">Días promedio de detección</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Navigation -->
+            <div class="section-nav"></div>
+        </div>
+    </main>
+
+    <footer class="footer-cyber">
+        <div class="container">
+            <p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/section-nav.js"></script>
+
+    <!-- CIA Triad 3D -->
+    <script>
+    (function() {
+        const canvas = document.getElementById('cia-canvas');
+        const container = document.getElementById('cia-triad-3d');
+        if (!canvas || !container || typeof THREE === 'undefined') return;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+
+        // CIA Triad - Three spheres connected
+        const group = new THREE.Group();
+
+        const sphereGeo = new THREE.SphereGeometry(0.8, 32, 32);
+        const positions = [
+            { x: 0, y: 2, color: 0x00f0ff, label: 'C' },     // Confidentiality (top)
+            { x: -1.7, y: -1, color: 0x7b2ff7, label: 'I' },  // Integrity (left)
+            { x: 1.7, y: -1, color: 0xff2e63, label: 'A' },   // Availability (right)
+        ];
+
+        positions.forEach((pos, i) => {
+            const mat = new THREE.MeshBasicMaterial({
+                color: pos.color,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.7,
+            });
+            const sphere = new THREE.Mesh(sphereGeo, mat);
+            sphere.position.set(pos.x, pos.y, 0);
+            group.add(sphere);
+
+            // Glow ring
+            const ringGeo = new THREE.RingGeometry(1, 1.05, 32);
+            const ringMat = new THREE.MeshBasicMaterial({
+                color: pos.color,
+                transparent: true,
+                opacity: 0.4,
+                side: THREE.DoubleSide,
+            });
+            const ring = new THREE.Mesh(ringGeo, ringMat);
+            ring.position.set(pos.x, pos.y, 0);
+            group.add(ring);
+        });
+
+        // Connection lines
+        const lineMat = new THREE.LineBasicMaterial({ color: 0x00f0ff, transparent: true, opacity: 0.3 });
+        const linePairs = [[0,1], [1,2], [2,0]];
+        linePairs.forEach(([a, b]) => {
+            const points = [
+                new THREE.Vector3(positions[a].x, positions[a].y, 0),
+                new THREE.Vector3(positions[b].x, positions[b].y, 0)
+            ];
+            const lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+            const line = new THREE.Line(lineGeo, lineMat);
+            group.add(line);
+        });
+
+        scene.add(group);
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            group.rotation.y += 0.003;
+            group.rotation.x = Math.sin(Date.now() * 0.0005) * 0.1;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        });
+    })();
+    </script>
+</body>
+</html>

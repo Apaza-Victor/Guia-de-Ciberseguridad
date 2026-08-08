@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Forense Digital y Análisis de Malware</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="reading-progress"></div>
+    <div class="bg-3d-container"></div>
+    <nav class="navbar-cyber navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shield-halved"></i>
+                <span>CyberSec Guide</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
+                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
+                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
+                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
+                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
+                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
+                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
+                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
+                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
+                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../comandos.html">Comandos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../recursos.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">Acerca de</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section-page-content">
+        <div class="content-block">
+            <div class="section-header" style="text-align: left;">
+                <span class="difficulty-badge difficulty-advanced"><i class="fas fa-bolt"></i> Nivel Avanzado</span>
+                <h1 class="section-title" style="text-align: left; margin-top: 1rem;">Forense Digital y Análisis de Malware</h1>
+                <p class="section-description" style="text-align: left; margin: 0;">Técnicas de investigación digital, análisis de malware y respuesta a incidentes.</p>
+            </div>
+
+            <div class="diagram-3d" style="height: 350px;"><canvas id="forensic-canvas"></canvas></div>
+
+            <h2><i class="fas fa-search" style="color: var(--primary);"></i> Proceso Forense Digital</h2>
+            <p>El análisis forense digital sigue una metodología rigurosa para preservar evidencia y mantener la cadena de custodia.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-clipboard-check" style="color: var(--primary);"></i></div>
+                        <div class="card-title">1. Identificación</div>
+                        <div class="card-text">Identificar fuentes de evidencia volátil y no volátil. Documentar la escena.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-hdd" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">2. Preservación</div>
+                        <div class="card-text">Adquisición forense de evidencia. Imágenes bit a bit. Verificación con hash.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-microscope" style="color: var(--accent);"></i></div>
+                        <div class="card-title">3. Análisis</div>
+                        <div class="card-text">Examinar evidencia. Recoverar datos eliminados. Análisis de timeline.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="300">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-file-alt" style="color: #00c853;"></i></div>
+                        <div class="card-title">4. Reporte</div>
+                        <div class="card-text">Documentar hallazgos con precisión forense. Cadena de custodia intacta.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-memory" style="color: var(--secondary);"></i> Volatilidad de Evidencia</h2>
+            <p>La evidencia digital se clasifica por su volatilidad: datos que se pierden primero deben capturarse primero.</p>
+
+            <div class="card-cyber" style="margin: 2rem 0;">
+                <div class="code-block" data-lang="orden">
+                    <code><span class="code-comment"># Orden de volatilidad (más → menos volátil):</span>
+
+1. <span class="code-keyword">Registros CPU / Caché</span>        → Se pierde al apagar
+2. <span class="code-keyword">RAM (memoria volátil)</span>         → Contiene datos en ejecución
+3. <span class="code-keyword">Estado de red</span>                → Conexiones activas, ARP cache
+4. <span class="code-keyword">Procesos en ejecución</span>        → PID, conexiones, archivos abiertos
+5. <span class="code-keyword">Disco duro</span>                   → Archivos, logs, metadatos
+6. <span class="code-keyword">Logs en papel / configuraciones</span> → Mínima volatilidad</code>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-bug" style="color: var(--accent);"></i> Análisis de Malware</h2>
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="estatico"><i class="fas fa-file-code"></i> Análisis Estático</button>
+                    <button class="tab-btn" data-tab="dinamico"><i class="fas fa-play"></i> Análisis Dinámico</button>
+                    <button class="tab-btn" data-tab="sand"><i class="fas fa-box"></i> Sandboxing</button>
+                </div>
+                <div class="tab-content active" data-content="estatico">
+                    <div class="card-cyber">
+                        <div class="card-title">Análisis Estático (sin ejecutar)</div>
+                        <p class="card-text">Examinar el malware sin ejecutarlo. Más seguro pero puede estar ofuscado/packed.</p>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">strings</div><div class="tool-desc">Extraer cadenas de texto legibles del binario</div></div>
+                            <div class="tool-card"><div class="tool-name">file</div><div class="tool-desc">Identificar tipo de archivo y arquitectura</div></div>
+                            <div class="tool-card"><div class="tool-name">PEStudio</div><div class="tool-desc">Análisis de archivos PE (Windows)</div></div>
+                            <div class="tool-card"><div class="tool-name">YARA</div><div class="tool-desc">Reglas para identificar patrones de malware</div></div>
+                        </div>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Análisis básico con herramientas CLI</span>
+<span class="code-function">file</span> malware.exe          <span class="code-comment"># Tipo de archivo</span>
+<span class="code-function">strings</span> malware.exe | <span class="code-function">less</span>  <span class="code-comment"># Cadenas legibles</span>
+<span class="code-function">md5sum</span> malware.exe        <span class="code-comment"># Hash para lookup en VirusTotal</span>
+<span class="code-function">objdump</span> -d malware.exe    <span class="code-comment"># Desensamblar (x86)</span>
+<span class="code-function">rabin2</span> -I malware.exe     <span class="code-comment"># Info detallada con radare2</span></code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="dinamico">
+                    <div class="card-cyber">
+                        <div class="card-title">Análisis Dinámico (ejecutando)</div>
+                        <p class="card-text">Ejecutar el malware en un entorno controlado para observar su comportamiento real.</p>
+                        <ul>
+                            <li><strong>Sysinternals ProcMon:</strong> Monitoreo de filesystem, registry, red</li>
+                            <li><strong>Wireshark:</strong> Captura de tráfico de red generado por el malware</li>
+                            <li><strong>Process Hacker:</strong> Análisis de procesos y servicios</li>
+                            <li><strong>API Monitor:</strong> Interceptación de llamadas a API</li>
+                        </ul>
+                        <div class="alert-cyber alert-danger">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div><strong>NUNCA</strong> ejecutes malware en tu máquina real. Usa siempre VMs aisladas sin conexión a tu red.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="sand">
+                    <div class="card-cyber">
+                        <div class="card-title">Sandboxing y Análisis Automatizado</div>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">Any.Run</div><div class="tool-desc">Sandbox interactiva en la nube. Gratis.</div></div>
+                            <div class="tool-card"><div class="tool-name">Hybrid Analysis</div><div class="tool-desc">Análisis gratuito de archivos sospechosos</div></div>
+                            <div class="tool-card"><div class="tool-name">Cuckoo Sandbox</div><div class="tool-desc">Sandbox open source auto-hospedada</div></div>
+                            <div class="tool-card"><div class="tool-name">CAPE</div><div class="tool-desc">Análisis automatizado con extracción de configs</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-memory" style="color: var(--primary);"></i> Herramientas Forenses</h2>
+            <div class="tools-grid">
+                <div class="tool-card" data-animate>
+                    <div class="tool-name">Volatility</div>
+                    <div class="tool-desc">Análisis de memoria RAM. Extrae procesos, conexiones, contraseñas de dumps de memoria.</div>
+                </div>
+                <div class="tool-card" data-animate data-delay="50">
+                    <div class="tool-name">Autopsy</div>
+                    <div class="tool-desc">Plataforma forense de escritorio. Análisis de discos duros y dispositivos móviles.</div>
+                </div>
+                <div class="tool-card" data-animate data-delay="100">
+                    <div class="tool-name">FTK Imager</div>
+                    <div class="tool-desc">Creación de imágenes forenses bit a bit con verificación de integridad.</div>
+                </div>
+                <div class="tool-card" data-animate data-delay="150">
+                    <div class="tool-name"> Sleuth Kit</div>
+                    <div class="tool-desc">Suite de herramientas CLI para análisis de sistemas de archivos.</div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-clock" style="color: var(--secondary);"></i> Cadena de Custodia</h2>
+            <div class="alert-cyber alert-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <strong>Importante:</strong> La evidencia digital debe mantener una cadena de custodia documentada para ser válida legalmente.
+                </div>
+            </div>
+            <ol>
+                <li><strong>Recolección:</strong> Documentar quién, cuándo y cómo se obtuvo la evidencia</li>
+                <li><strong>Preservación:</strong> Almacenar en contenedores anti-estáticos, ambiente controlado</li>
+                <li><strong>Análisis:</strong> Trabajar solo con copias, nunca con originales</li>
+                <li><strong>Transporte:</strong> Cadenas de custodia firmadas, selladas</li>
+                <li><strong>Almacenamiento:</strong> Bóvedas seguras con control de acceso</li>
+            </ol>
+
+            <h2><i class="fas fa-exclamation-triangle" style="color: var(--accent);"></i> Respuesta a Incidentes</h2>
+            <div class="row g-3">
+                <div class="col-md-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-bell" style="color: var(--accent);"></i></div>
+                        <div class="card-title">NIST IR Lifecycle</div>
+                        <ol>
+                            <li>Preparación</li>
+                            <li>Detección y Análisis</li>
+                            <li>Contención</li>
+                            <li>Eradicación</li>
+                            <li>Recuperación</li>
+                            <li>Lecciones aprendidas</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-md-8" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-list-ol" style="color: var(--primary);"></i> Herramientas de IR</div>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">Volatility</div><div class="tool-desc">Análisis de volámemory forense</div></div>
+                            <div class="tool-card"><div class="tool-name">GRR</div><div class="tool-desc">Google Rapid Response - IR remoto</div></div>
+                            <div class="tool-card"><div class="tool-name">Velociraptor</div><div class="tool-desc">Endpoint forensics y monitoring</div></div>
+                            <div class="tool-card"><div class="tool-name">TheHive</div><div class="tool-desc">Plataforma de gestión de incidentes</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-nav"></div>
+        </div>
+    </main>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/section-nav.js"></script>
+    <script>
+    (function(){
+        const canvas=document.getElementById('forensic-canvas');if(!canvas||typeof THREE==='undefined')return;
+        const c=canvas.parentElement;const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(60,c.clientWidth/c.clientHeight,0.1,1000);
+        const r=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});r.setSize(c.clientWidth,c.clientHeight);
+        const g=new THREE.Group();
+        // Magnifying glass
+        const lensG=new THREE.RingGeometry(1,1.1,32);
+        const lensM=new THREE.MeshBasicMaterial({color:0x00f0ff,wireframe:true,transparent:true,opacity:0.5,side:THREE.DoubleSide});
+        g.add(new THREE.Mesh(lensG,lensM));
+        const handleG=new THREE.CylinderGeometry(0.08,0.08,1.5,8);
+        const handleM=new THREE.MeshBasicMaterial({color:0x7b2ff7,wireframe:true,transparent:true,opacity:0.5});
+        const handle=new THREE.Mesh(handleG,handleM);handle.position.set(0.8,-0.8,0);handle.rotation.z=-Math.PI/4;g.add(handle);
+        // Data particles inside lens
+        for(let i=0;i<50;i++){
+            const pg=new THREE.SphereGeometry(0.03,6,6);
+            const pm=new THREE.MeshBasicMaterial({color:[0x00f0ff,0x00c853,0xff2e63][i%3],transparent:true,opacity:0.6});
+            const p=new THREE.Mesh(pg,pm);
+            const a=(i/50)*Math.PI*2;const rad=Math.random()*0.8;
+            p.position.set(Math.cos(a)*rad,Math.sin(a)*rad,0);g.add(p);
+        }
+        scene.add(g);cam.position.z=4;
+        function animate(){requestAnimationFrame(animate);g.rotation.y+=0.005;g.rotation.x=Math.sin(Date.now()*0.0005)*0.1;r.render(scene,cam);}
+        animate();
+        window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
+    })();
+    </script>
+</body>
+</html>

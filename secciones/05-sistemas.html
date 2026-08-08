@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Seguridad en Sistemas Operativos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="reading-progress"></div>
+    <div class="bg-3d-container"></div>
+    <nav class="navbar-cyber navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shield-halved"></i>
+                <span>CyberSec Guide</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
+                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
+                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
+                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
+                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
+                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
+                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
+                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
+                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
+                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../comandos.html">Comandos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../recursos.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">Acerca de</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section-page-content">
+        <div class="content-block">
+            <div class="section-header" style="text-align: left;">
+                <span class="difficulty-badge difficulty-intermediate"><i class="fas fa-fire"></i> Nivel Intermedio</span>
+                <h1 class="section-title" style="text-align: left; margin-top: 1rem;">Seguridad en Sistemas Operativos</h1>
+                <p class="section-description" style="text-align: left; margin: 0;">Técnicas de hardening, auditoría y configuración segura de sistemas.</p>
+            </div>
+
+            <div class="diagram-3d" style="height: 350px;"><canvas id="os-canvas"></canvas></div>
+
+            <h2><i class="fas fa-terminal" style="color: var(--primary);"></i> Hardening de Linux</h2>
+            <p>El hardening consiste en reducir la superficie de ataque de un sistema eliminando servicios innecesarios y aplicando controles de seguridad.</p>
+
+            <div class="code-block" data-lang="bash">
+                <code><span class="code-comment"># === HARDENING BÁSICO DE LINUX ===</span>
+
+<span class="code-comment"># 1. Actualizar el sistema</span>
+<span class="code-function">sudo apt update && sudo apt upgrade -y</span>    <span class="code-comment"># Debian/Ubuntu</span>
+<span class="code-function">sudo dnf update -y</span>                        <span class="code-comment"># RHEL/Fedora</span>
+
+<span class="code-comment"># 2. Eliminar servicios innecesarios</span>
+<span class="code-function">sudo systemctl disable</span> telnet.socket
+<span class="code-function">sudo systemctl disable</span> rpcbind
+<span class="code-function">sudo systemctl disable</span> avahi-daemon
+
+<span class="code-comment"># 3. Configurar SSH seguro</span>
+<span class="code-function">sudo nano /etc/ssh/sshd_config</span>
+<span class="code-comment"># PermitRootLogin no</span>
+<span class="code-comment"># PasswordAuthentication no</span>
+<span class="code-comment"># Protocol 2</span>
+<span class="code-comment"># Port 2222</span>
+
+<span class="code-comment"># 4. Configurar firewall</span>
+<span class="code-function">sudo ufw default deny incoming</span>
+<span class="code-function">sudo ufw default allow outgoing</span>
+<span class="code-function">sudo ufw allow 2222/tcp</span>
+<span class="code-function">sudo ufw enable</span>
+
+<span class="code-comment"># 5. Auditoría de archivos SUID/SGID</span>
+<span class="code-function">find / -perm /4000 -type f 2>/dev/null</span>  <span class="code-comment"># SUID files</span>
+<span class="code-function">find / -perm /2000 -type f 2>/dev/null</span>  <span class="code-comment"># SGID files</span></code>
+            </div>
+
+            <h2><i class="fas fa-user-shield" style="color: var(--secondary);"></i> Gestión de Usuarios y Permisos</h2>
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="perms"><i class="fas fa-lock"></i> Permisos</button>
+                    <button class="tab-btn" data-tab="sudo"><i class="fas fa-user-shield"></i> Sudo</button>
+                    <button class="tab-btn" data-tab="selinux"><i class="fas fa-shield-alt"></i> SELinux</button>
+                </div>
+                <div class="tab-content active" data-content="perms">
+                    <div class="card-cyber">
+                        <div class="card-title">Sistema de Permisos Unix</div>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Formato: rwxrwxrwx (Owner/Group/Others)</span>
+<span class="code-comment"># r=read(4) w=write(2) x=execute(1)</span>
+
+<span class="code-comment"># Ejemplos:</span>
+-rwxr-xr--  <span class="code-comment">→ 754 Owner: rwx, Group: r-x, Others: r--</span>
+-rw-------  <span class="code-comment">→ 600 Solo owner lee/escribe (seguro para claves)</span>
+-rwxrwxrwx  <span class="code-comment">→ 777 ¡PELIGRO! Acceso total a todos</span>
+
+<span class="code-comment"># Cambiar permisos</span>
+<span class="code-function">chmod</span> 700 ~/ssh_keys    <span class="code-comment"># Solo owner</span>
+<span class="code-function">chmod</span> 644 index.html    <span class="code-comment"># Owner rw, otros r</span>
+<span class="code-function">chmod</span> -R 750 /var/www   <span class="code-comment"># Recursivo</span>
+
+<span class="code-comment"># Cambiar propietario</span>
+<span class="code-function">chown</span> -R www-data:www-data /var/www</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="sudo">
+                    <div class="card-cyber">
+                        <div class="card-title">Configuración Segura de Sudo</div>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Editar sudoers de forma segura</span>
+<span class="code-function">sudo visudo</span>
+
+<span class="code-comment"># Reglas recomendadas:</span>
+Defaults    env_reset
+Defaults    mail_badpass
+Defaults    secure_path=<span class="code-string">"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"</span>
+Defaults    use_pty              <span class="code-comment"># Forzar pseudo-terminal</span>
+Defaults    logfile=<span class="code-string">"/var/log/sudo.log"</span>
+
+<span class="code-comment"># Principio de mínimo privilegio</span>
+<span class="code-comment"># NUNCA: username ALL=(ALL:ALL) ALL</span>
+<span class="code-comment"># SÍ:</span>
+deploy  ALL=(root) NOPASSWD: /usr/bin/systemctl restart nginx</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="selinux">
+                    <div class="card-cyber">
+                        <div class="card-title">SELinux - Mandatory Access Control</div>
+                        <p class="card-text">SELinux implementa control de acceso obligatorio, restringiendo qué procesos pueden acceder a qué recursos, independientemente de permisos Unix tradicionales.</p>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Verificar estado de SELinux</span>
+<span class="code-function">getenforce</span>            <span class="code-comment"># Enforcing / Permissive / Disabled</span>
+<span class="code-function">sestatus</span>              <span class="code-comment"># Estado detallado</span>
+
+<span class="code-comment"># Modos de SELinux</span>
+<span class="code-comment"># Enforcing  → Aplica políticas activamente</span>
+<span class="code-comment"># Permissive → Solo registra (para debugging)</span>
+<span class="code-comment"># Disabled    → Desactivado (NUNCA en producción)</span>
+
+<span class="code-comment"># Ver contexto de archivos</span>
+<span class="code-function">ls -Z</span> /var/www/html/
+<span class="code-comment"># -rw-r--r--. root root unconfined_u:object_r:httpd_sys_content_t:s0 index.html</span></code>
+                        </div>
+                        <div class="alert-cyber alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div><strong>Consejo:</strong> Nunca desactives SELinux en producción. Si algo no funciona, investiga el contexto en lugar de desactivar la seguridad.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-clipboard-list" style="color: var(--accent);"></i> Auditoría y Logs</h2>
+            <p>Monitoreo y registro de eventos de seguridad es esencial para detectar intrusiones y realizar análisis forense.</p>
+            <div class="code-block" data-lang="bash">
+                <code><span class="code-comment"># === HERRAMIENTAS DE AUDITORÍA ===</span>
+
+<span class="code-comment"># Auditd - Framework de auditoría de Linux</span>
+<span class="code-function">sudo auditctl</span> -w /etc/passwd -p wa -k passwd_changes
+<span class="code-comment"># Monitorea escrituras en /etc/passwd y etiqueta como "passwd_changes"</span>
+
+<span class="code-comment"># Buscar eventos</span>
+<span class="code-function">sudo ausearch</span> -k passwd_changes --start today
+
+<span class="code-comment"># Fail2ban - Protección contra brute force</span>
+<span class="code-function">sudo apt install fail2ban -y</span>
+<span class="code-function">sudo systemctl enable fail2ban</span>
+
+<span class="code-comment"># Monitoreo de archivos críticos</span>
+<span class="code-function">sudo aide --init</span>        <span class="code-comment"># Inicializar base de datos</span>
+<span class="code-function">sudo aide --check</span>       <span class="code-comment"># Verificar cambios</span>
+
+<span class="code-comment"># Logs importantes a revisar</span>
+/var/log/auth.log          <span class="code-comment"># Autenticación</span>
+/var/log/syslog            <span class="code-comment"># Eventos del sistema</span>
+/var/log/kern.log          <span class="code-comment"># Kernel</span>
+/var/log/audit/audit.log   <span class="code-comment"># Auditoría</span></code>
+            </div>
+
+            <h2><i class="fas fa-user-shield" style="color: #00c853;"></i> Principio de Menor Privilegio</h2>
+            <div class="quote-box">
+                "Un usuario solo debe tener los permisos mínimos necesarios para realizar su trabajo."
+                <cite>— Principio fundamental de seguridad</cite>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-users-cog" style="color: var(--primary);"></i> RBAC</div>
+                        <div class="card-text">Control de Acceso Basado en Roles. Los permisos se asignan a roles, no a usuarios individuales.</div>
+                        <ul>
+                            <li>Admin: Control total del sistema</li>
+                            <li>Editor: Puede modificar contenido</li>
+                            <li>Viewer: Solo lectura</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-key" style="color: var(--secondary);"></i> Gestión de Secretos</div>
+                        <div class="card-text">Nunca guardes secretos en código fuente. Usa gestores de secretos.</div>
+                        <div class="code-block" style="margin-top:1rem;" data-lang="bash">
+                            <code><span class="code-comment"># Ejemplo: Variables de entorno</span>
+export DB_PASSWORD=<span class="code-string">"secreto_aqui"</span>
+
+<span class="code-comment"># Mejor: HashiCorp Vault, AWS Secrets Manager</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-windows" style="color: var(--primary);"></i> Seguridad en Windows</h2>
+            <div class="row g-3">
+                <div class="col-md-6" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-shield-alt" style="color: var(--primary);"></i> Windows Defender</div>
+                        <ul>
+                            <li>Antivirus integrado con protección en tiempo real</li>
+                            <li>Exploit Protection (EMET sucesor)</li>
+                            <li>Control de acceso de carpetas (Ransomware protection)</li>
+                            <li>Protección de credenciales (Credential Guard)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-cogs" style="color: var(--secondary);"></i> Group Policy (GPO)</div>
+                        <ul>
+                            <li>Políticas de contraseñas (longitud, complejidad, expiración)</li>
+                            <li>Restricción de USB y dispositivos</li>
+                            <li>Auditoría de acceso a objetos</li>
+                            <li>Software Restriction Policies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-nav"></div>
+        </div>
+    </main>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/section-nav.js"></script>
+    <script>
+    (function(){
+        const canvas=document.getElementById('os-canvas');if(!canvas||typeof THREE==='undefined')return;
+        const c=canvas.parentElement;const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(60,c.clientWidth/c.clientHeight,0.1,1000);
+        const r=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});r.setSize(c.clientWidth,c.clientHeight);
+        const g=new THREE.Group();
+        // Server rack representation
+        for(let i=0;i<5;i++){
+            const bg=new THREE.BoxGeometry(3,0.3,1);
+            const bm=new THREE.MeshBasicMaterial({color:0x00f0ff,wireframe:true,transparent:true,opacity:0.4-i*0.05});
+            const b=new THREE.Mesh(bg,bm);b.position.y=i*0.5-1;g.add(b);
+            // Status lights
+            for(let j=0;j<3;j++){
+                const lg=new THREE.SphereGeometry(0.05,8,8);
+                const lm=new THREE.MeshBasicMaterial({color:j===0?0x00c853:0xff2e63,transparent:true,opacity:0.8});
+                const l=new THREE.Mesh(lg,lm);l.position.set(-1.2+j*0.3,i*0.5-1,0.55);g.add(l);
+            }
+        }
+        scene.add(g);cam.position.z=4;
+        function animate(){requestAnimationFrame(animate);g.rotation.y+=0.003;g.rotation.x=Math.sin(Date.now()*0.0003)*0.05;r.render(scene,cam);}
+        animate();
+        window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
+    })();
+    </script>
+</body>
+</html>

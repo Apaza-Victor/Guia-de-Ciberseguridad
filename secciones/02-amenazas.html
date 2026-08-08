@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Amenazas y Vulnerabilidades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="reading-progress"></div>
+    <div class="bg-3d-container"></div>
+    <nav class="navbar-cyber navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-shield-halved"></i>
+                <span>CyberSec Guide</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
+                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
+                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
+                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
+                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
+                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
+                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
+                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
+                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
+                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../comandos.html">Comandos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../recursos.html">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">Acerca de</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section-page-content">
+        <div class="content-block">
+            <div class="section-header" style="text-align: left;">
+                <span class="difficulty-badge difficulty-beginner"><i class="fas fa-seedling"></i> Nivel Básico</span>
+                <h1 class="section-title" style="text-align: left; margin-top: 1rem;">Amenazas y Vulnerabilidades</h1>
+                <p class="section-description" style="text-align: left; margin: 0;">
+                    Identifica, clasifica y comprende las principales amenazas que enfrentan los sistemas informáticos actuales.
+                </p>
+            </div>
+
+            <!-- 3D Malware Visualization -->
+            <div class="diagram-3d" style="height: 350px;">
+                <canvas id="malware-canvas"></canvas>
+            </div>
+
+            <h2><i class="fas fa-virus" style="color: var(--accent);"></i> Tipos de Malware</h2>
+            <p>El malware (software malicioso) comprende cualquier programa diseñado para causar daño, obtener acceso no autorizado o interrumpir sistemas.</p>
+
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="virus"><i class="fas fa-virus"></i> Virus</button>
+                    <button class="tab-btn" data-tab="ransomware"><i class="fas fa-lock"></i> Ransomware</button>
+                    <button class="tab-btn" data-tab="trojan"><i class="fas fa-horse"></i> Troyano</button>
+                    <button class="tab-btn" data-tab="worm"><i class="fas fa-worm"></i> Gusano</button>
+                    <button class="tab-btn" data-tab="spyware"><i class="fas fa-eye"></i> Spyware</button>
+                </div>
+
+                <div class="tab-content active" data-content="virus">
+                    <div class="card-cyber">
+                        <div class="card-icon"><i class="fas fa-virus" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Virus Informático</div>
+                        <p class="card-text">Programa que se replica adjuntándose a archivos o programas legítimos. Requiere intervención humana para propagarse.</p>
+                        <h4 style="color: var(--accent);">Características:</h4>
+                        <ul>
+                            <li>Se adjunta a archivos ejecutables (.exe, .com)</li>
+                            <li>Se activa cuando el usuario ejecuta el archivo infectado</li>
+                            <li>Puede corromper datos y degradar rendimiento</li>
+                            <li>Variantes: archivo, macro, boot sector, polimórfico</li>
+                        </ul>
+                        <div class="alert-cyber alert-danger">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div><strong>Ejemplo real:</strong> El virus <em>ILOVEYOU</em> (2000) causó $10 mil millones en daños globales, propagándose vía email con el asunto "ILOVEYOU".</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" data-content="ransomware">
+                    <div class="card-cyber">
+                        <div class="card-icon"><i class="fas fa-lock" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Ransomware</div>
+                        <p class="card-text">Cifra los archivos de la víctima y exige un rescate (generalmente en criptomonedas) para la clave de descifrado.</p>
+                        <h4 style="color: var(--accent);">Familias principales:</h4>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">WannaCry</div><div class="tool-desc">Explotó EternalBlue (SMB). 200K+ víctimas en 150 países (2017)</div></div>
+                            <div class="tool-card"><div class="tool-name">Ryuk</div><div class="tool-desc">Ataques dirigidos a grandes empresas. Ransom medio: $1.5M USD</div></div>
+                            <div class="tool-card"><div class="tool-name">LockBit</div><div class="tool-desc">Ransomware-as-a-Service (RaaS). Operación más activa 2022-2024</div></div>
+                            <div class="tool-card"><div class="tool-name">REvil/Sodinokibi</div><div class="tool-desc">Doble extorsión: cifrado + amenaza de publicación de datos</div></div>
+                        </div>
+                        <div class="alert-cyber alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div><strong>Doble extorsión:</strong> Los atacantes modernos no solo cifran datos, sino que también roban información y amenazan con publicarla si no se paga el rescate.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" data-content="trojan">
+                    <div class="card-cyber">
+                        <div class="card-icon"><i class="fas fa-horse" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Troyano</div>
+                        <p class="card-text">Software que se disfraza de legítimo pero contiene funcionalidad oculta maliciosa. No se auto-replica.</p>
+                        <h4 style="color: var(--secondary);">Tipos comunes:</h4>
+                        <ul>
+                            <li><strong>Backdoor:</strong> Puerta trasera para acceso remoto</li>
+                            <li><strong>RAT (Remote Access Trojan):</strong> Control total del sistema</li>
+                            <li><strong>Banking Trojan:</strong> Robo de credenciales bancarias (Emotet, TrickBot)</li>
+                            <li><strong>Infostealer:</strong> Recopila credenciales y datos sensibles</li>
+                        </ul>
+                        <div class="code-block" data-lang="bash">
+                            <code><span class="code-comment"># Detección de procesos sospechosos en Linux</span>
+<span class="code-function">ps aux</span> | <span class="code-function">grep</span> -E <span class="code-string">'nc|ncat|netcat|socat'</span>
+<span class="code-function">netstat</span> -tulpn | <span class="code-function">grep</span> LISTEN
+<span class="code-function">lsof</span> -i -P -n | <span class="code-function">grep</span> ESTABLISHED</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" data-content="worm">
+                    <div class="card-cyber">
+                        <div class="card-icon"><i class="fas fa-worm" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Gusano (Worm)</div>
+                        <p class="card-text">Se propaga automáticamente a través de redes sin necesidad de intervención humana ni archivo huésped.</p>
+                        <h4 style="color: var(--primary);">Diferencia con virus:</h4>
+                        <ul>
+                            <li><strong>Autónomo:</strong> No necesita archivo host ni usuario</li>
+                            <li><strong>Autopropagación:</strong> Explota vulnerabilidades de red</li>
+                            <li><strong>Alcance:</strong> Puede infectar miles de sistemas en minutos</li>
+                        </ul>
+                        <div class="alert-cyber alert-info">
+                            <i class="fas fa-lightbulb"></i>
+                            <div><strong>Morris Worm (1988):</strong> Primer gusano de la historia. Infectó ~10% de las 60,000 computadoras conectadas a Internet. Su creador, Robert Morris, fue condenado bajo la CFAA.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" data-content="spyware">
+                    <div class="card-cyber">
+                        <div class="card-icon"><i class="fas fa-eye" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Spyware y Keyloggers</div>
+                        <p class="card-text">Software que recopila información del usuario sin su conocimiento: hábitos de navegación, credenciales, datos bancarios.</p>
+                        <ul>
+                            <li><strong>Keyloggers:</strong> Registran cada tecla presionada</li>
+                            <li><strong>Screen capture:</strong> Capturan pantalla periódicamente</li>
+                            <li><strong>Adware:</strong> Muestra publicidad no deseada y rastrea navegación</li>
+                            <li><strong>Stalkerware:</strong> Vigilancia interpersonal maliciosa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-fish" style="color: var(--primary);"></i> Ingeniería Social y Phishing</h2>
+            <p>La ingeniería social explota la psicología humana, no la tecnología. El phishing es su variante más común.</p>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-envelope" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Email Phishing</div>
+                        <div class="card-text">Correos masivos que imitan entidades legítimas para robar credenciales. Detecta: remitente sospechoso, urgencia, enlaces falsos.</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-crosshairs" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Spear Phishing</div>
+                        <div class="card-text">Phishing dirigido a individuos específicos con información personalizada. Mayor tasa de éxito que el phishing masivo.</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-building" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Whaling</div>
+                        <div class="card-text">Spear phishing dirigido a ejecutivos de alto nivel (CEO, CFO). Usado para BEC (Business Email Compromise).</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-bullseye" style="color: var(--accent);"></i> Vulnerabilidades Comunes (CVE)</h2>
+            <p>Las vulnerabilidades son debilidades en software o hardware que pueden ser explotadas por atacantes.</p>
+
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="owasp"><i class="fas fa-list-ol"></i> OWASP Top 10</button>
+                    <button class="tab-btn" data-tab="cve"><i class="fas fa-database"></i> CVE Famosas</button>
+                </div>
+                <div class="tab-content active" data-content="owasp">
+                    <div class="card-cyber">
+                        <h3 style="color: var(--primary);">OWASP Top 10 (2021)</h3>
+                        <div class="code-block" data-lang="lista">
+                            <code>A01: Broken Access Control
+A02: Cryptographic Failures
+A03: Injection (SQL, NoSQL, LDAP, XPath)
+A04: Insecure Design
+A05: Security Misconfiguration
+A06: Vulnerable and Outdated Components
+A07: Identification and Authentication Failures
+A08: Software and Data Integrity Failures
+A09: Security Logging and Monitoring Failures
+A10: Server-Side Request Forgery (SSRF)</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="cve">
+                    <div class="card-cyber">
+                        <h3 style="color: var(--accent);">CVEs Más Impactantes</h3>
+                        <div class="tools-grid">
+                            <div class="tool-card"><div class="tool-name">CVE-2021-44228</div><div class="tool-desc">Log4Shell - Vulnerabilidad crítica en Apache Log4j. CVSS: 10.0</div></div>
+                            <div class="tool-card"><div class="tool-name">CVE-2017-0144</div><div class="tool-desc">EternalBlue - Usado por WannaCry y NotPetya. SMB v1</div></div>
+                            <div class="tool-card"><div class="tool-name">CVE-2024-3094</div><div class="tool-desc">Backdoor en xz-utils comprometió cadenas de suministro de software</div></div>
+                            <div class="tool-card"><div class="tool-name">CVE-2023-44487</div><div class="tool-desc">HTTP/2 Rapid Reset - Ataque DDoS de capa 7 más grande registrado</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-network-wired" style="color: var(--secondary);"></i> ATAques Comunes en Red</h2>
+            <div class="row g-3">
+                <div class="col-md-6" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-exchange-alt" style="color: var(--accent);"></i> Man-in-the-Middle (MitM)</div>
+                        <div class="card-text">El atacante se interpone entre dos comunicantes para interceptar, modificar o inyectar datos.</div>
+                        <ul style="margin-top:1rem;">
+                            <li>ARP Spoofing</li>
+                            <li>SSL Stripping</li>
+                            <li>Session Hijacking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-satellite-dish" style="color: var(--primary);"></i> Denegación de Servicio (DoS/DDoS)</div>
+                        <div class="card-text">Inundar un sistema con tráfico para hacerlo inaccesible a usuarios legítimos.</div>
+                        <ul style="margin-top:1rem;">
+                            <li>Volumetric Attacks (UDP Flood)</li>
+                            <li>Protocol Attacks (SYN Flood)</li>
+                            <li>Application Layer (HTTP Flood)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-users" style="color: var(--primary);"></i> Ingeniería Social Avanzada</h2>
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="vishing"><i class="fas fa-phone"></i> Vishing</button>
+                    <button class="tab-btn" data-tab="smishing"><i class="fas fa-sms"></i> Smishing</button>
+                    <button class="tab-btn" data-tab="pretexting"><i class="fas fa-theater-masks"></i> Pretexting</button>
+                </div>
+                <div class="tab-content active" data-content="vishing">
+                    <div class="card-cyber">
+                        <div class="card-title">Vishing (Voice Phishing)</div>
+                        <p class="card-text">Ataques telefónicos donde el atacante se hace pasar por soporte técnico, banco o autoridad.</p>
+                        <div class="alert-cyber alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div><strong>Señales de alerta:</strong> Urgencia excesiva, solicitud de datos personales, amenazas, números no verificados.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="smishing">
+                    <div class="card-cyber">
+                        <div class="card-title">Smishing (SMS Phishing)</div>
+                        <p class="card-text">Mensajes SMS maliciosos con enlaces a páginas falsas de bancos o servicios.</p>
+                        <div class="code-block" data-lang="ejemplo">
+                            <code><span class="code-string">[BANCO FALSO]</span> Tu cuenta ha sido bloqueada. Visita <span class="code-function">bit.ly/3xYz</span> para reactivar. <span class="code-comment">#NoClick</span></code>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" data-content="pretexting">
+                    <div class="card-cyber">
+                        <div class="card-title">Pretexting</div>
+                        <p class="card-text">El atacante crea un escenario falso (pretext) para ganar confianza y obtener información.</p>
+                        <ul>
+                            <li><strong>Ejemplo:</strong> "Soy del departamento de TI, necesito verificar tu contraseña"</li>
+                            <li><strong>Ejemplo:</strong> "Ganaste un premio, solo necesitamos tus datos bancarios"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-shield-alt" style="color: #00c853;"></i> Prevención y Mitigación</h2>
+            <div class="row g-3">
+                <div class="col-md-6" data-animate>
+                    <div class="alert-cyber alert-success">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Actualizaciones:</strong> Mantén SO y software actualizados. Parchea vulnerabilidades conocidas.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="50">
+                    <div class="alert-cyber alert-success">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Backups:</strong> Regla 3-2-1: 3 copias, 2 medios diferentes, 1 fuera del sitio.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="100">
+                    <div class="alert-cyber alert-success">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Educar usuarios:</strong> Concienciación sobre phishing, contraseñas fuertes y MFA.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="150">
+                    <div class="alert-cyber alert-success">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Principle of Least Privilege:</strong> Otorga solo los permisos mínimos necesarios.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-nav"></div>
+        </div>
+    </main>
+
+    <footer class="footer-cyber">
+        <div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025</p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/section-nav.js"></script>
+    <script>
+    (function(){
+        const canvas = document.getElementById('malware-canvas');
+        if(!canvas || typeof THREE === 'undefined') return;
+        const container = canvas.parentElement;
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, container.clientWidth/container.clientHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        const group = new THREE.Group();
+        // Central spiky sphere (malware core)
+        const coreGeo = new THREE.IcosahedronGeometry(1.2, 1);
+        const coreMat = new THREE.MeshBasicMaterial({color: 0xff2e63, wireframe:true, transparent:true, opacity:0.6});
+        group.add(new THREE.Mesh(coreGeo, coreMat));
+        // Orbiting threat nodes
+        const threatColors = [0xff2e63, 0x7b2ff7, 0x00f0ff, 0xffc107, 0x00c853];
+        for(let i=0; i<15; i++){
+            const sGeo = new THREE.OctahedronGeometry(0.15, 0);
+            const sMat = new THREE.MeshBasicMaterial({color: threatColors[i%5], transparent:true, opacity:0.7});
+            const s = new THREE.Mesh(sGeo, sMat);
+            const a = (i/15)*Math.PI*2;
+            s.position.set(Math.cos(a)*3, (Math.random()-0.5)*2, Math.sin(a)*3);
+            s.userData = {angle: a, speed: 0.01+Math.random()*0.02, radius: 2.5+Math.random()};
+            group.add(s);
+        }
+        scene.add(group);
+        camera.position.z = 6;
+        function animate(){
+            requestAnimationFrame(animate);
+            group.rotation.y += 0.002;
+            group.children.forEach((c,i)=>{
+                if(i>0 && c.userData.angle !== undefined){
+                    c.userData.angle += c.userData.speed;
+                    c.position.x = Math.cos(c.userData.angle)*c.userData.radius;
+                    c.position.z = Math.sin(c.userData.angle)*c.userData.radius;
+                }
+            });
+            renderer.render(scene,camera);
+        }
+        animate();
+        window.addEventListener('resize',()=>{
+            camera.aspect=container.clientWidth/container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth,container.clientHeight);
+        });
+    })();
+    </script>
+</body>
+</html>
