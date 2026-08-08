@@ -23,7 +23,48 @@ document.addEventListener('DOMContentLoaded', () => {
   // initCardTilt(); // Disabled - cards are now static for better readability
   initSectionNav();
   initParallax();
+  initCloseMenuOnClickOutside();
 });
+
+// ============================================
+// CERRAR MENÚ AL HACER CLIC FUERA
+// ============================================
+function initCloseMenuOnClickOutside() {
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  
+  if (!navbarCollapse || !navbarToggler) return;
+  
+  document.addEventListener('click', (e) => {
+    const isClickInsideNavbar = e.target.closest('.navbar-cyber');
+    const isMenuOpen = navbarCollapse.classList.contains('show');
+    
+    if (isMenuOpen && !isClickInsideNavbar) {
+      // Close the menu
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      } else {
+        navbarCollapse.classList.remove('show');
+      }
+    }
+  });
+  
+  // Also close menu when clicking on a nav link
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        } else {
+          navbarCollapse.classList.remove('show');
+        }
+      }
+    });
+  });
+}
 
 // ============================================
 // ACTUALIZACIÓN AUTOMÁTICA DEL AÑO

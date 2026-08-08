@@ -81,8 +81,9 @@ body {
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   order: 2;
+  margin-left: 10px;
 }
 
 .navbar-cyber .theme-toggle {
