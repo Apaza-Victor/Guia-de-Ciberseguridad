@@ -17,53 +17,110 @@
     <!-- Navbar -->
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -226,7 +283,7 @@
                         <div class="alert-cyber alert-warning">
                             <i class="fas fa-exclamation-triangle"></i>
                             <div>
-                                <strong>Dato clave:</strong> Un minuto de inaprendibilidad puede costar
+                                <strong>Dato clave:</strong> Un minuto de indisponibilidad puede costar
                                 a una empresa grande más de $5,600 USD (Gartner, 2024).
                             </div>
                         </div>
@@ -285,14 +342,14 @@
                 </div>
             </div>
 
-            <h2><i class="fas fa-chart-line" style="color: var(--accent);"></i> Panorama Actual 2025</h2>
+            <h2><i class="fas fa-chart-line" style="color: var(--accent);"></i> Panorama Actual 2026</h2>
             <p>
-                El panorama de ciberseguridad en 2025 está definido por amenazas cada vez más sofisticadas,
+                El panorama de ciberseguridad en 2026 está definido por amenazas cada vez más sofisticadas,
                 el crecimiento exponencial del IoT, y la carrera armamentista entre atacantes y defensores
                 potenciada por inteligencia artificial.
             </p>
 
-            <h3><i class="fas fa-robot" style="color: var(--secondary);"></i> Tendencias 2025</h3>
+            <h3><i class="fas fa-robot" style="color: var(--secondary);"></i> Tendencias 2026</h3>
             <div class="row g-3">
                 <div class="col-md-6" data-animate>
                     <div class="alert-cyber alert-info">
@@ -303,7 +360,7 @@
                 <div class="col-md-6" data-animate data-delay="50">
                     <div class="alert-cyber alert-warning">
                         <i class="fas fa-cloud"></i>
-                        <div><strong>Cloud Security:</strong> El 95% de las cargas de trabajo estarán en la nube para 2025. Seguridad multi-cloud es crítica.</div>
+                        <div><strong>Cloud Security:</strong> El 95% de las cargas de trabajo estarán en la nube. Seguridad multi-cloud es crítica.</div>
                     </div>
                 </div>
                 <div class="col-md-6" data-animate data-delay="100">
@@ -348,13 +405,178 @@
             </div>
 
             <!-- Section Navigation -->
+            <h2><i class="fas fa-balance-scale" style="color: var(--primary);"></i> La Triada DAD y el Riesgo</h2>
+            <p>
+                Si la tríada CIA describe lo que buscamos proteger, la tríada DAD
+                (Divulgación, Alteración y Destrucción) describe lo que una amenaza busca lograr.
+                El riesgo de un incidente se modela como el producto de la amenaza, la vulnerabilidad
+                y el impacto.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-eye" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Divulgación</div>
+                        <div class="card-text">La exposición no autorizada de información confidencial. Rompe la confidencialidad y puede filtrar datos personales o secretos comerciales.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-edit" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Alteración</div>
+                        <div class="card-text">La modificación indebida de datos o sistemas. Atenta contra la integridad: registros manipulados, código inyectado o configuración corrompida.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-trash" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Destrucción</div>
+                        <div class="card-text">La eliminación total o parcial de información o servicios. Afecta la disponibilidad: ransomware, borrado de discos o ataques de denegación de servicio.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-calculator" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Riesgo = Amenaza × Vulnerabilidad × Impacto</div>
+                        <div class="card-text">La <strong>amenaza</strong> es cualquier actor o evento que puede causar daño; la <strong>vulnerabilidad</strong> es la debilidad explotable; el <strong>impacto</strong> es la pérdida potencial. Reducir cualquiera de los tres reduce el riesgo.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-layers" style="color: var(--secondary);"></i> Defensa en Profundidad (Defense in Depth)</h2>
+            <p>
+                La defensa en profundidad consiste en superponer múltiples capas de seguridad
+                independientes, de modo que si una capa falla, las demás siguen protegiendo el activo.
+                Cuantas más capas deba atravesar un atacante, mayor será la probabilidad de detección.
+            </p>
+            <ul>
+                <li><strong>Física:</strong> control de acceso a instalaciones, CCTV, guardias y cerraduras.</li>
+                <li><strong>Perímetro:</strong> firewalls perimetrales, filtrado de tráfico y zonas desmilitarizadas (DMZ).</li>
+                <li><strong>Red:</strong> segmentación, VLANs, IDS/IPS y monitoreo del tráfico interno.</li>
+                <li><strong>Host:</strong> hardening del sistema operativo, antivirus, EDR y gestión de parches.</li>
+                <li><strong>Aplicación:</strong> desarrollo seguro, WAF, validación de entradas y pruebas de penetración.</li>
+                <li><strong>Datos:</strong> cifrado en reposo y en tránsito, control de acceso y DLP.</li>
+                <li><strong>Humana:</strong> formación y concienciación, políticas claras y simulacros de phishing.</li>
+            </ul>
+            <p>
+                Ninguna capa por sí sola es suficiente: un buen firewall no protege frente a un
+                empleado que comparte contraseñas, y el mejor cifrado no detiene a quien roba las
+                llaves. La seguridad real emerge de la combinación de todas las capas.
+            </p>
+
+            <h2><i class="fas fa-user-lock" style="color: var(--accent);"></i> Zero Trust</h2>
+            <p>
+                El modelo Zero Trust parte del principio <strong>"Never trust, always verify"</strong>
+                (nunca confiar, siempre verificar): ningún usuario, dispositivo o red es confiable por
+                defecto, ni siquiera dentro del perímetro corporativo.
+            </p>
+            <ul>
+                <li><strong>Verificación continua:</strong> cada acceso se valida en el momento, no solo al iniciar sesión.</li>
+                <li><strong>Acceso con menor privilegio:</strong> cada usuario recibe solo los permisos mínimos necesarios.</li>
+                <li><strong>Microsegmentación:</strong> dividir la red en segmentos pequeños para limitar el movimiento lateral.</li>
+                <li><strong>Asunción de brecha:</strong> diseñar asumiendo que ya existe una intrusión y que habrá más.</li>
+                <li><strong>MFA permanente:</strong> autenticación multifactor en todo acceso sensible, sin excepciones.</li>
+                <li><strong>Monitoreo de todos los recursos:</strong> registro y análisis continuo de la actividad en endpoints, red y datos.</li>
+            </ul>
+
+            <h2><i class="fas fa-user-secret" style="color: var(--primary);"></i> Tipos de Hackers y Actores de Amenaza</h2>
+            <p>
+                No todos los atacantes persiguen lo mismo ni operan de la misma forma. Conocer el
+                perfil del adversario ayuda a anticipar sus tácticas y a priorizar las defensas.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-graduation-cap" style="color: #00c853;"></i></div>
+                        <div class="card-title">White Hat</div>
+                        <div class="card-text">Hackers éticos autorizados. Buscan vulnerabilidades para corregirlas antes de que otros las exploten.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-skull" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Black Hat</div>
+                        <div class="card-text">Atacantes maliciosos que explotan sistemas sin autorización para robar, extorsionar o dañar.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-code" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Grey Hat</div>
+                        <div class="card-text">Cruzan la línea sin intención maliciosa: encuentran fallos sin permiso y a veces los divulgan por su cuenta.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-bullhorn" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Hacktivista</div>
+                        <div class="card-text">Ataca por causas políticas o sociales, buscando visibilidad para su mensaje.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-gamepad" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Script Kiddie</div>
+                        <div class="card-text">Poco conocimiento técnico. Usa herramientas prefabricadas y exploits públicos sin entenderlos.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-flag" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Actores Estado-nación (APT)</div>
+                        <div class="card-text">Grupos patrocinados por gobiernos, muy organizados, dedicados al espionaje y sabotaje de largo plazo (APT).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-user-times" style="color: #e040fb;"></i></div>
+                        <div class="card-title">Insider Threat</div>
+                        <div class="card-text">Persona interna con acceso legítimo que abusa de sus privilegios o filtra información sensible.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="350">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-bug" style="color: #26a69a;"></i></div>
+                        <div class="card-title">Bug Bounty Hunter</div>
+                        <div class="card-text">Investiga programas de recompensas por fallos y reporta vulnerabilidades de forma responsable a cambio de un pago.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-book-open" style="color: var(--primary);"></i> Frameworks de Referencia</h2>
+            <div class="tools-grid">
+                <div class="tool-card" data-animate>
+                    <div class="tool-name">MITRE ATT&amp;CK</div>
+                    <div class="tool-desc">Base de conocimiento de tácticas y técnicas reales usadas por adversarios. Referencia clave para threat modeling y detección.</div>
+                </div>
+                <div class="tool-card" data-animate data-delay="50">
+                    <div class="tool-name">NIST Cybersecurity Framework</div>
+                    <div class="tool-desc">Organiza la gestión del riesgo en cinco funciones: Identify, Protect, Detect, Respond y Recover.</div>
+                </div>
+                <div class="tool-card" data-animate data-delay="100">
+                    <div class="tool-name">CIS Controls</div>
+                    <div class="tool-desc">Los 18 controles prioritarios y accionables para reducir de forma práctica las amenazas más comunes.</div>
+                </div>
+                <div class="tool-card" data-animate data-delay="150">
+                    <div class="tool-name">OWASP Top 10</div>
+                    <div class="tool-desc">Ranking de los riesgos de seguridad más críticos en aplicaciones web; base para el desarrollo seguro.</div>
+                </div>
+            </div>
+            <p>
+                Estos frameworks no son recetas obligatorias, sino mapas de referencia: alinean el
+                lenguaje del equipo, guían auditorías, priorizan las inversiones en seguridad y permiten
+                comparar la madurez de una organización frente a estándares reconocidos.
+            </p>
+
             <div class="section-nav"></div>
         </div>
     </main>
 
     <footer class="footer-cyber">
         <div class="container">
-            <p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p>
+            <p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p>
         </div>
     </footer>
 
@@ -440,5 +662,6 @@
         });
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

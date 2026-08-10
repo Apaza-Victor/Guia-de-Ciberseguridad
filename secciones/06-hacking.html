@@ -15,53 +15,110 @@
     <div class="bg-3d-container"></div>
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -162,7 +219,7 @@ msf6> exploit</code>
                         <p class="card-text">Una vez dentro, se busca escalar privilegios, moverse lateralmente y persistir.</p>
                         <ul>
                             <li><strong>Escalada de privilegios:</strong> kernel exploits, SUID, misconfigurations</li>
-                            <li><strong>Movimiento lateral:</strong> pass-the-hash,PsExec, WMI</li>
+                            <li><strong>Movimiento lateral:</strong> pass-the-hash, PsExec, WMI</li>
                             <li><strong>Persistencia:</strong> scheduled tasks, registry keys, backdoors</li>
                             <li><strong>Exfiltración:</strong> robo de credenciales, datos sensibles</li>
                         </ul>
@@ -195,10 +252,307 @@ msf6> exploit</code>
                 <div class="tool-card"><div class="tool-name">DVWA</div><div class="tool-desc">Damn Vulnerable Web App para pentest web</div></div>
             </div>
 
+            <h2><i class="fas fa-sitemap" style="color: var(--primary);"></i> Metodologías de Pentesting</h2>
+            <p>Las metodologías estandarizan la forma en que se planifican, ejecutan y reportan las pruebas de penetración. Adoptar una metodología garantiza cobertura, repetibilidad y profesionalismo en cada engagement.</p>
+
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">PTES</div><div class="tool-desc">Pentesting Execution Standard: fases detalladas de extremo a extremo</div></div>
+                <div class="tool-card"><div class="tool-name">OSSTMM</div><div class="tool-desc">Metodología de testing de seguridad operacional (ISECOM)</div></div>
+                <div class="tool-card"><div class="tool-name">OWASP WSTG</div><div class="tool-desc">Web Security Testing Guide para aplicaciones web</div></div>
+                <div class="tool-card"><div class="tool-name">NIST SP 800-115</div><div class="tool-desc">Guía técnica para evaluaciones de seguridad de TI</div></div>
+                <div class="tool-card"><div class="tool-name">MITRE ATT&CK</div><div class="tool-desc">Mapeo de técnicas y tácticas del adversario real</div></div>
+            </div>
+            <p>La metodología elegida define el <strong>alcance</strong>, la profundidad de las pruebas y los <strong>entregables</strong> del informe final, por lo que debe acordarse con el cliente antes de iniciar.</p>
+
+            <h2><i class="fas fa-chess-board" style="color: var(--secondary);"></i> Tipos de Pruebas y de Red Teams</h2>
+            <p>Las pruebas se clasifican según la información previa que se entrega al evaluador y según el rol del equipo que participa en el ejercicio.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-eye-slash" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Black Box</div>
+                        <div class="card-text">El evaluador parte sin información interna del objetivo. Simula el punto de vista de un atacante externo y maximiza el realismo.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-eye" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Grey Box</div>
+                        <div class="card-text">Se entrega información parcial (credenciales básicas, diagramas de red). Equilibra realismo y eficiencia de tiempo.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-file-code" style="color: var(--accent);"></i></div>
+                        <div class="card-title">White Box</div>
+                        <div class="card-text">Acceso completo al código fuente, configuración y documentación. Permite una revisión profunda y exhaustiva.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-crosshairs" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Red Team</div>
+                        <div class="card-text">Simula un adversario real con objetivos de negocio definidos, operando de forma sigilosa para medir la detección de la defensa.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-shield-halved" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Blue Team</div>
+                        <div class="card-text">Equipo de defensa responsable de detectar, responder y contener los ataques del red team durante el ejercicio.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-handshake" style="color: #e040fb;"></i></div>
+                        <div class="card-title">Purple Team</div>
+                        <div class="card-text">Colaboración entre atacantes y defensores para mejorar continuamente las capacidades de detección y respuesta.</div>
+                    </div>
+                </div>
+            </div>
+            <p>Es clave diferenciar tres niveles de engagement:</p>
+            <ul>
+                <li><strong>Vulnerability assessment:</strong> escaneo automatizado y clasificación de CVEs, sin explotar las vulnerabilidades.</li>
+                <li><strong>Pentest:</strong> validación manual de las vulnerabilidades explotándolas de forma controlada para confirmar el impacto.</li>
+                <li><strong>Red team exercise:</strong> simulación completa de un adversario real, con objetivos de negocio y sin alertar a los equipos de defensa.</li>
+            </ul>
+
+            <h2><i class="fas fa-network-wired" style="color: var(--accent);"></i> Ataques a Active Directory</h2>
+            <p>Active Directory es el objetivo principal de la mayoría de compromisos corporativos: concentra autenticación, permisos y acceso a recursos. Conocer estos ataques es imprescindible para defender la identidad.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-key" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Kerberoasting</div>
+                        <div class="card-text">Solicita tickets TGS de SPNs de servicios y los descifra offline para recuperar la contraseña de cuentas de servicio.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-user-lock" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">AS-REP Roasting</div>
+                        <div class="card-text">Explota usuarios con pre-autenticación Kerberos deshabilitada para obtener hashes crackeables sin interacción.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-fingerprint" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Pass-the-Hash</div>
+                        <div class="card-text">Reutiliza el hash NTLM de una víctima para autenticarse en otros sistemas sin conocer la contraseña en claro.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-ticket" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Pass-the-Ticket</div>
+                        <div class="card-text">Reutiliza tickets Kerberos (TGT/TGS) robados para suplantar la identidad del usuario dentro del dominio.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-copy" style="color: var(--accent);"></i></div>
+                        <div class="card-title">DCSync</div>
+                        <div class="card-text">Abusa de la replicación de dominio para extraer hashes de todos los usuarios; habilita Golden Ticket y DCShadow.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-exchange-alt" style="color: #00c853;"></i></div>
+                        <div class="card-title">SMB Relay</div>
+                        <div class="card-text">Intercepta autenticaciones SMB y las reenvía a otros servidores para obtener acceso sin conocer las credenciales.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-block" data-lang="bash">
+                <code><span class="code-comment"># Impacket - Ataques a Active Directory</span>
+
+<span class="code-comment"># AS-REP Roasting: cuentas sin pre-autenticación</span>
+<span class="code-function">GetNPUsers.py</span> dominio/usuarios -dc-ip IP -no-pass
+
+<span class="code-comment"># Kerberoasting: tickets TGS de SPNs de servicio</span>
+<span class="code-function">GetUserSPNs.py</span> dominio/usuario:pass -dc-ip IP
+
+<span class="code-comment"># DCSync: extraer hashes vía replicación de dominio</span>
+<span class="code-function">secretsdump.py</span> dominio/usuario:pass@IP -just-dc
+
+<span class="code-comment"># Movimiento lateral mediante autenticación con psexec</span>
+<span class="code-function">psexec.py</span> dominio/usuario:pass@IP</code>
+            </div>
+
+            <div class="alert-cyber alert-danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div><strong>⚠️ IMPORTANTE:</strong> Estos ataques a Active Directory solo deben ejecutarse en laboratorios o entornos con autorización escrita. Utilizarlos contra sistemas sin permiso es un delito.</div>
+            </div>
+
+            <h2><i class="fas fa-arrow-trend-up" style="color: #00c853;"></i> Escalada de Privilegios</h2>
+            <p>Tras obtener un acceso inicial, el objetivo es elevar privilegios hasta nivel administrador/root. La enumeración sistemática del sistema comprometido es el paso más importante de esta fase.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-linux" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Escalada en Linux</div>
+                        <div class="card-text">Binarios SUID/SGID, sudo mal configurado, capabilities excesivas y exploits de kernel sin parchear.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-windows" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Escalada en Windows</div>
+                        <div class="card-text">Unquoted service paths, DLL hijacking, token impersonation y abuso de SeImpersonate con JuicyPotato.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-block" data-lang="bash">
+                <code><span class="code-comment"># Enumeración automatizada con PEASS-ng</span>
+<span class="code-function">curl -L</span> https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh <span class="code-comment">| sh</span>
+
+<span class="code-comment"># Enumeración manual rápida en Linux</span>
+<span class="code-function">sudo -l</span>                        <span class="code-comment"># Binarios ejecutables con sudo</span>
+<span class="code-function">find / -perm -4000 -type f</span>    <span class="code-comment"># Binarios SUID</span>
+
+<span class="code-comment"># En Windows</span>
+<span class="code-function">winPEAS.exe</span>                     <span class="code-comment"># Enumeración de Windows</span></code>
+            </div>
+            <p>Antes de ejecutar cualquier script descargado, revísalo y verifícalo en un entorno aislado: el código proviene de terceros.</p>
+
+            <h2><i class="fas fa-user-secret" style="color: #ffc107;"></i> Persistencia y Evasión</h2>
+            <p>La persistencia garantiza el acceso al sistema tras reinicios o desconexiones, mientras que la evasión busca que el malware no sea detectado por AV o EDR. Ambas son técnicas de adversarios reales y también de operaciones defensivas.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-clock" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Persistencia Linux</div>
+                        <div class="card-text">Tareas cron, units de systemd persistentes, claves SSH autorizadas y archivos de inicio de shell.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-windows" style="color: #00c853;"></i></div>
+                        <div class="card-title">Persistencia Windows</div>
+                        <div class="card-text">Run keys del registro, servicios con binarios maliciosos y suscriptores WMI permanentes.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-shield-virus" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Evasión de AV</div>
+                        <div class="card-text">Obfuscación de código, packers/crypters y bypass de AMSI en Windows para evitar la detección estática.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-bolt" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">LOLBins</div>
+                        <div class="card-text">Binarios legítimos del sistema (powershell, mshta, certutil) usados para moverse sin levantar alertas.</div>
+                    </div>
+                </div>
+            </div>
+            <p>Toda técnica de evasión debe probarse antes en un sandbox y nunca debe usarse fuera de entornos autorizados.</p>
+
+            <h2><i class="fas fa-share-nodes" style="color: #ff6d00;"></i> Pivoting y Túneles</h2>
+            <p>El pivoting permite alcanzar segmentos de red internos a través de un host ya comprometido, convirtiéndolo en puente. Los túneles cifran y canalizan ese tráfico de forma discreta.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-door-open" style="color: #26a69a;"></i></div>
+                        <div class="card-title">SSH Local Forward</div>
+                        <div class="card-text">Redirige un puerto local a un servicio interno vía SSH con la opción -L.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-signal" style="color: #ffc107;"></i></div>
+                        <div class="card-title">SSH Dynamic</div>
+                        <div class="card-text">Crea un SOCKS proxy con -D para enrutar cualquier herramienta a través del host comprometido.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-random" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Chisel</div>
+                        <div class="card-text">Túneles sobre HTTP/WebSocket ideales cuando el tráfico directo de red está filtrado.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-route" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Metasploit Routing</div>
+                        <div class="card-text">La instrucción <code>route add</code> enruta el tráfico de sesiones Metasploit hacia redes internas.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-link" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">proxychains</div>
+                        <div class="card-text">Redirige el tráfico de herramientas como nmap a través del proxy SOCKS creado con SSH.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-block" data-lang="bash">
+                <code><span class="code-comment"># SSH local port forward: puerto local → servicio interno</span>
+<span class="code-function">ssh -L 8080:10.0.0.5:80 user@edge</span>
+
+<span class="code-comment"># SSH dynamic: SOCKS proxy para escaneo indirecto</span>
+<span class="code-function">ssh -D 1080 user@edge</span>
+
+<span class="code-comment"># Escaneo a través del túnel SOCKS</span>
+<span class="code-function">proxychains4 nmap -sT -Pn 10.0.0.0/24</span></code>
+            </div>
+
+            <h2><i class="fas fa-file-signature" style="color: #e040fb;"></i> Reporting y CVSS</h2>
+            <p>El informe es el entregable principal del pentest: traduce hallazgos técnicos en riesgo de negocio y guía las decisiones de remediación.</p>
+            <ul>
+                <li><strong>CVSS v3.1:</strong> vector base (AV/AC/PR/UI) con score de 0 a 10 y métricas de impacto.</li>
+                <li><strong>Severidad:</strong> clasificación en Critical / High / Medium / Low según el score.</li>
+                <li><strong>Hallazgos reproducibles:</strong> pasos exactos para que el cliente pueda verificar cada vulnerabilidad.</li>
+                <li><strong>Evidencia:</strong> capturas de pantalla, logs y POCs que respalden cada hallazgo.</li>
+                <li><strong>Priorización:</strong> orden de corrección por criticidad e impacto sobre el negocio.</li>
+                <li><strong>Remediación:</strong> solución propuesta con pasos concretos y estimación de esfuerzo.</li>
+            </ul>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-clipboard-check" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Hallazgo reproducible</div>
+                        <div class="card-text">Cada vulnerabilidad se documenta con pasos claros para su reproducción y verificación posterior.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-chart-line" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Impacto de negocio</div>
+                        <div class="card-text">Explica en términos de negocio qué ocurriría si la vulnerabilidad fuera explotada por un atacante real.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-lightbulb" style="color: #00c853;"></i></div>
+                        <div class="card-title">Recomendación</div>
+                        <div class="card-text">Acción correctiva concreta para mitigar o eliminar la vulnerabilidad de forma segura.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-calendar-check" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Plan de remediación</div>
+                        <div class="card-text">Hoja de ruta con prioridades, responsables y plazos para corregir los hallazgos más críticos.</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="section-nav"></div>
         </div>
     </main>
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="../js/theme.js"></script>
@@ -226,5 +580,6 @@ msf6> exploit</code>
         window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

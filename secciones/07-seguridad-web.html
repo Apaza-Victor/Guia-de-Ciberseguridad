@@ -15,53 +15,110 @@
     <div class="bg-3d-container"></div>
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -252,10 +309,303 @@ user = cursor.<span class="code-function">fetchone</span>()</code>
                 <div class="tool-card"><div class="tool-name">WPScan</div><div class="tool-desc">Scanner de vulnerabilidades para WordPress</div></div>
             </div>
 
+            <h2><i class="fas fa-list-check" style="color: var(--accent);"></i> OWASP Top 10 - Vulnerabilidades que faltan</h2>
+            <p>El <strong>OWASP Top 10</strong> es el estándar de referencia para comprender los riesgos más críticos en aplicaciones web. Esta sección completa las vulnerabilidades ya vistas (SQL Injection, XSS, CSRF y fallos de autenticación) con los riesgos restantes de la lista, para que tengas una visión integral del panorama.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-user-lock" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Broken Access Control / IDOR</div>
+                        <div class="card-text">Permite manipular identificadores (IDs) en URLs o peticiones para acceder a recursos ajenos, como ver documentos de otro usuario con solo cambiar el valor de un parámetro.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-cogs" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Security Misconfiguration</div>
+                        <div class="card-text">Configuraciones por defecto, cabeceras ausentes, directorios listables y errores verbosos que filtran información interna al atacante.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-drafting-compass" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Insecure Design</div>
+                        <div class="card-text">Fallos en la fase de diseño: falta de controles de negocio, límites de uso o modelos de confianza que la aplicación asume sin verificar.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-box-open" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Vulnerable and Outdated Components</div>
+                        <div class="card-text">Dependencias y librerías con CVEs conocidos sin actualizar. Revisa tu inventario con SBOM y herramientas de escaneo de dependencias.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-globe" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">SSRF (Server-Side Request Forgery)</div>
+                        <div class="card-text">El servidor es forzado a realizar peticiones a recursos internos (metadata cloud, redes privadas) que no deberían ser accesibles desde Internet.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-file-code" style="color: #e040fb;"></i></div>
+                        <div class="card-title">XXE (XML External Entity)</div>
+                        <div class="card-text">Entidades externas XML que permiten leer archivos locales, escanear puertos o lanzar ataques DoS al procesar documentos XML maliciosos.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="350">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-box" style="color: #26a69a;"></i></div>
+                        <div class="card-title">Insecure Deserialization</div>
+                        <div class="card-text">Objetos serializados maliciosos que, al deserializarse, ejecutan código arbitrario en el servidor. Evita formatos nativos y valida la integridad de los datos.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-cyber alert-warning">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <strong>Edición 2025:</strong> El OWASP Top 10 2025 incorpora los riesgos emergentes de la IA y los LLM, como la inyección de prompts, la exfiltración de datos por modelos y el abuso de agentes autónomos. Si construyes aplicaciones con IA, consulta además el OWASP LLM Top 10.
+                </div>
+            </div>
+
+            <h2><i class="fas fa-arrows-alt-h" style="color: var(--primary);"></i> Encabezados de Seguridad HTTP</h2>
+            <p>Los encabezados de respuesta HTTP indican al navegador cómo comportarse de forma segura. Configurarlos correctamente mitiga XSS, clickjacking, MIME sniffing, downgrade de HTTPS y otras amenazas, sin necesidad de modificar el código de la aplicación.</p>
+            <ul>
+                <li><strong>Content-Security-Policy (CSP):</strong> Restringe qué recursos (scripts, estilos, imágenes) puede cargar la página. Es la defensa principal contra XSS.</li>
+                <li><strong>Strict-Transport-Security (HSTS):</strong> Obliga al navegador a usar solo HTTPS y evita ataques de downgrade y SSL stripping.</li>
+                <li><strong>X-Frame-Options:</strong> Evita que la página sea incrustada en frames de terceros, bloqueando clickjacking.</li>
+                <li><strong>X-Content-Type-Options:</strong> Fuerza la interpretación del tipo MIME declarado (nosniff) e impide el MIME sniffing.</li>
+                <li><strong>Referrer-Policy:</strong> Controla cuánta información de la URL se envía al navegar hacia otros sitios.</li>
+                <li><strong>Permissions-Policy:</strong> Limita el uso de APIs del navegador (cámara, geolocalización, micrófono) dentro de la página.</li>
+                <li><strong>CORS:</strong> Define qué orígenes pueden acceder a los recursos de tu API; una configuración excesivamente permisiva expone datos a dominios maliciosos.</li>
+            </ul>
+            <div class="code-block" data-lang="headers">
+                <code><span class="code-comment"># Ejemplo de encabezados de seguridad en la respuesta HTTP</span>
+<span class="code-function">Content-Security-Policy</span>: <span class="code-string">default-src 'self'; script-src 'self'</span>
+<span class="code-function">Strict-Transport-Security</span>: <span class="code-string">max-age=31536000; includeSubDomains</span>
+<span class="code-function">X-Frame-Options</span>: <span class="code-string">DENY</span>
+<span class="code-function">X-Content-Type-Options</span>: <span class="code-string">nosniff</span></code>
+            </div>
+
+            <h2><i class="fas fa-cookie-bite" style="color: #ffc107;"></i> Cookies Seguras y Sesiones</h2>
+            <p>Las cookies mantienen la sesión del usuario, pero si se configuran mal, un atacante puede robarlas, reutilizarlas o forzar acciones en nombre de la víctima. Cada atributo de seguridad cumple una función concreta contra un vector de ataque distinto.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-eye-slash" style="color: var(--primary);"></i></div>
+                        <div class="card-title">HttpOnly</div>
+                        <div class="card-text">La cookie no es accesible desde JavaScript, lo que bloquea el robo de sesión mediante ataques XSS.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-lock" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Secure</div>
+                        <div class="card-text">La cookie solo se envía por HTTPS, evitando que viaje en claro por HTTP y pueda ser interceptada en la red.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-exchange-alt" style="color: var(--accent);"></i></div>
+                        <div class="card-title">SameSite</div>
+                        <div class="card-text">Strict, Lax o None controla el envío de la cookie en peticiones entre sitios. Es un pilar en la defensa contra CSRF.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-user-secret" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Session Fixation / Hijacking</div>
+                        <div class="card-text">El atacante impone (fixation) o roba (hijacking) el ID de sesión. Mitiga regenerando el ID tras el login y validando el origen de la petición.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-tag" style="color: #e040fb;"></i></div>
+                        <div class="card-title">Cookie Prefixes</div>
+                        <div class="card-text">Los prefijos __Host- y __Secure- obligan al navegador a aceptar la cookie solo bajo condiciones estrictas (HTTPS, dominio exacto).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-clock" style="color: #00c853;"></i></div>
+                        <div class="card-title">Expiración y rotación de sesión</div>
+                        <div class="card-text">Sesiones con expiración corta y rotación periódica del ID reducen la ventana de tiempo en la que un token robado sigue siendo válido.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-cyber alert-danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <strong>El riesgo de omitir un atributo:</strong> sin HttpOnly un XSS roba la cookie; sin Secure viaja en claro por HTTP; sin SameSite el navegador la envía en peticiones cruzadas (CSRF). Configúralas siempre: <strong>Set-Cookie: session=...; HttpOnly; Secure; SameSite=Strict</strong>.
+                </div>
+            </div>
+
+            <h2><i class="fas fa-code-branch" style="color: var(--primary);"></i> Seguridad de APIs</h2>
+            <p>Las APIs exponen la lógica y los datos de tu aplicación a clientes y terceros, por lo que son un objetivo prioritario. Una API segura combina autenticación robusta, autorización por objeto y control de abuso.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-list-ol" style="color: var(--accent);"></i></div>
+                        <div class="card-title">OWASP API Top 10</div>
+                        <div class="card-text">Lista de riesgos específicos de APIs: broken object-level authorization, mass assignment, exceso de datos en respuestas y falta de rate limiting.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-id-card" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">JWT (JSON Web Token)</div>
+                        <div class="card-text">Estructura header.payload.signature. Vigila los ataques de confusion de algoritmo (alg confusion) y valida siempre la expiración del token.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-tachometer-alt" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Rate Limiting</div>
+                        <div class="card-text">Limita el número de peticiones por usuario y ventana de tiempo; bloquea fuerza bruta, credential stuffing y ataques de lógica.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-handshake" style="color: #26a69a;"></i></div>
+                        <div class="card-title">OAuth2 / OpenID Connect</div>
+                        <div class="card-text">Flujos de autorización y autenticación delegada con tokens de acceso, refresh tokens e ID tokens. Valida audience y expiración en cada uso.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-key" style="color: var(--primary);"></i></div>
+                        <div class="card-title">API Keys y secretos</div>
+                        <div class="card-text">Nunca almacenes claves en el frontend ni en repositorios. Usa gestores de secretos y rota o revoca inmediatamente las claves comprometidas.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-filter" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Validación de entradas</div>
+                        <div class="card-text">Valida y sanitiza todo lo que llegue a tus endpoints: tipos, rangos, formatos y valores permitidos, tanto en el cuerpo como en la URL.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="code-block" data-lang="json">
+                <code><span class="code-comment"># JWT decodificado: header.payload.signature (Base64Url)</span>
+<span class="code-function">header</span>    = <span class="code-string">{"alg":"HS256","typ":"JWT"}</span>
+<span class="code-function">payload</span>   = <span class="code-string">{"sub":"12345","name":"ana","iat":1710000000,"exp":1710003600}</span>
+<span class="code-function">signature</span> = <span class="code-string">HMACSHA256(base64url(header) + "." + base64url(payload), secreto)</span>
+
+<span class="code-comment"># sub = sujeto (usuario) | iat = emitido en | exp = expiración</span>
+<span class="code-comment"># Riesgos: no verificar "alg", secretos débiles, ignorar "exp"</span>
+<span class="code-comment"># ✅ Validar siempre firma, expiración y autorización por objeto</span></code>
+            </div>
+
+            <h2><i class="fas fa-fingerprint" style="color: var(--secondary);"></i> Autenticación y MFA</h2>
+            <p>La autenticación verifica quién es el usuario antes de concederle acceso. El factor único (la contraseña) ya no es suficiente: el MFA combina varias pruebas de identidad y bloquea la gran mayoría de los ataques basados en credenciales robadas o adivinadas.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-layer-group" style="color: var(--primary);"></i></div>
+                        <div class="card-title">MFA</div>
+                        <div class="card-text">Algo que sabes (contraseña), algo que eres (biometría) y algo que tienes (token). Combina al menos dos factores independientes.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-clock" style="color: var(--accent);"></i></div>
+                        <div class="card-title">TOTP / HOTP</div>
+                        <div class="card-text">Códigos temporales basados en tiempo o en contador (p. ej. Google Authenticator). Más seguros que el SMS e inmunes al SIM swapping.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-key" style="color: #00c853;"></i></div>
+                        <div class="card-title">WebAuthn / Passkeys</div>
+                        <div class="card-text">Autenticación con claves de hardware o biométricas mediante criptografía de clave pública: sin contraseñas que robar ni phishing posible.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-share-alt" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">OAuth2 y SAML</div>
+                        <div class="card-text">Identidad federada: delegas la autenticación en proveedores de identidad (Google, Azure AD) y gestionas los accesos de forma centralizada.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-shield-alt" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Brute force protection</div>
+                        <div class="card-text">Bloqueo tras N intentos fallidos (lockout), retardos progresivos, CAPTCHA y rate limiting en el formulario de login.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-unlock-alt" style="color: #26a69a;"></i></div>
+                        <div class="card-title">Passwordless</div>
+                        <div class="card-text">Elimina las contraseñas usando magic links, passkeys o biometría. Menos superficie de ataque y una mejor experiencia de usuario.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-cyber alert-success">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <strong>¿Por qué MFA bloquea la mayoría de los ataques?</strong> La mayor parte de los incidentes relacionados con cuentas se deben a credenciales robadas, filtradas o reutilizadas (credential stuffing). Incluso si el atacante obtiene la contraseña, sin el segundo factor no puede completar el acceso: el MFA convierte una credencial comprometida en un dato inútil.
+                </div>
+            </div>
+
+            <h2><i class="fas fa-terminal" style="color: var(--accent);"></i> Inyección de Comandos y Otras Inyecciones</h2>
+            <p>Más allá del SQL, los datos del usuario pueden acabar interpretados como comandos del sistema, consultas LDAP, plantillas, includes de servidor o encabezados HTTP. El principio es siempre el mismo: tratar los datos como datos y el código como código.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-terminal" style="color: var(--accent);"></i></div>
+                        <div class="card-title">OS Command Injection</div>
+                        <div class="card-text">Ejecución de comandos del sistema operativo a través de inputs mal validados que terminan concatenados en una shell del servidor.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-address-book" style="color: var(--primary);"></i></div>
+                        <div class="card-title">LDAP Injection</div>
+                        <div class="card-text">Manipulación de filtros LDAP para eludir la autenticación o enumerar el directorio (Active Directory) sin conocer credenciales.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-code" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Template Injection (SSTI)</div>
+                        <div class="card-text">Explotación de motores de plantillas (Jinja2, Twig, Freemarker) para ejecutar código arbitrario en el servidor.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-file-alt" style="color: #ffc107;"></i></div>
+                        <div class="card-title">SSI Injection</div>
+                        <div class="card-text">Inyección de directivas de Server-Side Includes (&lt;!--#exec cmd--&gt;) en páginas .shtml para ejecutar comandos del sistema.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-angles-right" style="color: #e040fb;"></i></div>
+                        <div class="card-title">CRLF Injection</div>
+                        <div class="card-text">Inserción de caracteres de retorno y salto de línea para inyectar encabezados HTTP arbitrarios, con cache poisoning o XSS como consecuencia.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="code-block" data-lang="bash">
+                <code><span class="code-comment"># Payloads de inyección de comandos en inputs sin sanitizar:</span>
+; ls -la
+$(id)
+`id`
+|| whoami
+
+<span class="code-comment"># Cualquiera de ellos ejecuta comandos con los privilegios del servidor</span>
+<span class="code-comment"># ✅ Mitigación: validación estricta + allowlist de caracteres,</span>
+<span class="code-comment">#   comandos y rutas; usar APIs seguras en lugar de shells</span></code>
+            </div>
+
             <div class="section-nav"></div>
         </div>
     </main>
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="../js/theme.js"></script>
@@ -285,5 +635,6 @@ user = cursor.<span class="code-function">fetchone</span>()</code>
         window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

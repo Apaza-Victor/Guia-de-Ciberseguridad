@@ -15,53 +15,110 @@
     <div class="bg-3d-container"></div>
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -192,10 +249,217 @@ decrypted = cipher.<span class="code-function">decrypt</span>(encrypted)
                 <div class="tool-card"><div class="tool-name">SPHINCS+</div><div class="tool-desc">Firma basada en hashes. Alternativa a lattice-based</div></div>
             </div>
 
+            <h2><i class="fas fa-lock" style="color: var(--primary);"></i> Algoritmos de Cifrado Simétrico</h2>
+            <p>Los cifrados simétricos usan una misma clave para cifrar y descifrar. Son extremadamente rápidos y adecuados para grandes volúmenes de datos, pero requieren una distribución segura de la clave. La elección del <strong>modo de operación</strong> es tan importante como el algoritmo: el modo ECB cifra cada bloque de forma independiente y <strong>filtra patrones</strong> en los datos, por lo que nunca debe utilizarse.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-microchip" style="color: var(--primary);"></i> AES-256</div>
+                        <p class="card-text">Estándar de facto para cifrado simétrico. Clave de 256 bits y bloque de 128 bits. Sus modos más usados son <strong>ECB</strong> (inseguro), <strong>CBC</strong> (encadenamiento) y <strong>GCM</strong> (recomendado, añade autenticación e integridad).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-bolt" style="color: var(--accent);"></i> ChaCha20</div>
+                        <p class="card-text">Cifrado de flujo extremadamente rápido en software, sin depender de aceleración por hardware. Junto con Poly1305 se usa en <strong>TLS 1.3</strong>, WireGuard y SSH.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-skull" style="color: #ff6d00;"></i> 3DES</div>
+                        <p class="card-text">Triple DES (bloque de 64 bits, clave efectiva de 112 bits). Vulnerable a ataques de cumpleaños y obsoleto: <strong>no debe usarse</strong> en sistemas nuevos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-exchange-alt" style="color: var(--secondary);"></i> Algoritmos Asimétricos y Difusión de Claves</h2>
+            <p>El cifrado asimétrico utiliza un par de claves (pública y privada) y resuelve el problema de la distribución: la clave pública puede viajar libremente. Además de cifrar, permite el <strong>intercambio de claves</strong> para acordar un secreto compartido sin exponerlo a terceros.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-percentage" style="color: var(--primary);"></i> RSA</div>
+                        <p class="card-text">Seguridad basada en la dificultad de factorizar números primos grandes. Se recomienda un mínimo de <strong>2048 bits</strong>; 4096 bits para datos de alta sensibilidad.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-chart-line" style="color: var(--accent);"></i> ECC / ECDSA / Ed25519</div>
+                        <p class="card-text">Criptografía de curvas elípticas: ofrece la misma seguridad que RSA con claves mucho más cortas (256 bits ≈ RSA 3072). <strong>Ed25519</strong> es la opción moderna para firmas en SSH y TLS.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-handshake" style="color: #26a69a;"></i> Diffie-Hellman</div>
+                        <p class="card-text">Protocolo de <strong>intercambio de claves</strong>: dos partes acuerdan un secreto compartido sin enviarlo por el canal. La variante efímera (DHE/ECDHE) aporta <em>forward secrecy</em>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="code-block" data-lang="bash">
+                <code><span class="code-comment"># Generar par de claves RSA de 4096 bits</span>
+<span class="code-function">openssl</span> genrsa -out clave.pem 4096
+<span class="code-function">openssl</span> rsa -pubout -in clave.pem -out clave.pub
+
+<span class="code-comment"># Cifrar un archivo con la clave pública</span>
+<span class="code-function">openssl</span> pkeyutl -encrypt -in mensaje.txt \
+  -pubin -inkey clave.pub -out mensaje.cifrado
+
+<span class="code-comment"># Firmar digitalmente un documento</span>
+<span class="code-function">openssl</span> pkeyutl -sign -in documento.txt -inkey clave.pem -out documento.sig</code>
+            </div>
+
+            <h2><i class="fas fa-sort-amount-up" style="color: var(--accent);"></i> Handshake TLS paso a paso</h2>
+            <p>Cuando un cliente se conecta a un servidor HTTPS, ambos ejecutan el <strong>handshake TLS</strong>: una secuencia de mensajes que negocia parámetros, autentica al servidor y deriva las claves de sesión que protegerán la comunicación.</p>
+            <ol>
+                <li><strong>ClientHello:</strong> el cliente envía los protocolos TLS soportados y las suites de cifrado que acepta.</li>
+                <li><strong>ServerHello + Certificado:</strong> el servidor elige la suite y presenta su certificado X.509 con la clave pública.</li>
+                <li><strong>Intercambio de claves:</strong> mediante <strong>ECDHE</strong> (curvas elípticas efímeras) se acuerda un secreto compartido sin exponerlo.</li>
+                <li><strong>Verificación del certificado:</strong> el cliente valida la firma y la cadena de confianza hasta la CA raíz.</li>
+                <li><strong>Generación de claves de sesión:</strong> ambas partes derivan las claves simétricas (AES-GCM) que cifrarán los datos.</li>
+                <li><strong>Aplicación cifrada:</strong> la comunicación HTTPS queda protegida y operativa.</li>
+            </ol>
+            <div class="alert-cyber alert-info">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>Forward secrecy:</strong> con ECDHE las claves son <em>efímeras</em> (nuevas en cada sesión). Aunque un atacante robe la clave privada a largo plazo del servidor, <strong>no podrá descifrar</strong> tráfico capturado anteriormente.</div>
+            </div>
+
+            <h2><i class="fas fa-bug" style="color: #e040fb;"></i> Vulnerabilidades Criptográficas Históricas</h2>
+            <p>La historia de la criptografía está llena de fallos que enseñaron lecciones importantes. Cada uno de estos ataques fue posible por errores de implementación o de diseño, no por algoritmos matemáticamente débiles.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-heart-crack" style="color: #e040fb;"></i> Heartbleed</div>
+                        <p class="card-text"><strong>CVE-2014-0160.</strong> Fuga de memoria en OpenSSL (extensión Heartbeat) que permitía leer la RAM del servidor y robar claves privadas. <em>Lección:</em> las librerías criptográficas deben auditarse y actualizarse.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-sort-down" style="color: #ffc107;"></i> POODLE</div>
+                        <p class="card-text">Ataque de <em>downgrade</em> que obligaba a los clientes a retroceder a <strong>SSL 3.0</strong>, permitiendo descifrar el tráfico. <em>Lección:</em> desactivar protocolos antiguos y no permitir la negociación hacia abajo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-eraser" style="color: #26a69a;"></i> Padding Oracle</div>
+                        <p class="card-text">El servidor revelaba errores de padding que permitían <strong>descifrar datos bloque a bloque</strong> sin conocer la clave. <em>Lección:</em> usar modos autenticados (GCM) y respuestas de error uniformes.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-burst" style="color: #ff6d00;"></i> Colisiones SHA-1 y MD5</div>
+                        <p class="card-text">Ambos hashes sufren <strong>colisiones</strong> (dos entradas con el mismo hash) explotables para falsificar documentos y certificados. <em>Lección:</em> deprecados; usar SHA-256 o SHA-3.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-rotate-left" style="color: var(--accent);"></i> Reutilización de Nonce</div>
+                        <p class="card-text">En WEP/TKIP, reutilizar el vector de inicialización (nonce) exponía la clave RC4. <em>Lección:</em> cada cifrado debe usar un <strong>nonce único</strong>; la reutilización destruye la confidencialidad.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-graduation-cap" style="color: var(--primary);"></i> Lecciones clave</div>
+                        <p class="card-text">El eslabón más débil suele ser la <strong>implementación o el uso</strong>, no el algoritmo. Criptografía moderna: algoritmos auditados, modos autenticados y actualización constante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-user-lock" style="color: #00c853;"></i> Almacenamiento Seguro de Contraseñas</h2>
+            <p>Nunca se debe almacenar la contraseña en texto plano ni con hashes rápidos. Los algoritmos de hashing generales (MD5, SHA-1, SHA-256) se pueden forzar por fuerza bruta a millones de intentos por segundo.</p>
+            <ul>
+                <li><strong>No usar MD5/SHA1:</strong> son demasiado rápidos; un atacante prueba miles de millones de combinaciones por segundo.</li>
+                <li><strong>Funciones de derivación lentas:</strong> <code>bcrypt</code>, <code>scrypt</code> y <code>argon2</code> son intencionadamente costosas en CPU y memoria.</li>
+                <li><strong>Sal (salting):</strong> añade un valor aleatorio único por usuario para evitar tablas rainbow y que dos contraseñas iguales no generen el mismo hash.</li>
+                <li><strong>Pepper:</strong> un secreto del servidor mezclado con el hash, de modo que sin acceso al servidor el ataque es inviable.</li>
+                <li><strong>Comparación en tiempo constante:</strong> la verificación no debe revelar cuántos caracteres coinciden.</li>
+                <li><strong>Gestores de contraseñas:</strong> generan y almacenan claves únicas y largas para cada sitio.</li>
+            </ul>
+            <div class="code-block" data-lang="python">
+                <code><span class="code-comment"># Hash de contraseña con argon2 en Python</span>
+<span class="code-keyword">from</span> argon2 <span class="code-keyword">import</span> PasswordHasher
+
+ph = <span class="code-function">PasswordHasher</span>()
+
+<span class="code-comment"># Generar el hash (sal aleatoria automática)</span>
+hash_guardado = ph.<span class="code-function">hash</span>(<span class="code-string">"MiContraseñaSegura"</span>)
+
+<span class="code-comment"># Verificar en tiempo constante</span>
+<span class="code-function">print</span>(ph.<span class="code-function">verify</span>(hash_guardado, <span class="code-string">"MiContraseñaSegura"</span>))</code>
+            </div>
+
+            <h2><i class="fas fa-vault" style="color: var(--secondary);"></i> Gestión de Claves y Secretos</h2>
+            <p>Por muy fuerte que sea un algoritmo, su seguridad depende de la clave. La gestión de claves suele ser <strong>el eslabón más débil</strong> de la criptografía: claves mal guardadas, poco rotadas o embebidas en el código comprometen todo el sistema.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-server" style="color: var(--primary);"></i> KMS</div>
+                        <p class="card-text">Servicio de gestión centralizada de claves (AWS KMS, Azure Key Vault, GCP KMS). Genera, rota y controla el acceso a las claves de forma centralizada y auditada.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-hard-drive" style="color: var(--accent);"></i> HSM</div>
+                        <p class="card-text">Módulo de seguridad por hardware: dispositivos físicos a prueba de manipulación donde las claves <strong>nunca salen</strong> del dispositivo. Usados por bancos y CA.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-rotate-right" style="color: #00c853;"></i> Rotación de Claves</div>
+                        <p class="card-text">Reemplazar las claves periódicamente limita el daño en caso de filtración. Las políticas modernas rotan claves automáticamente con un ciclo de vida definido.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-shield-halved" style="color: #ffc107;"></i> Custodia (Key Escrow)</div>
+                        <p class="card-text">Copia de seguridad de las claves bajo custodia de terceros o del proveedor, pensada para recuperación y cumplimiento. Debe protegerse tanto como la propia clave.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-lock" style="color: #e040fb;"></i> Secretos en Aplicaciones</div>
+                        <p class="card-text">Nunca incrustar secretos en el código ni en repositorios. Herramientas como <strong>HashiCorp Vault</strong> centralizan y cifran secretos con acceso granular y rotación automática.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-triangle-exclamation" style="color: #ff6d00;"></i> El eslabón débil</div>
+                        <p class="card-text">La mayoría de filtraciones criptográficas provienen de claves mal gestionadas, no de algoritmos rotos. La gestión de claves es la parte más difícil y crítica de la criptografía.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-signature" style="color: var(--accent);"></i> Firma Digital</h2>
+            <p>Una firma digital es el <strong>hash del mensaje cifrado con la clave privada</strong> del firmante. Cualquiera puede verificarla con la clave pública, lo que garantiza integridad, autenticidad y no repudio. Herramientas como GPG integran la firma en flujos de correo y paquetes de software.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-file-invoice" style="color: #00c853;"></i> Integridad</div>
+                        <p class="card-text">Si el documento cambia una sola letra, la verificación de la firma falla.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-user-check" style="color: var(--primary);"></i> Autenticidad</div>
+                        <p class="card-text">El emisor se identifica porque solo él posee la clave privada.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-ban" style="color: #ff6d00;"></i> No repudio</div>
+                        <p class="card-text">El firmante no puede negar haber firmado: la firma depende de su clave privada.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-magnifying-glass" style="color: var(--accent);"></i> Verificación</div>
+                        <p class="card-text">Se usa la clave pública del firmante para comprobar la firma.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="section-nav"></div>
         </div>
     </main>
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="../js/theme.js"></script>
@@ -230,5 +494,6 @@ decrypted = cipher.<span class="code-function">decrypt</span>(encrypted)
         window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

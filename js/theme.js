@@ -23,44 +23,150 @@ document.addEventListener('DOMContentLoaded', () => {
   // initCardTilt(); // Disabled - cards are now static for better readability
   initSectionNav();
   initParallax();
-  initCloseMenuOnClickOutside();
+  initMobileMenu();
+  initScrollTop();
+  initDropdownBehavior();
 });
 
 // ============================================
-// CERRAR MENÚ AL HACER CLIC FUERA
+// MENÚ MÓVIL (hamburguesa) - control total
 // ============================================
-function initCloseMenuOnClickOutside() {
-  const navbarCollapse = document.querySelector('.navbar-collapse');
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  
-  if (!navbarCollapse || !navbarToggler) return;
-  
-  document.addEventListener('click', (e) => {
-    const isClickInsideNavbar = e.target.closest('.navbar-cyber');
-    const isMenuOpen = navbarCollapse.classList.contains('show');
-    
-    if (isMenuOpen && !isClickInsideNavbar) {
-      // Close the menu
-      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-      if (bsCollapse) {
-        bsCollapse.hide();
-      } else {
-        navbarCollapse.classList.remove('show');
-      }
+function initMobileMenu() {
+  const toggler = document.querySelector('.navbar-toggler');
+  const collapse = document.querySelector('.navbar-collapse');
+  if (!toggler || !collapse) return;
+
+  // Desactiva Bootstrap: el menú se controla 100% manual (evita doble toggle)
+  toggler.removeAttribute('data-bs-toggle');
+  toggler.removeAttribute('data-bs-target');
+  if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+    const inst = bootstrap.Collapse.getInstance(collapse);
+    if (inst) inst.dispose();
+  }
+
+  const openMenu = () => {
+    collapse.classList.add('show');
+    toggler.classList.add('toggler-open');
+    toggler.setAttribute('aria-expanded', 'true');
+    toggler.setAttribute('aria-label', 'Cerrar menú');
+    document.body.classList.add('menu-open');
+  };
+
+  const closeMenu = () => {
+    collapse.classList.remove('show');
+    toggler.classList.remove('toggler-open');
+    toggler.setAttribute('aria-expanded', 'false');
+    toggler.setAttribute('aria-label', 'Abrir menú');
+    document.body.classList.remove('menu-open');
+
+    // Cerrar también el submenú de Secciones si estaba abierto
+    collapse.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+      menu.classList.remove('show');
+      const toggle = menu.closest('.nav-item.dropdown')?.querySelector('.dropdown-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  // Control manual: evita que Bootstrap (data-api) interfiera con el toggle
+  toggler.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (collapse.classList.contains('show')) {
+      closeMenu();
+    } else {
+      openMenu();
     }
   });
-  
-  // Also close menu when clicking on a nav link
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
+
+  // Cerrar al hacer clic fuera del header
+  document.addEventListener('click', (e) => {
+    if (collapse.classList.contains('show') && !e.target.closest('.navbar-cyber')) {
+      closeMenu();
+    }
+  });
+
+  // Cerrar al navegar (enlaces y elementos de Secciones, excepto el toggle del dropdown)
+  collapse.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
     link.addEventListener('click', () => {
-      if (navbarCollapse.classList.contains('show')) {
-        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-        if (bsCollapse) {
-          bsCollapse.hide();
-        } else {
-          navbarCollapse.classList.remove('show');
-        }
+      if (link.classList.contains('dropdown-toggle')) return;
+      closeMenu();
+    });
+  });
+
+  // Al volver a desktop se restablece el menú
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992) closeMenu();
+  });
+}
+
+// ============================================
+// BOTÓN VOLVER ARRIBA
+// ============================================
+function initScrollTop() {
+  const btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 300) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  };
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ============================================
+// DROPDOWN SECCIONES (hover + clic, cierre automático)
+// ============================================
+function initDropdownBehavior() {
+  document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+    const toggle = item.querySelector('.dropdown-toggle');
+    const menu = item.querySelector('.dropdown-menu');
+    if (!toggle || !menu) return;
+
+    // Clic: abre / cierra el menú
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = menu.classList.contains('show');
+      if (isOpen) {
+        menu.classList.remove('show');
+        item.classList.add('force-closed'); // evita que el hover lo mantenga abierto
+      } else {
+        item.classList.remove('force-closed');
+        menu.classList.add('show');
+      }
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Al salir el mouse: cerrar automáticamente
+    item.addEventListener('mouseleave', () => {
+      menu.classList.remove('show');
+      item.classList.remove('force-closed');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+
+    // Al volver a entrar: quitar el bloqueo de cierre por clic
+    item.addEventListener('mouseenter', () => {
+      item.classList.remove('force-closed');
+    });
+  });
+
+  // Cerrar al hacer clic fuera del menú
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+      if (!item.contains(e.target)) {
+        const menu = item.querySelector('.dropdown-menu');
+        const toggle = item.querySelector('.dropdown-toggle');
+        if (menu) menu.classList.remove('show');
+        item.classList.remove('force-closed');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
       }
     });
   });
@@ -94,30 +200,23 @@ function initThemeToggle() {
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateToggleUI(savedTheme);
 
-  toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateToggleUI(newTheme);
-  });
+  toggleBtn.addEventListener('click', cycleTheme);
+}
+
+function cycleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateToggleUI(newTheme);
 }
 
 function updateToggleUI(theme) {
-  const toggleBtn = document.getElementById('themeToggle');
-  if (!toggleBtn) return;
-  
-  const icon = toggleBtn.querySelector('i');
-  const text = toggleBtn.querySelector('span');
-  
-  if (theme === 'dark') {
-    icon.className = 'fas fa-moon';
-    text.textContent = 'Dark';
-  } else {
-    icon.className = 'fas fa-sun';
-    text.textContent = 'Light';
-  }
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    const icon = btn.querySelector('i');
+    if (!icon) return;
+    icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+  });
 }
 
 // ============================================
@@ -569,8 +668,10 @@ function initParallax() {
 document.addEventListener('click', (e) => {
   const link = e.target.closest('a[href^="#"]');
   if (link) {
+    const href = link.getAttribute('href');
+    if (!href || href === '#') return; // Skip empty or bare # links (dropdown toggles etc)
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -648,3 +749,181 @@ function initImageZoom() {
 }
 
 document.addEventListener('DOMContentLoaded', initImageZoom);
+
+
+
+// ============================================
+// SEARCH FUNCTIONALITY
+// ============================================
+const SEARCH_DATA = [
+  { title: 'Introducción a la Ciberseguridad', section: 'Sección 01', url: 'secciones/01-introduccion.html', icon: 'fa-shield-halved', keywords: 'fundamentos historia cia principios dominios' },
+  { title: 'Amenazas y Vulnerabilidades', section: 'Sección 02', url: 'secciones/02-amenazas.html', icon: 'fa-bug', keywords: 'malware virus ransomware phishing exploit' },
+  { title: 'Redes y Protocolos', section: 'Sección 03', url: 'secciones/03-redes.html', icon: 'fa-network-wired', keywords: 'osi tcp ip firewalls ids ips vpn segmentacion' },
+  { title: 'Criptografía', section: 'Sección 04', url: 'secciones/04-criptografia.html', icon: 'fa-lock', keywords: 'cifrado simetrico asimetrico hash pki tls ssl' },
+  { title: 'Seguridad SO', section: 'Sección 05', url: 'secciones/05-sistemas.html', icon: 'fa-server', keywords: 'hardening permisos logs auditoria selinux windows linux' },
+  { title: 'Hacking Ético', section: 'Sección 06', url: 'secciones/06-hacking.html', icon: 'fa-user-secret', keywords: 'pentesting reconocimiento escaneo explotacion metasploit' },
+  { title: 'Seguridad Web', section: 'Sección 07', url: 'secciones/07-seguridad-web.html', icon: 'fa-globe', keywords: 'owasp xss sql injection csrf apis autenticacion' },
+  { title: 'Forense Digital', section: 'Sección 08', url: 'secciones/08-forense.html', icon: 'fa-search', keywords: 'analisis malware cadena custodia investigacion incidentes' },
+  { title: 'Normativas', section: 'Sección 09', url: 'secciones/09-normativas.html', icon: 'fa-gavel', keywords: 'iso 27001 gdpr pci dss compliance riesgos auditoria' },
+  { title: 'Certificaciones', section: 'Sección 10', url: 'secciones/10-certificaciones.html', icon: 'fa-award', keywords: 'ceh oscp cissp comptia security carrera aprendizaje' },
+  { title: 'Herramientas del Arsenal', section: 'Herramientas', url: 'herramientas.html', icon: 'fa-tools', keywords: 'kali wireshark metasploit nmap burp suite john nessus zap' },
+  { title: 'Comandos Esenciales', section: 'Comandos', url: 'comandos.html', icon: 'fa-terminal', keywords: 'nmap linux hashing red wifi criptografia metasploit web' },
+  { title: 'Recursos y Enlaces', section: 'Recursos', url: 'recursos.html', icon: 'fa-link', keywords: 'hackthebox tryhackme vulnhub overthewire picoctf virustotal' },
+  { title: 'Kali Linux', section: 'Herramientas', url: 'herramientas.html', icon: 'fa-terminal', keywords: 'distribucion pentesting herramientas seguridad' },
+  { title: 'Wireshark', section: 'Herramientas', url: 'herramientas.html', icon: 'fa-wifi', keywords: 'analisis protocolos red captura trafico' },
+  { title: 'Metasploit', section: 'Herramientas', url: 'herramientas.html', icon: 'fa-bug', keywords: 'framework exploits penetracion testing' },
+  { title: 'Nmap', section: 'Herramientas', url: 'herramientas.html', icon: 'fa-network-wired', keywords: 'escaneo redes auditoria puertos servicios' },
+  { title: 'Burp Suite', section: 'Herramientas', url: 'herramientas.html', icon: 'fa-lock', keywords: 'testing seguridad web proxy scanner' },
+  { title: 'OWASP Top 10', section: 'Sección 07', url: 'secciones/07-seguridad-web.html', icon: 'fa-globe', keywords: 'vulnerabilidades web inyeccion broken authentication' },
+  { title: 'Modelo OSI', section: 'Sección 03', url: 'secciones/03-redes.html', icon: 'fa-network-wired', keywords: 'capas protocolos red comunicacion' },
+  { title: 'Principios CIA', section: 'Sección 01', url: 'secciones/01-introduccion.html', icon: 'fa-shield-halved', keywords: 'confidencialidad integridad disponibilidad seguridad' },
+  { title: 'Fases del Pentesting', section: 'Sección 06', url: 'secciones/06-hacking.html', icon: 'fa-user-secret', keywords: 'reconocimiento escaneo explotacion post-explotacion informe' },
+  { title: 'CompTIA Security+', section: 'Sección 10', url: 'secciones/10-certificaciones.html', icon: 'fa-award', keywords: 'certificacion basica principiante seguridad' },
+  { title: 'OSCP', section: 'Sección 10', url: 'secciones/10-certificaciones.html', icon: 'fa-award', keywords: 'certificacion pentesting ofensiva avanzada' },
+  { title: 'CISSP', section: 'Sección 10', url: 'secciones/10-certificaciones.html', icon: 'fa-award', keywords: 'certificacion gestion seguridad senior experto' },
+  { title: 'Ransomware', section: 'Sección 02', url: 'secciones/02-amenazas.html', icon: 'fa-bug', keywords: 'malware cifrado datos secuestro bitcoin' },
+  { title: 'SQL Injection', section: 'Sección 07', url: 'secciones/07-seguridad-web.html', icon: 'fa-globe', keywords: 'inyeccion sql base datos vulnerabilidad web' },
+  { title: 'XSS', section: 'Sección 07', url: 'secciones/07-seguridad-web.html', icon: 'fa-globe', keywords: 'cross-site scripting javascript inyeccion' },
+  { title: 'Zero Trust', section: 'Sección 01', url: 'secciones/01-introduccion.html', icon: 'fa-shield-halved', keywords: 'arquitectura seguridad nunca confiar verificar' },
+  { title: 'Firewall', section: 'Sección 03', url: 'secciones/03-redes.html', icon: 'fa-network-wired', keywords: 'cortafuegos filtro trafico reglas seguridad' },
+  { title: 'VPN', section: 'Sección 03', url: 'secciones/03-redes.html', icon: 'fa-network-wired', keywords: 'red privada virtual cifrado tunel wireguard openvpn' },
+  { title: 'GDPR', section: 'Sección 09', url: 'secciones/09-normativas.html', icon: 'fa-gavel', keywords: 'proteccion datos privacidad europea regulacion' },
+  { title: 'ISO 27001', section: 'Sección 09', url: 'secciones/09-normativas.html', icon: 'fa-gavel', keywords: 'estandar seguridad informacion gestion riesgos' },
+  { title: 'Hack The Box', section: 'Recursos', url: 'recursos.html', icon: 'fa-link', keywords: 'plataforma practica maquinas vulnerables pentesting' },
+  { title: 'TryHackMe', section: 'Recursos', url: 'recursos.html', icon: 'fa-link', keywords: 'plataforma aprendizaje guiado labs practicos' },
+];
+
+function initSearch() {
+  // Create inline search bar HTML
+  const searchBar = document.createElement('div');
+  searchBar.className = 'search-bar';
+  searchBar.id = 'searchBar';
+  searchBar.innerHTML = `
+    <input type="text" class="search-bar-input" id="searchInput" placeholder="Buscar en la guía..." autocomplete="off">
+    <button class="search-bar-close" id="searchClose"><i class="fas fa-times"></i></button>
+    <div class="search-bar-results" id="searchResults"></div>
+  `;
+
+  // Insert search bar into each navbar (before the icons)
+  document.querySelectorAll('.navbar-cyber > .container-fluid').forEach(container => {
+    const clonedBar = searchBar.cloneNode(true);
+    const icons = container.querySelector('.navbar-icons');
+    if (icons) {
+      container.insertBefore(clonedBar, icons);
+    }
+  });
+
+  // Event listeners for search toggle buttons
+  document.querySelectorAll('.search-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleSearch(btn);
+    });
+  });
+
+  // Close search when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-bar')) {
+      closeAllSearch();
+    }
+  });
+
+  // Input event for search
+  document.querySelectorAll('.search-bar-input').forEach(input => {
+    input.addEventListener('input', (e) => {
+      performSearch(e.target.value, input.closest('.search-bar'));
+    });
+    input.addEventListener('click', (e) => e.stopPropagation());
+  });
+
+  // Close buttons
+  document.querySelectorAll('.search-bar-close').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeAllSearch();
+    });
+  });
+
+  // Keyboard shortcut: Ctrl+K or Cmd+K
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      const firstBar = document.querySelector('.search-bar');
+      if (firstBar) toggleSearch(null, firstBar);
+    }
+    if (e.key === 'Escape') {
+      closeAllSearch();
+    }
+  });
+}
+
+function toggleSearch(btn, bar) {
+  const searchBar = bar || (btn ? btn.closest('.container-fluid').querySelector('.search-bar') : null);
+  if (!searchBar) return;
+
+  const isActive = searchBar.classList.contains('active');
+  closeAllSearch();
+
+  if (!isActive) {
+    searchBar.classList.add('active');
+    const input = searchBar.querySelector('.search-bar-input');
+    if (input) setTimeout(() => input.focus(), 100);
+  }
+}
+
+function closeAllSearch() {
+  document.querySelectorAll('.search-bar').forEach(bar => {
+    bar.classList.remove('active');
+    const input = bar.querySelector('.search-bar-input');
+    if (input) input.value = '';
+    const results = bar.querySelector('.search-bar-results');
+    if (results) {
+      results.innerHTML = '';
+      results.classList.remove('active');
+    }
+  });
+}
+
+function performSearch(query, searchBar) {
+  const resultsContainer = searchBar ? searchBar.querySelector('.search-bar-results') : document.querySelector('.search-bar-results');
+  if (!resultsContainer) return;
+  
+  const baseUrl = window.location.pathname.includes('/secciones/') ? '../' : '';
+
+  if (query.length < 2) {
+    resultsContainer.innerHTML = '';
+    resultsContainer.classList.remove('active');
+    return;
+  }
+
+  const lowerQuery = query.toLowerCase();
+  const results = SEARCH_DATA.filter(item => {
+    return item.title.toLowerCase().includes(lowerQuery) ||
+           item.keywords.toLowerCase().includes(lowerQuery) ||
+           item.section.toLowerCase().includes(lowerQuery);
+  });
+
+  if (results.length === 0) {
+    resultsContainer.innerHTML = `
+      <div class="search-no-results">
+        <i class="fas fa-search"></i>
+        <p>Sin resultados para "${query}"</p>
+      </div>
+    `;
+    resultsContainer.classList.add('active');
+    return;
+  }
+
+  resultsContainer.innerHTML = results.map(item => `
+    <a href="${baseUrl}${item.url}" class="search-result-item">
+      <i class="fas ${item.icon}"></i>
+      <div>
+        <div class="result-title">${item.title}</div>
+        <div class="result-section">${item.section}</div>
+      </div>
+    </a>
+  `).join('');
+  resultsContainer.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', initSearch);

@@ -15,53 +15,110 @@
     <div class="bg-3d-container"></div>
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -269,10 +326,280 @@ export DB_PASSWORD=<span class="code-string">"secreto_aqui"</span>
                 </div>
             </div>
 
+            <h2><i class="fas fa-windows" style="color: var(--primary);"></i> Hardening de Windows</h2>
+            <p>El hardening de Windows combina cifrado, aislamiento de credenciales, allow-listing de aplicaciones y visibilidad de eventos para reducir la superficie de ataque del sistema operativo más utilizado en entornos corporativos.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-lock" style="color: var(--primary);"></i></div>
+                        <div class="card-title">BitLocker</div>
+                        <div class="card-text">Cifrado de disco completo (FDE). Requiere TPM 2.0 para proteger el arranque y las claves de cifrado contra ataques pre-boot.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-id-card" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Credential Guard</div>
+                        <div class="card-text">Aísla credenciales (hashes NTLM, tickets Kerberos) dentro de un entorno basado en virtualización (VBS), mitigando pass-the-hash y ataques con mimikatz.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-ban" style="color: var(--accent);"></i></div>
+                        <div class="card-title">AppLocker / WDAC</div>
+                        <div class="card-text">Allow-listing de aplicaciones: solo el software autorizado puede ejecutarse, bloqueando malware no firmado o no aprobado por la organización.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-shield-alt" style="color: #00c853;"></i></div>
+                        <div class="card-title">Defender + ASR</div>
+                        <div class="card-text">Windows Defender con reglas ASR (Attack Surface Reduction) bloquea comportamientos de alto riesgo como scripts ofuscados y macros de Office.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-list-alt" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Event Logs y Sysmon</div>
+                        <div class="card-text">Registro de eventos con Sysmon para telemetría avanzada: creación de procesos, conexiones de red y cambios en el registro.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-cogs" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Servicios y Registro</div>
+                        <div class="card-text">Deshabilitar servicios y roles innecesarios (RDP, SMBv1, impresión), restringir claves de registro sensibles y aplicar GPOs de seguridad.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-clipboard-check" style="color: var(--secondary);"></i> Baselines y Benchmarks de Seguridad</h2>
+            <p>Los baselines definen la configuración segura de referencia para sistemas y plataformas. El flujo recomendado es: evaluar la configuración actual, endurecer el sistema según la baseline y mantenerlo parcheado de forma continua.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-book" style="color: var(--primary);"></i></div>
+                        <div class="card-title">CIS Benchmarks</div>
+                        <div class="card-text">Baselines consensuadas por el Center for Internet Security para sistemas operativos, nube, aplicaciones y dispositivos de red.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-gavel" style="color: var(--accent);"></i></div>
+                        <div class="card-title">STIG</div>
+                        <div class="card-text">Security Technical Implementation Guides del DoD: requisitos de endurecimiento oficiales para entornos gubernamentales y militares.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-layer-group" style="color: #00c853;"></i></div>
+                        <div class="card-title">Gold Images</div>
+                        <div class="card-text">Imágenes base endurecidas y aprobadas para desplegar sistemas nuevos sin pasos de seguridad manuales.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-sync-alt" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Parcheo y Vulnerabilidades</div>
+                        <div class="card-text">Gestión basada en CVE, priorización con EPSS y despliegue centralizado con WSUS/SCCM o herramientas equivalentes.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-arrows-alt-h" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Ciclo de Endurecimiento</div>
+                        <div class="card-text">Flujo continuo: evaluar → endurecer → mantener parcheado.</div>
+                        <ul>
+                            <li>Evaluar: escaneo y comparación contra la baseline</li>
+                            <li>Endurecer: aplicar configuraciones y deshabilitar servicios</li>
+                            <li>Mantener: parcheo y re-evaluación periódica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-microchip" style="color: #e040fb;"></i> Arranque Seguro y Hardware</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-check-double" style="color: var(--primary);"></i></div>
+                        <div class="card-title">UEFI Secure Boot</div>
+                        <div class="card-text">Solo permite arrancar software firmado con claves confiables, impidiendo bootkits y rootkits que se cargan antes del sistema operativo.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-microchip" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">TPM 2.0</div>
+                        <div class="card-text">Chip criptográfico que almacena claves de forma segura y mide la integridad del arranque para los sistemas operativos modernos.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-chart-line" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Measured Boot</div>
+                        <div class="card-text">El TPM registra una cadena de mediciones de cada etapa del arranque; el sistema puede compararla contra un valor conocido (Remote Attestation).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-key" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Firmware y BIOS</div>
+                        <div class="card-text">Proteger el firmware con contraseña de administrador (BIOS/UEFI password) y mantenerlo actualizado contra vulnerabilidades como Spectre y Meltdown.</div>
+                    </div>
+                </div>
+            </div>
+            <p>El TPM es la pieza central de BitLocker: protege las claves de cifrado antes del arranque. También habilita Credential Guard al confiar en la medición del arranque para aislar las credenciales dentro del hypervisor.</p>
+
+            <h2><i class="fas fa-terminal" style="color: var(--accent);"></i> Linux Avanzado: AppArmor, PAM y systemd</h2>
+            <p>Más allá del hardening básico, Linux ofrece control de acceso por aplicación, autenticación modular y unidades systemd con opciones de aislamiento que limitan el impacto de un proceso comprometido.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-shield-virus" style="color: var(--primary);"></i></div>
+                        <div class="card-title">AppArmor</div>
+                        <div class="card-text">Perfiles de restricción por aplicación ubicados en /etc/apparmor.d que limitan archivos, redes y capacidades accesibles.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-id-badge" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">PAM</div>
+                        <div class="card-text">Autenticación modular y configurable: MFA, lockout por intentos fallidos, políticas de contraseñas y módulos por servicio.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-cogs" style="color: var(--accent);"></i></div>
+                        <div class="card-title">systemd Hardening</div>
+                        <div class="card-text">Directivas de aislamiento por servicio: MemoryDenyWriteExecute, PrivateTmp, ProtectSystem, NoNewPrivileges y más.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-fire" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Firejail</div>
+                        <div class="card-text">Sandboxing de aplicaciones usando namespaces y seccomp sin requerir contenedores ni máquinas virtuales.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-block" data-lang="bash">
+                <code><span class="code-comment"># === APPARMOR: CONTROL DE ACCESO POR APLICACIÓN ===</span>
+
+<span class="code-function">aa-status</span>                      <span class="code-comment"># Perfiles cargados y procesos confinados</span>
+<span class="code-function">sudo aa-enforce</span> /usr/bin/firefox <span class="code-comment"># Forzar perfil restrictivo</span>
+<span class="code-function">sudo aa-complain</span> /usr/bin/app   <span class="code-comment"># Solo registrar (depuración)</span>
+<span class="code-function">sudo aa-genprof</span> /usr/bin/app     <span class="code-comment"># Generar perfil interactivo</span>
+
+<span class="code-comment"># Perfiles disponibles</span>
+<span class="code-function">ls /etc/apparmor.d/</span>
+
+<span class="code-comment"># === UNIT SYSTEMD ENDURECIDA ===</span>
+<span class="code-string">[Service]</span>
+PrivateTmp=true                  <span class="code-comment"># /tmp y /var/tmp aislados por servicio</span>
+NoNewPrivileges=true             <span class="code-comment"># Impide escalada de privilegios</span>
+ProtectSystem=strict             <span class="code-comment"># Raíz montada de solo lectura</span>
+ProtectHome=true                 <span class="code-comment"># Oculta directorios del usuario</span>
+MemoryDenyWriteExecute=true      <span class="code-comment"># Bloquea memoria escribible y ejecutable</span></code>
+            </div>
+
+            <h2><i class="fas fa-cubes" style="color: #26a69a;"></i> Seguridad de Contenedores y Kubernetes</h2>
+            <p>La seguridad de contenedores abarca la imagen, el runtime y el orquestador. Un contenedor no es un aislamiento de seguridad perfecto: comparte el kernel con el host, por lo que el host también debe endurecerse.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-search" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Escaneo de Imágenes</div>
+                        <div class="card-text">Análisis de vulnerabilidades en imágenes con Trivy o Clair, integrado en el pipeline CI/CD antes de cada despliegue.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-user-slash" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Ejecutar sin Root</div>
+                        <div class="card-text">Definir USER no-root en el Dockerfile para que los procesos del contenedor no tengan privilegios elevados.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-shield-alt" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Seccomp y AppArmor</div>
+                        <div class="card-text">Restringir syscalls con perfiles seccomp y confinar el runtime con AppArmor en Docker/Kubernetes.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-file-signature" style="color: #00c853;"></i></div>
+                        <div class="card-title">Firmado de Imágenes</div>
+                        <div class="card-text">Firmar y verificar imágenes con Cosign o Notation, con políticas de admisión que rechacen imágenes no firmadas.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-network-wired" style="color: #ffc107;"></i></div>
+                        <div class="card-title">RBAC y Network Policies</div>
+                        <div class="card-text">Control de acceso basado en roles para el cluster y Network Policies para segmentar el tráfico entre pods.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-key" style="color: #e040fb;"></i></div>
+                        <div class="card-title">Secretos en K8s</div>
+                        <div class="card-text">Gestionar secretos con Kubernetes Secrets cifrados en etcd y preferiblemente con un Vault externo (External Secrets Operator).</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-desktop" style="color: #ff6d00;"></i> Protección de Endpoints (EDR y MDR)</h2>
+            <p>La protección de endpoints evolucionó de firmas estáticas a detección por comportamiento y threat hunting: el análisis de la telemetría busca actividad maliciosa antes de que cause daño.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-virus" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Antivirus Tradicional</div>
+                        <div class="card-text">Detección por firmas de malware conocido. Rápido, pero ciego ante malware nuevo o modificado (0-days).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-robot" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">EDR</div>
+                        <div class="card-text">Endpoint Detection and Response: telemetría continua, detección por comportamiento y respuesta automatizada ante incidentes.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-headset" style="color: var(--accent);"></i></div>
+                        <div class="card-title">MDR / XDR</div>
+                        <div class="card-text">Servicio gestionado que correlaciona señales de endpoints, red y nube para detectar y responder amenazas de forma continua.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-mobile-alt" style="color: #00c853;"></i></div>
+                        <div class="card-title">MDM / UEM</div>
+                        <div class="card-text">Gestión de dispositivos móviles y endpoints unificados: políticas, cifrado, borrado remoto y cumplimiento.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-database" style="color: #ffc107;"></i></div>
+                        <div class="card-title">osquery</div>
+                        <div class="card-text">Consulta el estado del endpoint con SQL: procesos, sockets, archivos y configuración en tiempo real para hunting.</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="section-nav"></div>
         </div>
     </main>
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="../js/theme.js"></script>
@@ -301,5 +628,6 @@ export DB_PASSWORD=<span class="code-string">"secreto_aqui"</span>
         window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

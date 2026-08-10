@@ -15,53 +15,110 @@
     <div class="bg-3d-container"></div>
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -286,10 +343,177 @@
                 </a>
             </div>
 
+            <h2><i class="fas fa-layer-group" style="color: var(--primary);"></i> Catálogo de Certificaciones por Especialidad</h2>
+            <p>El ecosistema de certificaciones es amplio y cada una cubre un área concreta del oficio. A continuación se agrupan las más reconocidas por especialidad, indicando su enfoque, la dificultad aproximada del examen y el costo relativo para ayudarte a planificar tu inversión. Los precios varían según la región y la moneda, por lo que se expresan de forma orientativa.</p>
+
+            <h3 style="color: var(--primary);">Fundamentos y Auditoría</h3>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">CompTIA Security+</div><div class="tool-desc">Fundamentos de seguridad de la información. Dificultad baja-media, costo bajo (~$400). Certificación de entrada por excelencia.</div></div>
+                <div class="tool-card"><div class="tool-name">CompTIA Network+</div><div class="tool-desc">Redes y conectividad. Dificultad baja, costo bajo (~$350). Base técnica antes de especializarte.</div></div>
+                <div class="tool-card"><div class="tool-name">CompTIA CySA+</div><div class="tool-desc">Análisis de seguridad y respuesta a incidentes, orientado blue team. Dificultad media, costo bajo-medio (~$400).</div></div>
+                <div class="tool-card"><div class="tool-name">CompTIA PenTest+</div><div class="tool-desc">Gestión de pruebas de penetración y vulnerabilidades. Dificultad media, costo bajo-medio (~$400).</div></div>
+                <div class="tool-card"><div class="tool-name">CISA</div><div class="tool-desc">Certified Information Systems Auditor (ISACA). Auditoría y control de sistemas. Dificultad media-alta, costo medio (~$600).</div></div>
+            </div>
+
+            <h3 style="color: var(--secondary);">Red Team / Hacking</h3>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">CEH</div><div class="tool-desc">Certified Ethical Hacker (EC-Council). Fundamentos de hacking ético. Dificultad media, costo alto (~$1,200).</div></div>
+                <div class="tool-card"><div class="tool-name">eJPT</div><div class="tool-desc">eLearnSecurity Junior Penetration Tester. Examen 100% práctico. Dificultad baja-media, costo bajo (~$250).</div></div>
+                <div class="tool-card"><div class="tool-name">eCPPT</div><div class="tool-desc">eLearnSecurity Certified Professional Penetration Tester. Informe y explotación integral. Dificultad media, costo medio (~$400).</div></div>
+                <div class="tool-card"><div class="tool-name">OSCP</div><div class="tool-desc">Offensive Security Certified Professional. Estándar de facto del pentest. Dificultad alta, costo alto (~$1,750+).</div></div>
+                <div class="tool-card"><div class="tool-name">OSEP</div><div class="tool-desc">Offensive Security Experienced Professional. Evasión de defensas y post-explotación. Dificultad muy alta, costo muy alto.</div></div>
+                <div class="tool-card"><div class="tool-name">PNPT</div><div class="tool-desc">Practical Network Penetration Tester (TCM Security). Examen práctico realista de 5 días. Dificultad media-alta, costo medio (~$500).</div></div>
+            </div>
+
+            <h3 style="color: #00c853;">Blue Team / Defensa</h3>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">GSEC</div><div class="tool-desc">GIAC Security Essentials. Fundamentos prácticos de defensa. Dificultad media, costo muy alto (SANS).</div></div>
+                <div class="tool-card"><div class="tool-name">GCIH</div><div class="tool-desc">GIAC Certified Incident Handler. Detección y respuesta ante incidentes. Dificultad media-alta, costo muy alto (SANS).</div></div>
+                <div class="tool-card"><div class="tool-name">BTL1</div><div class="tool-desc">Blue Team Level 1 (Security Blue Team). Defensa, forense y SOC en formato práctico. Dificultad media, costo medio.</div></div>
+                <div class="tool-card"><div class="tool-name">GIAC</div><div class="tool-desc">Familia general de certificaciones SANS para especialidades defensivas (GCDA, GED, GNFA). Dificultad alta, costo muy alto.</div></div>
+            </div>
+
+            <h3 style="color: var(--accent);">Dirección y Gestión</h3>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">CISSP</div><div class="tool-desc">Certified Information Systems Security Professional (ISC²). Gobierno y arquitectura de seguridad. Dificultad alta, costo medio-alto (~$750).</div></div>
+                <div class="tool-card"><div class="tool-name">CISM</div><div class="tool-desc">Certified Information Security Manager (ISACA). Gestión de programas de seguridad. Dificultad media-alta, costo medio-alto (~$760).</div></div>
+                <div class="tool-card"><div class="tool-name">CRISC</div><div class="tool-desc">Certified in Risk and Information Systems Control (ISACA). Gestión de riesgos TI. Dificultad media, costo medio-alto.</div></div>
+                <div class="tool-card"><div class="tool-name">CGRC</div><div class="tool-desc">Certified in Governance, Risk and Compliance (ISC², antes CAP). Marcos de cumplimiento. Dificultad media, costo medio.</div></div>
+            </div>
+
+            <h3 style="color: #26a69a;">Cloud y DevSecOps</h3>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">AWS Certified Security</div><div class="tool-desc">Specialty de seguridad en AWS: IAM, cifrado, monitorización. Dificultad media-alta, costo medio (~$300).</div></div>
+                <div class="tool-card"><div class="tool-name">Microsoft SC-200</div><div class="tool-desc">Security Operations Analyst: Microsoft 365 Defender y Sentinel. Dificultad media, costo medio (~$165).</div></div>
+                <div class="tool-card"><div class="tool-name">CCSP</div><div class="tool-desc">Certified Cloud Security Professional (ISC²). Seguridad en la nube multi-proveedor. Dificultad media-alta, costo alto.</div></div>
+                <div class="tool-card"><div class="tool-name">Kubernetes (CKS)</div><div class="tool-desc">Certified Kubernetes Security Specialist. Seguridad de clústeres y contenedores. Dificultad alta, costo medio (~$395).</div></div>
+            </div>
+
+            <h2><i class="fas fa-flag-checkered" style="color: var(--accent);"></i> CTF y Bug Bounty</h2>
+            <p>Los CTF (Capture The Flag) y las plataformas de bug bounty son una de las mejores formas de practicar hacking real en un entorno legal. Empieza resolviendo retos en labs controlados, adquiere metodología y solo después enfréntate a programas de divulgación responsable con un alcance claramente definido. Nunca pruebes técnicas en sistemas de los que no tengas autorización.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-flag" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Plataformas CTF</div>
+                        <div class="card-text">Competiciones y retos prácticos de seguridad ofensiva y defensiva. <strong>CTFtime</strong> agrega los eventos del calendario mundial, <strong>picoCTF</strong> es ideal para iniciarse y <strong>HackerRank</strong> ofrece challenges de scripting y criptografía para entrenar.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-bug" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Plataformas Bug Bounty</div>
+                        <div class="card-text">Programas con recompensa económica por hallazgos reales. <strong>HackerOne</strong> y <strong>Bugcrowd</strong> son las más grandes, mientras <strong>Intigriti</strong> destaca por sus retos semanales de XSS y una comunidad europea muy activa.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-handshake" style="color: #00c853;"></i></div>
+                        <div class="card-title">Programas de Divulgación Responsable</div>
+                        <div class="card-text">Organizaciones que invitan a investigadores a reportar vulnerabilidades de forma controlada. Siempre revisa el <strong>scope</strong> (alcance), las reglas de participación y las políticas de recompensa antes de interactuar con cualquier sistema.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-balance-scale" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Divulgación Responsable vs Revelación Total</div>
+                        <div class="card-text">La <strong>divulgación responsable</strong> notifica primero al proveedor y da un plazo razonable para el parche. La <strong>revelación total</strong> publica el fallo de inmediato, lo que acelera la exposición pero puede poner en riesgo a los usuarios. La primera es la práctica estándar y ética.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="400">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-route" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Cómo Empezar Paso a Paso</div>
+                        <div class="card-text">1) Domina fundamentos en TryHackMe y HTB. 2) Resuelve CTFs de nivel fácil. 3) Practica en tu propio laboratorio local. 4) Entra en programas con scope limitado y recompensa baja. 5) Redacta informes claros: impacto, pasos de reproducción y remediación.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="500">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-gavel" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Consideraciones Legales y Éticas</div>
+                        <div class="card-text">Investiga siempre las leyes locales y el marco legal del país donde se encuentra el objetivo. Un alcance malentendido puede convertir un reporte en un delito. Prioriza la autorización por escrito y documenta cada interacción con el programa.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-money-bill-trend-up" style="color: var(--secondary);"></i> Mercado Laboral y Salarios</h2>
+            <p>La ciberseguridad es uno de los sectores con mayor demanda de profesionales del mundo. Los rangos salariales que se muestran son orientativos y varían considerablemente según la región, la industria, el tamaño de la empresa, las certificaciones y la experiencia. En mercados como Norteamérica los salarios suelen ser más altos en USD, mientras que en Europa y Latinoamérica las cifras en EUR o moneda local son diferentes, aunque la demanda sigue creciendo.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-seedling" style="color: #00c853;"></i></div>
+                        <div class="card-title">Roles Junior (0-2 años)</div>
+                        <div class="card-text"><strong>SOC Analyst</strong> (monitoreo y triage de alertas) y <strong>GRC Junior</strong> (gobierno, riesgo y cumplimiento). Rangos aproximados: $50K-75K USD / 30K-45K EUR anuales. Puerta de entrada habitual tras Security+ o CySA+.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-bolt" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Roles Senior (3-6 años)</div>
+                        <div class="card-text"><strong>Pentester</strong> (ofensiva) y <strong>Security Engineer</strong> (arquitectura e implementación). Rangos aproximados: $90K-140K USD / 55K-85K EUR. Certificaciones como OSCP o CISSP incrementan notablemente el rango.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-rocket" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Roles Especializados (6+ años)</div>
+                        <div class="card-text"><strong>Cloud Security</strong>, <strong>Threat Hunting</strong> y <strong>Forense Digital/IR</strong>. Rangos aproximados: $120K-180K USD / 70K-110K EUR. Prima salarial por escasez de perfiles en estas áreas.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-chart-line" style="color: #26a69a;"></i></div>
+                        <div class="card-title">Habilidades Más Demandadas</div>
+                        <div class="card-text">Seguridad en la nube (AWS/Azure/GCP), scripting en Python y Bash para automatización, orquestación con <strong>SOAR</strong> y SIEM (Splunk, Sentinel), y comprensión de frameworks como MITRE ATT&CK.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="400">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-sliders-h" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Factores que Influyen en el Salario</div>
+                        <div class="card-text">La <strong>región</strong> (poder adquisitivo), la <strong>industria</strong> (financiera, tecnológica, gobierno), las <strong>certificaciones</strong> obtenidas, el dominio del inglés y el nivel de <strong>remotividad</strong> del puesto son los factores que más mueven el rango salarial.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="500">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-globe" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Mercado Global vs Local</div>
+                        <div class="card-text">El trabajo remoto ha globalizado el mercado: es posible trabajar para empresas de EE.UU. desde otros países. Consulta fuentes como el informe anual de (ISC)², Glassdoor o LinkedIn Salary para datos actualizados de tu región.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-user-shield" style="color: #ff6d00;"></i> Cómo Prepararse para OSCP</h2>
+            <p>OSCP es una de las certificaciones más exigentes y respetadas del hacking ético. A diferencia de otras, es un examen <strong>100% práctico</strong>: no hay preguntas de teoría, debes comprometer máquinas reales en un entorno controlado y demostrar dominio técnico bajo presión.</p>
+            <ol>
+                <li><strong>Fundamentos de Linux y redes:</strong> domina la terminal, gestión de archivos, redes TCP/IP, servicios y protocolos antes de empezar.</li>
+                <li><strong>Scripting en Python y Bash:</strong> automatiza enumeración y explotación; escribe tus propios scripts de reconocimiento y fuerza bruta.</li>
+                <li><strong>Curso oficial PEN-200 / PWK:</strong> el curso de OffSec incluye laboratorios con máquinas de dificultad progresiva; consúmelo por completo y explota cada máquina.</li>
+                <li><strong>Práctica en HTB y VulnHub:</strong> resuelve máquinas de la lista <strong>TJ Null's OSCP</strong>, que replica la dificultad real del examen, y documenta cada paso.</li>
+                <li><strong>Metodología y notas:</strong> desarrolla una checklist propia de enumeración, mantén notas ordenadas y escribe writeups de cada máquina resuelta.</li>
+                <li><strong>Examen 24h + informe 24h:</strong> el examen dura 24 horas y tienes otras 24 para entregar un informe profesional que demuestre cada explotación.</li>
+                <li><strong>Retake policy:</strong> si no apruebas a la primera, el intento adicional (retake) tiene un costo reducido; revisa las condiciones vigentes en la web de OffSec.</li>
+            </ol>
+            <div class="alert-cyber">
+                <i class="fas fa-exclamation-triangle"></i> <strong>Recomendación:</strong> no reserves el examen hasta comprometer al menos 20-30 máquinas de la lista de TJ Null de forma autónoma y sin guías.
+            </div>
+
+            <h2><i class="fas fa-graduation-cap" style="color: #00c853;"></i> Recursos Gratuitos para Formarse</h2>
+            <p>No necesitas invertir dinero para empezar. Existe una gran cantidad de contenido gratuito y de alta calidad para construir una base sólida y llegar preparado a tus primeras certificaciones o programas de bug bounty.</p>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">Google Cybersecurity Certificate</div><div class="tool-desc">Coursera. Curso gratuito de auditoría de 6 meses con labs hands-on y salida directa a roles junior.</div></div>
+                <div class="tool-card"><div class="tool-name">Cisco Networking Academy</div><div class="tool-desc">Cursos oficiales de redes (CCNA) y ciberseguridad con simuladores como Packet Tracer. Gratuitos al registrarte.</div></div>
+                <div class="tool-card"><div class="tool-name">Cybrary</div><div class="tool-desc">Catálogo amplio de cursos y certificados gratuitos, desde fundamentos hasta hacking y cloud security.</div></div>
+                <div class="tool-card"><div class="tool-name">TryHackMe</div><div class="tool-desc">Free rooms guiadas paso a paso, ideales para principiantes que quieren aprender resolviendo retos reales.</div></div>
+                <div class="tool-card"><div class="tool-name">OverTheWire</div><div class="tool-desc">Wargames de terminal que enseñan seguridad de sistemas y scripting de forma progresiva (Bandit, Narnia, Behemoth).</div></div>
+                <div class="tool-card"><div class="tool-name">picoCTF</div><div class="tool-desc">Plataforma de CTFs educativa de Carnegie Mellon, con retos clasificados por nivel y guías de aprendizaje.</div></div>
+                <div class="tool-card"><div class="tool-name">PortSwigger Web Security Academy</div><div class="tool-desc">100% gratis. Labs de seguridad web con la mayoría de los riesgos del OWASP Top 10, cada uno con soluciones explicadas.</div></div>
+            </div>
+
             <div class="section-nav"></div>
         </div>
     </main>
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span> | Construido con <i class="fas fa-heart" style="color: var(--accent);"></i> para la comunidad</p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span> | Construido con <i class="fas fa-heart" style="color: var(--accent);"></i> para la comunidad</p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="../js/theme.js"></script>
@@ -324,5 +548,6 @@
         window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

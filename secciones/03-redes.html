@@ -12,55 +12,114 @@
 </head>
 <body>
     <div class="reading-progress"></div>
-    <div class="bg-3d-container"></div>    <nav class="navbar-cyber navbar-expand-lg">
+    <div class="bg-3d-container"></div>
+
+    <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -205,10 +264,149 @@
                 </div>
             </div>
 
+            <h2><i class="fas fa-sitemap" style="color: var(--primary);"></i> Modelo TCP/IP vs OSI</h2>
+            <p>El modelo TCP/IP es el marco práctico sobre el que se construyó Internet. A diferencia de los 7 niveles del modelo OSI, condensa la comunicación en 4 capas que se corresponden funcionalmente con varias capas del OSI a la vez.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-animate>
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,109,0,0.2), rgba(255,109,0,0.1));"><i class="fas fa-ethernet" style="color: #ff6d00;"></i></div><div class="card-title">1. Acceso a Red</div><div class="card-text">ETHERNET, WiFi, ARP. Fusiona las capas física y de enlace del modelo OSI.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="50">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(38,166,154,0.2), rgba(38,166,154,0.1));"><i class="fas fa-globe" style="color: #26a69a;"></i></div><div class="card-title">2. Internet</div><div class="card-text">IP, ICMP, enrutamiento. Equivale a la capa 3 del modelo OSI.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="100">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(0,200,83,0.2), rgba(0,200,83,0.1));"><i class="fas fa-shipping-fast" style="color: #00c853;"></i></div><div class="card-title">3. Transporte</div><div class="card-text">TCP, UDP, puertos. Maneja confiabilidad, control de flujo y multiplexación.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-animate data-delay="150">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(255,193,7,0.1));"><i class="fas fa-code" style="color: #ffc107;"></i></div><div class="card-title">4. Aplicación</div><div class="card-text">HTTP, DNS, SMTP, SSH. Agrupa las capas de sesión, presentación y aplicación del OSI.</div></div>
+                </div>
+            </div>
+
+            <p>El modelo OSI usa 7 capas (física, enlace, red, transporte, sesión, presentación y aplicación) y es excelente como marco conceptual y didáctico. El modelo TCP/IP, con sus 4 capas, refleja mejor el funcionamiento real de Internet y de los equipos actuales. En ciberseguridad ambos son útiles: el OSI ayuda a ubicar dónde actúa cada ataque (ARP spoofing en capa 2, IP spoofing en capa 3), mientras que el TCP/IP es el que realmente se audita en los sistemas.</p>
+
+            <h2><i class="fas fa-plug" style="color: var(--secondary);"></i> Puertos y Protocolos Comunes</h2>
+            <p>Cada servicio de red escucha en un puerto TCP/UDP específico. Conocerlos permite auditar servicios expuestos, configurar firewalls y detectar actividad sospechosa.</p>
+            <div class="tools-grid">
+                <div class="tool-card"><div class="tool-name">20/21 FTP</div><div class="tool-desc">Transferencia de archivos en claro. Usa FTPS o SFTP.</div></div>
+                <div class="tool-card"><div class="tool-name">22 SSH</div><div class="tool-desc">Acceso remoto seguro con cifrado. Clave del administrador.</div></div>
+                <div class="tool-card"><div class="tool-name">23 Telnet</div><div class="tool-desc">Acceso remoto SIN cifrado. Tráfico legible, muy inseguro.</div></div>
+                <div class="tool-card"><div class="tool-name">25 SMTP</div><div class="tool-desc">Envío de correo. Suele estar en el origen de spam y phishing.</div></div>
+                <div class="tool-card"><div class="tool-name">53 DNS</div><div class="tool-desc">Resolución de nombres. Punto de ataque (spoofing, tunneling).</div></div>
+                <div class="tool-card"><div class="tool-name">80 HTTP</div><div class="tool-desc">Tráfico web en claro. Debe redirigir a HTTPS.</div></div>
+                <div class="tool-card"><div class="tool-name">110/143 POP3/IMAP</div><div class="tool-desc">Recepción de correo. En claro son legibles; usar versiones TLS.</div></div>
+                <div class="tool-card"><div class="tool-name">443 HTTPS</div><div class="tool-desc">Web cifrada (TLS). Estándar obligatorio en la web moderna.</div></div>
+                <div class="tool-card"><div class="tool-name">445 SMB</div><div class="tool-desc">Compartición de archivos Windows. Vector de EternalBlue y ransomware.</div></div>
+                <div class="tool-card"><div class="tool-name">1433 MSSQL</div><div class="tool-desc">Base de datos de Microsoft. Blanco de fuerza bruta y credenciales débiles.</div></div>
+                <div class="tool-card"><div class="tool-name">3306 MySQL</div><div class="tool-desc">Base de datos open source. Evitar exponerla a Internet.</div></div>
+                <div class="tool-card"><div class="tool-name">5432 PostgreSQL</div><div class="tool-desc">Base de datos avanzada. Escucha por defecto en este puerto.</div></div>
+                <div class="tool-card"><div class="tool-name">6379 Redis</div><div class="tool-desc">Cache en memoria. Configurado sin auth permite RCE o volcado de datos.</div></div>
+                <div class="tool-card"><div class="tool-name">27017 MongoDB</div><div class="tool-desc">Base de datos NoSQL. Exposiciones sin autenticación causan brechas masivas.</div></div>
+                <div class="tool-card"><div class="tool-name">3389 RDP</div><div class="tool-desc">Escritorio remoto de Windows. Blanco favorito de ransomware.</div></div>
+            </div>
+            <div class="alert-cyber alert-info">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>Nota de riesgo:</strong> Telnet y FTP en claro exponen credenciales y datos a la escucha en la red. Un RDP expuesto a Internet es un blanco frecuente de fuerza bruta y de ataques como BlueKeep; conviene exponerlo solo a través de VPN o con MFA.</div>
+            </div>
+
+            <h2><i class="fas fa-wifi" style="color: #ff6d00;"></i> Seguridad WiFi</h2>
+            <p>La capa inalámbrica es especialmente vulnerable porque la señal cruza el aire: cualquier persona en el rango puede capturarla. La elección del protocolo de autenticación y cifrado define qué tan fácil es comprometer una red WiFi.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,109,0,0.2), rgba(255,109,0,0.1));"><i class="fas fa-lock" style="color: #ff6d00;"></i></div><div class="card-title">WEP</div><div class="card-text">Roto por completo: su cifrado RC4 se puede romper en minutos capturando paquetes. Nunca debe usarse.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(255,193,7,0.1));"><i class="fas fa-key" style="color: #ffc107;"></i></div><div class="card-title">WPA/WPA2-PSK</div><div class="card-text">Comparte una clave preseleccionada. El handshake de 4 vías puede capturarse y la clave se ataca offline o por PMKID.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(0,200,83,0.2), rgba(0,200,83,0.1));"><i class="fas fa-user-shield" style="color: #00c853;"></i></div><div class="card-title">WPA2-Enterprise</div><div class="card-text">Usa 802.1X para autenticar cada usuario de forma individual. Ideal para empresas, sin contraseña compartida.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(38,166,154,0.2), rgba(38,166,154,0.1));"><i class="fas fa-shield-alt" style="color: #26a69a;"></i></div><div class="card-title">WPA3</div><div class="card-text">Usa SAE (handshake simultáneo), forward secrecy y protección contra fuerza bruta offline. Estándar recomendado actual.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(224,64,251,0.2), rgba(224,64,251,0.1));"><i class="fas fa-wifi" style="color: #e040fb;"></i></div><div class="card-title">Evil Twin AP</div><div class="card-text">Punto de acceso falso que imita una red legítima para robar credenciales. La víctima se conecta sin notar la diferencia.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="250">
+                    <div class="card-cyber"><div class="card-icon"><i class="fas fa-unlink" style="color: var(--accent);"></i></div><div class="card-title">Rogue AP</div><div class="card-text">Punto de acceso no autorizado conectado a la red interna (p. ej. un router de un empleado). Genera una puerta trasera a la infraestructura.</div></div>
+                </div>
+            </div>
+            <div class="alert-cyber alert-danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div><strong>Aviso ético:</strong> Las técnicas de ataque WiFi (deautenticación, captura de handshake, evil twin) solo deben practicarse en redes propias o con autorización explícita del propietario. Atacar redes ajenas es ilegal en casi todos los países.</div>
+            </div>
+
+            <h2><i class="fas fa-id-badge" style="color: var(--accent);"></i> 802.1X, RADIUS y NAC</h2>
+            <p>El acceso a una red no debe darse por el simple hecho de estar físicamente conectado. 802.1X, RADIUS y NAC forman el sistema de autenticación y control de acceso que decide quién entra, desde dónde y bajo qué condiciones.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(0,200,83,0.2), rgba(0,200,83,0.1));"><i class="fas fa-network-wired" style="color: #00c853;"></i></div><div class="card-title">802.1X</div><div class="card-text">Control de acceso a puertos. Bloquea el tráfico del puerto hasta que el dispositivo se autentique correctamente.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(38,166,154,0.2), rgba(38,166,154,0.1));"><i class="fas fa-server" style="color: #26a69a;"></i></div><div class="card-title">RADIUS / TACACS+</div><div class="card-text">Servidores de autenticación AAA: validan usuario y credenciales, autorizan servicios y registran cada acceso en el log.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(255,193,7,0.1));"><i class="fas fa-clipboard-check" style="color: #ffc107;"></i></div><div class="card-title">NAC</div><div class="card-text">Network Access Control: evalúa la postura del dispositivo (antivirus, parches, cumplimiento de políticas) antes de dejarlo entrar.</div></div>
+                </div>
+            </div>
+            <p>Los tres trabajan en conjunto: el <strong>supplicant</strong> (el cliente instalado en el dispositivo) presenta sus credenciales al <strong>autenticador</strong> (el switch o punto de acceso), que reenvía la petición al <strong>servidor AAA</strong> (RADIUS). Si la identidad es válida y cumple la política NAC, se abre el puerto o el canal; de lo contrario, el dispositivo queda aislado o en una red de cuarentena.</p>
+
+            <h2><i class="fas fa-globe" style="color: #26a69a;"></i> Seguridad DNS</h2>
+            <p>El DNS convierte nombres en direcciones IP y es una infraestructura crítica: sin él, Internet no funciona. Por eso también es un vector de ataque: desde envenenamiento de caché hasta técnicas más sutiles como el tunneling.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(224,64,251,0.2), rgba(224,64,251,0.1));"><i class="fas fa-bug" style="color: #e040fb;"></i></div><div class="card-title">DNS Tunneling</div><div class="card-text">Encapsula datos en consultas DNS para exfiltrar información o crear canales de comando y control (C2) invisibles al firewall.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,109,0,0.2), rgba(255,109,0,0.1));"><i class="fas fa-sync-alt" style="color: #ff6d00;"></i></div><div class="card-title">DNS Rebinding</div><div class="card-text">Hace que un dominio resuelva a una IP distinta tras una consulta, saltando el Same-Origin Policy y accediendo a servicios internos.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(0,200,83,0.2), rgba(0,200,83,0.1));"><i class="fas fa-lock" style="color: #00c853;"></i></div><div class="card-title">DoH / DoT</div><div class="card-text">DNS sobre HTTPS (DoH) o sobre TLS (DoT) cifra las consultas y evita que el ISP o un atacante en la red las lea o modifique.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(38,166,154,0.2), rgba(38,166,154,0.1));"><i class="fas fa-columns" style="color: #26a69a;"></i></div><div class="card-title">Split-Horizon DNS</div><div class="card-text">Resuelve distinto según el origen de la consulta: vistas internas para la LAN y vistas públicas hacia Internet. Evita exponer infraestructura interna.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(255,193,7,0.1));"><i class="fas fa-certificate" style="color: #ffc107;"></i></div><div class="card-title">DNSSEC</div><div class="card-text">Firma digitalmente los registros DNS para impedir spoofing y envenenamiento de caché. Verifica autenticidad e integridad, no confidencialidad.</div></div>
+                </div>
+            </div>
+            <p>El <strong>DNS tunneling</strong> merece atención especial: como el tráfico DNS normalmente no se inspecciona en profundidad, los atacantes lo usan para <strong>exfiltrar datos</strong> en pequeñas piezas dentro de consultas aparentemente normales y para mantener <strong>canales C2</strong> persistentes. La detección se basa en anomalías: dominios de aspecto raro, volúmenes inusuales de consultas y tamaños de paquete sospechosos.</p>
+
+            <h2><i class="fas fa-bug" style="color: #e040fb;"></i> Honeypots y Honeynets</h2>
+            <p>Un honeypot es un señuelo: un servicio, sistema o credencial falsa diseñado para parecer vulnerable. Cuando un atacante cae en él, el equipo de seguridad obtiene telemetría temprana del ataque, aprende sus técnicas y lo desvía de los activos reales.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(38,166,154,0.2), rgba(38,166,154,0.1));"><i class="fas fa-low-vision" style="color: #26a69a;"></i></div><div class="card-title">Baja Interacción</div><div class="card-text">Emula servicios básicos (FTP, SSH, web) con poco riesgo. Captura escaneos y ataques automatizados, ideal para telemetría masiva.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="50">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,109,0,0.2), rgba(255,109,0,0.1));"><i class="fas fa-database" style="color: #ff6d00;"></i></div><div class="card-title">Alta Interacción</div><div class="card-text">Un sistema real completo. Máxima información sobre el atacante, pero mayor riesgo: debe estar aislado y monitoreado.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(255,193,7,0.1));"><i class="fas fa-project-diagram" style="color: #ffc107;"></i></div><div class="card-title">Honeynet</div><div class="card-text">Red completa de honeypots conectados y vigilados. Simula una red corporativa para estudiar movimientos laterales y fases de ataque.</div></div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="150">
+                    <div class="card-cyber"><div class="card-icon" style="background: linear-gradient(135deg, rgba(224,64,251,0.2), rgba(224,64,251,0.1));"><i class="fas fa-bolt" style="color: #e040fb;"></i></div><div class="card-title">HoneyTokens</div><div class="card-text">Datos falsos de alto valor: credenciales, archivos o documentos canarios. Su simple apertura o uso dispara la alarma sin necesidad de honeypot.</div></div>
+                </div>
+            </div>
+            <p>Los honeypots no sustituyen a los controles tradicionales, pero aportan dos ventajas únicas: <strong>telemetría temprana</strong> (alerta antes de que el atacante llegue a activos reales) y <strong>desviación</strong> (consume el tiempo del atacante mientras los equipos de defensa lo observan).</p>
+
+            <h2><i class="fas fa-fingerprint" style="color: #ffc107;"></i> Zero Trust de Red: ZTNA y SASE</h2>
+            <p>El modelo Zero Trust aplica a la red el principio de <strong>"nunca confiar, siempre verificar"</strong>: ninguna ubicación, red o dispositivo recibe confianza implícita. Cada acceso se evalúa por identidad y contexto en lugar de por la IP de origen.</p>
+            <ul>
+                <li><strong>ZTNA:</strong> Acceso a aplicaciones por identidad, no por IP. El usuario solo ve los servicios a los que está autorizado, sin red completa expuesta.</li>
+                <li><strong>SASE:</strong> Combina SD-WAN con seguridad en el edge (firewall, CASB, ZTNA) entregada como servicio desde la nube.</li>
+                <li><strong>Microsegmentación:</strong> Aísla cargas de trabajo y aplicaciones con reglas granulares para impedir movimientos laterales.</li>
+                <li><strong>Verificación continua:</strong> Revalida identidad, postura del dispositivo y comportamiento durante toda la sesión, no solo al inicio.</li>
+                <li><strong>Políticas por identidad y contexto:</strong> Deciden el acceso según quién, qué dispositivo, desde dónde, a qué hora y con qué riesgo.</li>
+            </ul>
+            <div class="alert-cyber alert-info">
+                <i class="fas fa-cloud"></i>
+                <div><strong>En la nube:</strong> estos principios se materializan con VPC (redes privadas aisladas), security groups (firewall por instancia) y NACL (reglas a nivel de subred). El control de acceso se basa en roles (IAM) más que en direcciones IP.</div>
+            </div>
+
             <div class="section-nav"></div>
         </div>
     </main>
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="../js/theme.js"></script>
@@ -243,5 +441,6 @@
         window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>

@@ -15,53 +15,110 @@
     <div class="bg-3d-container"></div>
     <nav class="navbar-cyber navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <i class="fas fa-shield-halved"></i>
-                <span>CyberSec Guide</span>
-            </a>
-            <div class="d-flex align-items-center navbar-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                    <span>Dark</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-shield-halved"></i><span>CyberSec Guide</span></a>
+            <div class="navbar-actions">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="01-introduccion.html"><span class="dropdown-num">01</span> Introducción</a></li>
-                            <li><a class="dropdown-item" href="02-amenazas.html"><span class="dropdown-num">02</span> Amenazas</a></li>
-                            <li><a class="dropdown-item" href="03-redes.html"><span class="dropdown-num">03</span> Redes</a></li>
-                            <li><a class="dropdown-item" href="04-criptografia.html"><span class="dropdown-num">04</span> Criptografía</a></li>
-                            <li><a class="dropdown-item" href="05-sistemas.html"><span class="dropdown-num">05</span> Seguridad SO</a></li>
-                            <li><a class="dropdown-item" href="06-hacking.html"><span class="dropdown-num">06</span> Hacking Ético</a></li>
-                            <li><a class="dropdown-item" href="07-seguridad-web.html"><span class="dropdown-num">07</span> Seguridad Web</a></li>
-                            <li><a class="dropdown-item" href="08-forense.html"><span class="dropdown-num">08</span> Forense Digital</a></li>
-                            <li><a class="dropdown-item" href="09-normativas.html"><span class="dropdown-num">09</span> Normativas</a></li>
-                            <li><a class="dropdown-item" href="10-certificaciones.html"><span class="dropdown-num">10</span> Certificaciones</a></li>
-                        </ul>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Secciones <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></a>
+                                                <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <a class="dropdown-item" href="01-introduccion.html">
+                                    <span class="dropdown-num">01</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Introducción</span>
+                                        <span class="dropdown-item-desc">Fundamentos</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="02-amenazas.html">
+                                    <span class="dropdown-num">02</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Amenazas</span>
+                                        <span class="dropdown-item-desc">Malware y phishing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="03-redes.html">
+                                    <span class="dropdown-num">03</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Redes</span>
+                                        <span class="dropdown-item-desc">Protocolos y firewalls</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="04-criptografia.html">
+                                    <span class="dropdown-num">04</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Criptografía</span>
+                                        <span class="dropdown-item-desc">Cifrado y hashing</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="05-sistemas.html">
+                                    <span class="dropdown-num">05</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad SO</span>
+                                        <span class="dropdown-item-desc">Hardening</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="06-hacking.html">
+                                    <span class="dropdown-num">06</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Hacking Ético</span>
+                                        <span class="dropdown-item-desc">Pentesting</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="07-seguridad-web.html">
+                                    <span class="dropdown-num">07</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Seguridad Web</span>
+                                        <span class="dropdown-item-desc">OWASP Top 10</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="08-forense.html">
+                                    <span class="dropdown-num">08</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Forense Digital</span>
+                                        <span class="dropdown-item-desc">Análisis</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="09-normativas.html">
+                                    <span class="dropdown-num">09</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Normativas</span>
+                                        <span class="dropdown-item-desc">ISO y GDPR</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                                <a class="dropdown-item" href="10-certificaciones.html">
+                                    <span class="dropdown-num">10</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Certificaciones</span>
+                                        <span class="dropdown-item-desc">CEH y OSCP</span>
+                                    </div>
+                                    <i class="fas fa-chevron-right dropdown-item-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../herramientas.html">Herramientas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../comandos.html">Comandos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../recursos.html">Recursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html#about">Acerca de</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../herramientas.html">Herramientas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../comandos.html">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">Acerca de</a></li>
                 </ul>
+            </div>
+            <div class="navbar-icons">
+                <button class="search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
             </div>
         </div>
     </nav>
@@ -256,10 +313,348 @@
                 <div class="tool-card"><div class="tool-name">LOPD/LFPDPPP</div><div class="tool-desc">Leyes de protección de datos en España/México</div></div>
             </div>
 
+            <h2><i class="fas fa-globe-americas" style="color: #26a69a;"></i> Normativas Sectoriales y Regionales</h2>
+            <p>Además de los marcos internacionales, existen regulaciones específicas por sector y por región. Conocerlas es clave para el cumplimiento: la misma actividad puede estar sujeta a varias normativas a la vez.</p>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-hospital" style="color: var(--primary);"></i></div>
+                        <div class="card-title">HIPAA</div>
+                        <div class="card-text">Sector salud en EE.UU. Regula la privacidad y seguridad de la información médica (PHI) y exige la Regla de Privacidad y la Regla de Seguridad.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-landmark" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">SOX</div>
+                        <div class="card-text">Sector financiero en EE.UU. Exige controles internos sobre la información financiera y responsabilidad ejecutiva, incluyendo la protección de sistemas que la respaldan.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-university" style="color: var(--accent);"></i></div>
+                        <div class="card-title">GLBA</div>
+                        <div class="card-text">Servicios financieros en EE.UU. Obliga a proteger los datos personales no públicos (NPI) de los clientes y a informar sobre las políticas de privacidad.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-user-shield" style="color: #00c853;"></i></div>
+                        <div class="card-title">CCPA/CPRA</div>
+                        <div class="card-text">Privacidad en California (EE.UU.). Otorga a los consumidores derechos sobre sus datos personales: acceso, supresión, exclusión de la venta y corrección.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-globe" style="color: #26a69a;"></i></div>
+                        <div class="card-title">LGPD</div>
+                        <div class="card-text">Protección de datos en Brasil. Similar al GDPR: establece bases legales, derechos de los titulares y notificación de incidentes ante la autoridad ANPD.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-file-contract" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Ley 25.326</div>
+                        <div class="card-text">Datos personales en Argentina. Regula el tratamiento, los derechos de acceso, rectificación y supresión, y el registro de bases de datos ante la AAIP.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-shield-halved" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">LOPD / GDPR España</div>
+                        <div class="card-text">España. La LOPDGDD adapta el GDPR al ordenamiento nacional: regula derechos, deber de información y regímenes específicos como videovigilancia y datos de salud.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-maple-leaf" style="color: #e040fb;"></i></div>
+                        <div class="card-title">PIPEDA</div>
+                        <div class="card-text">Protección de datos personales en Canadá. Aplica a organizaciones del sector privado y se basa en diez principios justos de tratamiento de la información.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-cloud-upload-alt" style="color: var(--accent);"></i> Auditoría y Estándares de Cloud</h2>
+            <p>El consumo de servicios cloud introduce riesgos de terceros. Estos estándares e informes permiten evaluar la madurez, los controles y el cumplimiento de los proveedores de nube.</p>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-file-signature" style="color: var(--primary);"></i></div>
+                        <div class="card-title">SOC 1 / 2 / 3</div>
+                        <div class="card-text">Informes de controles elaborados por auditores independientes. Tipo I describe el diseño en una fecha; Tipo II verifica la efectividad durante un período. SOC 3 es una versión pública.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-cloud" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">FedRAMP</div>
+                        <div class="card-text">Autorización de seguridad para servicios cloud usados por el gobierno de EE.UU. Define niveles de impacto (bajo, moderado, alto) y reutiliza evaluaciones de terceros.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-star" style="color: var(--accent);"></i></div>
+                        <div class="card-title">CSA STAR</div>
+                        <div class="card-text">Registro público de la Cloud Security Alliance. Los proveedores publican autoevaluaciones o certificaciones basadas en el Cloud Controls Matrix (CCM).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-cloud" style="color: #26a69a;"></i></div>
+                        <div class="card-title">ISO/IEC 27017</div>
+                        <div class="card-text">Guía de controles específicos de seguridad cloud. Extiende ISO 27001/27002 con controles adicionales para proveedores y clientes de servicios en la nube.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-user-lock" style="color: #00c853;"></i></div>
+                        <div class="card-title">ISO/IEC 27018</div>
+                        <div class="card-text">Código de prácticas para la protección de datos personales (PII) en cloud pública. Cubre consentimiento, minimización y obligaciones del procesador.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-lock" style="color: #e040fb;"></i></div>
+                        <div class="card-title">ISO/IEC 27701</div>
+                        <div class="card-text">Extensión de privacidad de ISO 27001/27002. Define controles y guía para la gestión de la información personal, alineándose con GDPR y otras regulaciones.</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-shield-alt" style="color: var(--accent);"></i> GDPR en Detalle</h2>
+            <p>El GDPR no es solo un conjunto de obligaciones: otorga derechos concretos a los ciudadanos y exige procesos internos de rendición de cuentas (accountability) a las organizaciones.</p>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-list-check" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Derechos de los titulares</div>
+                        <div class="card-text">Acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición. Las organizaciones deben responder en un plazo máximo de un mes.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-clipboard-check" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">DPIA</div>
+                        <div class="card-text">Evaluación de impacto en la protección de datos. Obligatoria cuando el tratamiento implica alto riesgo para los derechos de las personas (Art. 35).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-user-tie" style="color: var(--accent);"></i></div>
+                        <div class="card-title">DPO</div>
+                        <div class="card-text">Delegado de Protección de Datos. Obligatorio para autoridades públicas, tratamientos a gran escala y categorías especiales de datos (Art. 37).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-bell" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Notificación de brechas</div>
+                        <div class="card-text">Toda brecha que comprometa datos personales debe notificarse a la autoridad de control y, en ciertos casos, a los afectados (Art. 33 y 34).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-euro-sign" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Multas</div>
+                        <div class="card-text">Dos tramos: hasta 20M€ o 4% de la facturación global anual (el mayor), para infracciones graves de derechos; 10M€ o 2% para obligaciones de registro y seguridad.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-file-signature" style="color: #00c853;"></i></div>
+                        <div class="card-title">Base legal de tratamiento</div>
+                        <div class="card-text">Toda operación con datos necesita una base: consentimiento, contrato, obligación legal, interés vital, interés público o interés legítimo (Art. 6).</div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-cyber alert-info" style="margin-top: 1rem;">
+                <i class="fas fa-clock"></i>
+                <div><strong>72 horas:</strong> Si se produce una brecha de seguridad, la organización debe notificarla a la autoridad de control dentro de las 72 horas desde que tiene conocimiento de ella, salvo que el riesgo sea improbable.</div>
+            </div>
+
+            <h2><i class="fas fa-credit-card" style="color: var(--secondary);"></i> PCI-DSS 4.0</h2>
+            <p>El Estándar de Seguridad de Datos para la Industria de Tarjetas de Pago se organiza en seis objetivos que agrupan sus 12 requisitos. La versión 4.0 refuerza la seguridad por diseño y los métodos de autenticación fuertes.</p>
+            <ul>
+                <li><strong>Red segura:</strong> firewall configurado y no usar contraseñas del proveedor por defecto (Req. 1-2)</li>
+                <li><strong>Protección de datos de tarjeta:</strong> cifrar datos almacenados y en tránsito (Req. 3-4)</li>
+                <li><strong>Gestión de vulnerabilidades:</strong> proteger sistemas con antivirus y desarrollo seguro (Req. 5-6)</li>
+                <li><strong>Control de acceso:</strong> acceso por necesidad de saber y autenticación robusta (Req. 7-9)</li>
+                <li><strong>Monitoreo y pruebas:</strong> registrar y monitorear accesos, probar la seguridad (Req. 10-11)</li>
+                <li><strong>Política de seguridad:</strong> documentar políticas, procedimientos y asignar responsabilidades (Req. 12)</li>
+            </ul>
+            <p><strong>Puntos clave en 4.0:</strong> MFA para acceso remoto a redes corporativas y consolas administrativas, cifrado de datos de tarjeta en tránsito (TLS) y en reposo, escaneos trimestrales con ASV aprobados y la regla de no almacenar datos innecesarios (PAN, CVV, PIN).</p>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-lock" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Cifrado de datos de tarjeta</div>
+                        <div class="card-text">Los PAN deben protegerse con cifrado fuerte en reposo y TLS en tránsito. Nunca se almacenan CVV, PIN ni datos de la banda magnética.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-mobile-alt" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">MFA obligatorio</div>
+                        <div class="card-text">Autenticación multifactor para todo acceso remoto a la red y para accesos no consola a sistemas con datos de tarjeta (cambio clave en 4.0).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-search" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Escaneos trimestrales</div>
+                        <div class="card-text">Escaneos ASV (Approved Scanning Vendor) cada trimestre y pruebas de penetración al menos anuales para detectar vulnerabilidades explotables.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-database" style="color: #ff6d00;"></i></div>
+                        <div class="card-title">Restricción de almacenamiento</div>
+                        <div class="card-text">Solo almacenar los datos de tarjeta estrictamente necesarios para el negocio y eliminar los datos no requeridos al finalizar su uso (Retención mínima).</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2><i class="fas fa-book" style="color: #26a69a;"></i> NIST 800-53 y CIS Controls</h2>
+            <p>Los marcos NIST y CIS son catálogos de controles detallados que sirven como lista de verificación técnica. Son referencia habitual en auditorías y en la construcción de políticas de seguridad.</p>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-list" style="color: var(--primary);"></i></div>
+                        <div class="card-title">NIST SP 800-53</div>
+                        <div class="card-text">Catálogo de controles por familias: AC (control de acceso), IA (identidad y autenticación), AU (auditoría), SC (protección del sistema y las comunicaciones), entre otras.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-landmark" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">NIST SP 800-171</div>
+                        <div class="card-text">Conjunto de controles para proteger información de control no clasificada (CUI) en entidades no federales, muy usado por contratistas del gobierno.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-check-double" style="color: var(--accent);"></i></div>
+                        <div class="card-title">CIS Controls v8</div>
+                        <div class="card-text">18 controles priorizados y accionables, agrupados en Básicos (IG1), Fundamentales (IG2) y Organizativos (IG3), ideales para empezar a implementar defensas.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-cyber alert-info" style="margin-top: 1rem;">
+                <i class="fas fa-lightbulb"></i>
+                <div><strong>Cómo elegir el marco:</strong> Si tu sector está regulado, el marco obligatorio manda (p. ej. FedRAMP o 800-171 en contratos federales). Sin esa obligación, parte de CIS v8 para fundamentos rápidos y enriquece con 800-53 para control granular.</div>
+            </div>
+
+            <h2><i class="fas fa-balance-scale" style="color: #ffc107;"></i> Gestión de Riesgos Avanzada</h2>
+            <p>La gestión de riesgos cuantifica la incertidumbre y ayuda a priorizar inversiones en seguridad. Combinar valoración cualitativa y cuantitativa permite tomar decisiones basadas en datos.</p>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-th" style="color: var(--primary);"></i></div>
+                        <div class="card-title">Matriz de riesgo</div>
+                        <div class="card-text">Riesgo = Probabilidad × Impacto. Cada escenario se posiciona en la matriz para comparar niveles y decidir prioridades de tratamiento.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-layer-group" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">Riesgo inherente vs residual</div>
+                        <div class="card-text">El inherente es el riesgo sin controles; el residual es el que permanece después de aplicar las medidas. La gestión busca acercar el residual al apetito definido.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-gauge-high" style="color: var(--accent);"></i></div>
+                        <div class="card-title">Apetito y tolerancia</div>
+                        <div class="card-text">El apetito es el nivel de riesgo que la organización está dispuesta a asumir; la tolerancia fija los límites aceptables por riesgo o categoría.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-handshake" style="color: #00c853;"></i></div>
+                        <div class="card-title">Tratamiento del riesgo</div>
+                        <div class="card-text">Cuatro opciones: mitigar (reducir con controles), transferir (seguros, outsourcing), aceptar (con justificación) o evitar (eliminar la actividad).</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-chart-line" style="color: #26a69a;"></i></div>
+                        <div class="card-title">BIA</div>
+                        <div class="card-text">Business Impact Analysis: identifica procesos críticos, dependencias y el impacto financiero y operativo de su interrupción, insumo clave para BCP/DR.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-clipboard-list" style="color: #e040fb;"></i></div>
+                        <div class="card-title">Registro de riesgos</div>
+                        <div class="card-text">Inventario vivo de riesgos con ID, descripción, probabilidad, impacto, controles, responsable y estado. Se revisa periódicamente y tras cada incidente.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-cyber alert-info" style="margin-top: 1rem;">
+                <div><strong>Ejemplo de matriz 5×5:</strong> ejes de 1 (mínimo) a 5 (máximo); nivel = Probabilidad × Impacto (rango 1-25).</div>
+                <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem;">
+                    <li><strong>1–6 (verde):</strong> aceptable, mantener monitoreo</li>
+                    <li><strong>7–12 (amarillo):</strong> aceptable con controles y revisión periódica</li>
+                    <li><strong>13–18 (naranja):</strong> requiere plan de tratamiento prioritario</li>
+                    <li><strong>19–25 (rojo):</strong> inaceptable, tratar de inmediato</li>
+                </ul>
+            </div>
+
+            <h2><i class="fas fa-sync-alt" style="color: #e040fb;"></i> Continuidad de Negocio y Recuperación (BCP/DR)</h2>
+            <p>La resiliencia no termina con los controles preventivos: hay que planificar cómo seguir operando tras un incidente mayor y cómo restaurar los sistemas dentro de límites aceptables.</p>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-briefcase" style="color: var(--primary);"></i></div>
+                        <div class="card-title">BCP</div>
+                        <div class="card-text">Business Continuity Plan: mantiene operativos los procesos de negocio críticos durante y después de la interrupción, incluidos procedimientos manuales alternativos.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-server" style="color: var(--secondary);"></i></div>
+                        <div class="card-title">DRP</div>
+                        <div class="card-text">Disaster Recovery Plan: restaura la infraestructura de TI, aplicaciones y datos tras un desastre. Complementa al BCP enfocándose en la tecnología.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-stopwatch" style="color: var(--accent);"></i></div>
+                        <div class="card-title">RTO y RPO</div>
+                        <div class="card-text">RTO: tiempo máximo aceptable para restaurar el servicio. RPO: cantidad máxima de datos que se puede perder. Definen los objetivos de recuperación por proceso.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate>
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-warehouse" style="color: #ffc107;"></i></div>
+                        <div class="card-title">Sitios de respaldo</div>
+                        <div class="card-text">Caliente (réplica en tiempo real), tibio (equipos disponibles, datos desactualizados) o frío (instalaciones sin carga previa). Cada nivel reduce el RTO.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="100">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-flask" style="color: #26a69a;"></i></div>
+                        <div class="card-title">Pruebas y simulacros</div>
+                        <div class="card-text">Un plan sin prueba no es confiable. Ejercicios de mesa, pruebas parciales y simulacros completos validan procedimientos, tiempos y roles de respuesta.</div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-animate data-delay="200">
+                    <div class="card-cyber h-100 text-center">
+                        <div class="card-icon" style="margin: 0 auto;"><i class="fas fa-copy" style="color: #00c853;"></i></div>
+                        <div class="card-title">Backup 3-2-1</div>
+                        <div class="card-text">3 copias de los datos, en 2 medios distintos y 1 copia fuera del sitio (offsite). Complementar con backup inmutables contra ransomware.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert-cyber alert-warning" style="margin-top: 1rem;">
+                <i class="fas fa-money-bill-wave"></i>
+                <div><strong>Relación RTO/RPO con el presupuesto:</strong> cuanto más bajos son el RTO y el RPO, más cara es la solución (replicación síncrona, sitios calientes, alta disponibilidad). Fija objetivos a partir del costo que la interrupción implica para tu negocio, no al revés.</div>
+            </div>
+
             <div class="section-nav"></div>
         </div>
     </main>
-    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; 2025copy; <span class="current-year">2026</span></p></div></footer>
+    <footer class="footer-cyber"><div class="container"><p><i class="fas fa-shield-halved" style="color: var(--primary);"></i> Guía de Ciberseguridad &copy; <span class="current-year">2026</span></p></div></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="../js/theme.js"></script>
@@ -285,5 +680,6 @@
         window.addEventListener('resize',()=>{cam.aspect=c.clientWidth/c.clientHeight;cam.updateProjectionMatrix();r.setSize(c.clientWidth,c.clientHeight);});
     })();
     </script>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba" title="Volver arriba"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>
