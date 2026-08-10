@@ -272,6 +272,18 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ---
 
+## ©️ Derechos de Autor
+
+© 2026 **Apaza Victor**. Todos los derechos reservados.
+
+Esta guía y todos sus contenidos (texto, diseño, código y material educativo) son de autoría de **Apaza Victor**. Está prohibida la reproducción, distribución o modificación total o parcial sin autorización previa, salvo lo permitido por la Licencia MIT.
+
+- Autor: **Apaza Victor**
+- GitHub: [@Apaza-Victor](https://github.com/Apaza-Victor)
+- Email: apazavictor529@gmail.com
+
+---
+
 ## 👨‍💻 Autor
 
 **Apaza Victor** - Creado con ❤️ para la comunidad de ciberseguridad.
